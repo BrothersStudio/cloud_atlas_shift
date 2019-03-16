@@ -12,7 +12,7 @@ public class Flash : MonoBehaviour
     bool flashing = false;
     int dist_from_center = 0;
 
-    Vector2 center_pos = new Vector2(480 / 2, 270 / 2);
+    Vector2 center_pos = new Vector2(160 / 2, 90 / 2);
 
     void Awake()
     {
@@ -35,9 +35,9 @@ public class Flash : MonoBehaviour
         {
             if (!image.enabled) image.enabled = true;
 
-            Texture2D texture = new Texture2D(480, 270);
+            Texture2D texture = new Texture2D(256, 144);
             texture.filterMode = FilterMode.Point;
-            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 480, 270), Vector2.zero);
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 256, 144), Vector2.zero);
             image.sprite = sprite;
 
             for (int y = 0; y < texture.height; y++)
@@ -46,7 +46,7 @@ public class Flash : MonoBehaviour
                 {
                     Vector2 pos = new Vector2(x, y);
                     float dist = Vector2.Distance(pos, center_pos);
-                    if (dist < dist_from_center + 20)
+                    if (dist < dist_from_center + 3)
                     {
                         texture.SetPixel(x, y, new Color(1, 1, 1, 0));
                     }
@@ -59,8 +59,8 @@ public class Flash : MonoBehaviour
             texture.filterMode = FilterMode.Point;
             texture.Apply();
 
-            dist_from_center += 40;
-            if (dist_from_center >= 300)
+            dist_from_center += 8;
+            if (dist_from_center >= 200)
             {
                 flashing = false;
                 gameObject.SetActive(false);
