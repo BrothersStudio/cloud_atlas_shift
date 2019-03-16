@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     float knockback_force = 1000f;
     float knockback_time = 0.05f;
 
+    public Flash flash;
     Dimension dimension = Dimension.Blue;
     float last_shift = 0f;
     float shift_cooldown = 1f;
@@ -85,6 +86,7 @@ public class Player : MonoBehaviour
                 {
                     dimension = Dimension.Blue;
                 }
+                flash.Engage();
                 last_shift = Time.timeSinceLevelLoad;
             }
         }

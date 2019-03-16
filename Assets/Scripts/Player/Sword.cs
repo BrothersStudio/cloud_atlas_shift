@@ -109,7 +109,7 @@ public class Sword : MonoBehaviour
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy.last_swing_id != swing_id)
             {
-                enemy.SwordHit(damage, swing_id);
+                enemy.SwordHit(damage, transform.parent, swing_id);
                 Hitstop.current.HitstopFor(0.2f);
             }
         }

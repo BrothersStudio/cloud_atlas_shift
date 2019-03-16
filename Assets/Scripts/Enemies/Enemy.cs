@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    CameraFollow camera_shake;
+
     public int health;
 
     public int last_swing_id = -1;
 
+    public bool knockback_state = false;
+    float knockback_force = 1000f;
+    float knockback_time = 0.05f;
+
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
     public Sprite flash_sprite;
+    public Sprite dead_sprite;
 
     void Awake()
     {
+        camera_shake = Camera.main.GetComponent<CameraFollow>();
         sprite_renderer = GetComponent<SpriteRenderer>();
     }
 
-    public void SwordHit(int damage, int swing_id)
+    public void SwordHit(int damage, Transform source, int swing_id)
     {
         last_swing_id = swing_id;
-        Hit(damage);
+        Hit(damage, source);
     }
 
-    public void Hit(int damage)
+    public void Hit(int damage, Transform source)
     {
         CancelInvoke();
         sprite_renderer.sprite = flash_sprite;
         Invoke("EndFlash", 0.1f);
 
-        ParseDamage(damage);
+        ParseDamage(damage, source);
     }
 
     void EndFlash()
@@ -37,9 +45,39 @@ public class Enemy : MonoBehaviour
         sprite_renderer.sprite = normal_sprite;
     }
 
-    void ParseDamage(int damage)
+    void ParseDamage(int damage, Transform source)
     {
         health -= damage;
+        if (health <= 0)
+        {
+            CancelInvoke();
+            foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
+            {
+                collider.enabled = false;
+            }
+
+            sprite_renderer.sprite = dead_sprite;
+
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            Knockback(source);
+            camera_shake.Shake(0.2f);
+            GetComponent<ParticleSystem>().Play();
+        }
+    }
+
+    void Knockback(Transform source)
+    {
+        Vector2 direction = source.position - transform.position;
+        Vector2 norm_direction = direction.normalized;
+        GetComponent<Rigidbody2D>().AddForce(-norm_direction * knockback_force);
+        Invoke("EndKnockback", knockback_time);
+        knockback_state = true;
+    }
+
+    void EndKnockback()
+    {
+        knockback_state = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     void OnTriggerStay2D(Collider2D collision)
