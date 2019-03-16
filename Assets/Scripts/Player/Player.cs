@@ -31,12 +31,12 @@ public class Player : MonoBehaviour
     float swing_cooldown = 0.25f;
 
     // Movement
-    float acceleration = 1f;
+    float acceleration = 0.5f;
     
     float x_speed = 0;
     float y_speed = 0;
 
-    float max_speed = 60f;
+    float max_speed = 40f;
     float friction = 0.06f;
 
     void Start()
