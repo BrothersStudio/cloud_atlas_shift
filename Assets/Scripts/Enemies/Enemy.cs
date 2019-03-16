@@ -28,16 +28,16 @@ public class Enemy : MonoBehaviour
     public void SwordHit(int damage, Transform source, int swing_id)
     {
         last_swing_id = swing_id;
-        Hit(damage, source);
+        Hit(damage);
     }
 
-    public void Hit(int damage, Transform source)
+    public void Hit(int damage)
     {
         CancelInvoke();
         sprite_renderer.sprite = flash_sprite;
         Invoke("EndFlash", 0.1f);
 
-        ParseDamage(damage, source);
+        ParseDamage(damage);
     }
 
     void EndFlash()
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         sprite_renderer.sprite = normal_sprite;
     }
 
-    void ParseDamage(int damage, Transform source)
+    void ParseDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
             sprite_renderer.sprite = dead_sprite;
 
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            Knockback(source);
+            Knockback(FindObjectOfType<Player>().transform);
             camera_shake.Shake(0.2f);
             GetComponent<ParticleSystem>().Play();
         }

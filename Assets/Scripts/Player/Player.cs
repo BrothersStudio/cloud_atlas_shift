@@ -31,12 +31,12 @@ public class Player : MonoBehaviour
     float swing_cooldown = 0.25f;
 
     // Movement
-    float acceleration = 0.0042f;
+    float acceleration = 1f;
     
     float x_speed = 0;
     float y_speed = 0;
 
-    float max_speed = 0.65f;
+    float max_speed = 60f;
     float friction = 0.06f;
 
     void Start()
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
             x_speed *= (1 - friction);
             y_speed *= (1 - friction);
 
-            transform.position = new Vector3(transform.position.x + x_speed, transform.position.y + y_speed, transform.position.z);
+            transform.position = new Vector3(transform.position.x + x_speed * Time.deltaTime, transform.position.y + y_speed * Time.deltaTime, transform.position.z);
         }
     }
 
