@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    CameraFollow camera;
+
     // Combat
     int health = 3;
     public GameObject heart_bar;
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
 
+        camera = Camera.main.GetComponent<CameraFollow>();
         sword = transform.Find("Sword").GetComponent<Sword>();
     }
 
@@ -190,6 +193,7 @@ public class Player : MonoBehaviour
             invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
             GetComponent<PlayerSprite>().Hit();
 
+            camera.Shake(0.5f);
             Knockback(source);
         }
     }

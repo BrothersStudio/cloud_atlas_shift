@@ -9,8 +9,8 @@ public class CameraFollow : MonoBehaviour
 
     float trauma = 0;
 
-    float max_angle = 10f;
-    float max_offset = 0.3f;
+    float max_angle = 5f;
+    float max_offset = 0.5f;
 
     Vector3 default_position;
     Quaternion default_rotation;
@@ -28,6 +28,10 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         trauma = Mathf.Clamp01(trauma - 0.01f);
+        if (trauma == 0)
+        {
+            transform.rotation = default_rotation;
+        }
     }
 
     void LateUpdate()
