@@ -14,7 +14,7 @@ public class Hitstop : MonoBehaviour
         current = this;
     }
 
-    public void FreezeFor(float seconds)
+    public void HitstopFor(float seconds)
     {
         Hitstopped = true;
         hitstop_done = seconds + Time.timeSinceLevelLoad;

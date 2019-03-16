@@ -18,9 +18,18 @@ public class Bullet : MonoBehaviour
         {
             rigid.simulated = false;
         }
-        else
+        else if (rigid.simulated == false)
         {
             rigid.simulated = true;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            gameObject.SetActive(false);
+            collision.GetComponent<Enemy>().Hit();
         }
     }
 }

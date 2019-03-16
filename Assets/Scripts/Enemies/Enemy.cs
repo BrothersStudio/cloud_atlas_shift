@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    float flash_time = 0;
-    float flash_speed = 0.2f;
+    public int health;
 
-    public bool invincible = false;
-    float invincibility_end_time = 0f;
-    float invincibility_time = 1f;
+    public int last_swing_id = -1;
 
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
@@ -20,32 +17,22 @@ public class Enemy : MonoBehaviour
         sprite_renderer = GetComponent<SpriteRenderer>();
     }
 
-    public void Hit()
+    public void SwordHit(int swing_id)
     {
-        invincible = true;
-        invincibility_end_time = Time.timeSinceLevelLoad + invincibility_time;
-
-        flash_time = 0;
-        sprite_renderer.sprite = flash_sprite;
+        last_swing_id = swing_id;
+        Hit();
     }
 
-    void Update()
+    public void Hit()
     {
-        if (invincible)
-        {
-            flash_time += Time.deltaTime;
-            if (flash_time > flash_speed)
-            {
-                FlipFlashSprite();
-                flash_time = 0;
-            }
-        }
+        CancelInvoke();
+        sprite_renderer.sprite = flash_sprite;
+        Invoke("EndFlash", 0.1f);
+    }
 
-        if (Time.timeSinceLevelLoad > invincibility_end_time)
-        {
-            invincible = false;
-            sprite_renderer.sprite = normal_sprite;
-        }
+    void EndFlash()
+    {
+        sprite_renderer.sprite = normal_sprite;
     }
 
     void FlipFlashSprite()
@@ -62,10 +49,10 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // Running into player
         if (collision.tag == "Player")
         {
             Player player = collision.GetComponent<Player>();
-            Debug.Log(player);
             if (!player.invincible)
             {
                 player.DamagePlayer(transform);
