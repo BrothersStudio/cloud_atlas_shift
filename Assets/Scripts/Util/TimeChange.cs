@@ -9,6 +9,8 @@ public class TimeChange : MonoBehaviour
     public Flash flash;
     public Dimension dimension = Dimension.Blue;
 
+    public List<Enemy> enemies = new List<Enemy>();
+
     void Awake()
     {
         current = this;
@@ -24,7 +26,13 @@ public class TimeChange : MonoBehaviour
         {
             dimension = Dimension.Blue;
         }
+
         flash.FlashStart();
+
+        foreach (Enemy enemy in enemies)
+        {
+            enemy.SwitchDimensions();
+        }
     }
 }
 

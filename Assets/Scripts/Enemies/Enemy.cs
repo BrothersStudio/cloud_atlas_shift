@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     CameraFollow camera_shake;
 
     public int health;
+    public Dimension enemy_dimension;
 
     public int last_swing_id = -1;
 
@@ -23,6 +24,35 @@ public class Enemy : MonoBehaviour
     {
         camera_shake = Camera.main.GetComponent<CameraFollow>();
         sprite_renderer = GetComponent<SpriteRenderer>();
+    }
+
+    void Start()
+    {
+        TimeChange.current.enemies.Add(this);
+        SwitchDimensions();
+    }
+
+    public void SwitchDimensions()
+    {
+        if (health > 0)
+        {
+            if (TimeChange.current.dimension != enemy_dimension)
+            {
+                sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
+                foreach (Collider2D collider in GetComponents<Collider2D>())
+                {
+                    collider.enabled = false;
+                }
+            }
+            else
+            {
+                sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
+                foreach (Collider2D collider in GetComponents<Collider2D>())
+                {
+                    collider.enabled = true;
+                }
+            }
+        }
     }
 
     public void SwordHit(int damage, Transform source, int swing_id)
@@ -86,7 +116,7 @@ public class Enemy : MonoBehaviour
         if (collision.tag == "Player")
         {
             Player player = collision.GetComponent<Player>();
-            if (!player.invincible)
+            if (!player.invincible && TimeChange.current.dimension == enemy_dimension)
             {
                 player.DamagePlayer(transform);
             }

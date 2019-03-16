@@ -30,8 +30,11 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            gameObject.SetActive(false);
-            collision.GetComponent<Enemy>().Hit(damage);
+            if (collision.GetComponent<Enemy>().enemy_dimension == Dimension.Blue)
+            {
+                gameObject.SetActive(false);
+                collision.GetComponent<Enemy>().Hit(damage);
+            }
         }
     }
 }

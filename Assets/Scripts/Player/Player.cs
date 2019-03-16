@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         }
 
         // Shift
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Space))
         {
             if (Time.timeSinceLevelLoad > last_shift + shift_cooldown)
             {
