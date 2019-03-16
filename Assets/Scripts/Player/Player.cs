@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    CameraFollow camera;
+    CameraFollow camera_shake;
 
     // Combat
     int health = 3;
     public GameObject heart_bar;
+    public bool dying = false;
 
     [HideInInspector]
     public bool invincible = false;
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
 
-        camera = Camera.main.GetComponent<CameraFollow>();
+        camera_shake = Camera.main.GetComponent<CameraFollow>();
         sword = transform.Find("Sword").GetComponent<Sword>();
     }
 
@@ -51,6 +52,12 @@ public class Player : MonoBehaviour
     {
         // Make sure we aren't frozen
         if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
+        // Dying
+        if (dying)
         {
             return;
         }
@@ -182,19 +189,22 @@ public class Player : MonoBehaviour
         health--;
         heart_bar.GetComponentsInChildren<Heart>()[health].FlipHeartSprite();
 
+        camera_shake.Shake(0.5f);
+        Knockback(source);
+
+        invincible = true;
+        invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
+
         if (health == 0)
         {
-            Debug.Log("Player is dead, restart level");
+            dying = true;
+            GetComponent<ParticleSystem>().Play();
+            GetComponent<PlayerSprite>().Dead();
+            Invoke("Restart", 1f);
         }
         else
         {
-            // Invincibility
-            invincible = true;
-            invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
             GetComponent<PlayerSprite>().Hit();
-
-            camera.Shake(0.5f);
-            Knockback(source);
         }
     }
 
@@ -211,6 +221,11 @@ public class Player : MonoBehaviour
     {
         knockback_state = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
+    void Restart()
+    {
+        FindObjectOfType<LevelController>().ResetLevel();
     }
 }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    int damage = 20;
+
     public float speed;
     Rigidbody2D rigid;
 
@@ -29,7 +31,7 @@ public class Bullet : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             gameObject.SetActive(false);
-            collision.GetComponent<Enemy>().Hit();
+            collision.GetComponent<Enemy>().Hit(damage);
         }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    int damage = 50;
+
     int swing_id = 0;
     int swing_frame_count = 0;
     public BoxCollider2D[] swing_boxes;
@@ -107,7 +109,7 @@ public class Sword : MonoBehaviour
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy.last_swing_id != swing_id)
             {
-                enemy.SwordHit(swing_id);
+                enemy.SwordHit(damage, swing_id);
                 Hitstop.current.HitstopFor(0.2f);
             }
         }

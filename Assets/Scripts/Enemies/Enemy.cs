@@ -17,17 +17,19 @@ public class Enemy : MonoBehaviour
         sprite_renderer = GetComponent<SpriteRenderer>();
     }
 
-    public void SwordHit(int swing_id)
+    public void SwordHit(int damage, int swing_id)
     {
         last_swing_id = swing_id;
-        Hit();
+        Hit(damage);
     }
 
-    public void Hit()
+    public void Hit(int damage)
     {
         CancelInvoke();
         sprite_renderer.sprite = flash_sprite;
         Invoke("EndFlash", 0.1f);
+
+        ParseDamage(damage);
     }
 
     void EndFlash()
@@ -35,19 +37,12 @@ public class Enemy : MonoBehaviour
         sprite_renderer.sprite = normal_sprite;
     }
 
-    void FlipFlashSprite()
+    void ParseDamage(int damage)
     {
-        if (sprite_renderer.sprite == normal_sprite)
-        {
-            sprite_renderer.sprite = flash_sprite;
-        }
-        else
-        {
-            sprite_renderer.sprite = normal_sprite;
-        }
+        health -= damage;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         // Running into player
         if (collision.tag == "Player")

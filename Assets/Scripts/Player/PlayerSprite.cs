@@ -18,7 +18,10 @@ public class PlayerSprite : MonoBehaviour
     public Sprite[] walking_up;
     public Sprite[] walking_down;
     public Sprite[] walking_left;
+
     public Sprite flash_sprite;
+
+    public Sprite dead_sprite;
 
     private SpriteRenderer sprite_renderer;
 
@@ -32,7 +35,13 @@ public class PlayerSprite : MonoBehaviour
     public void Hit()
     {
         flash_time = 0;
-        GetComponent<SpriteRenderer>().sprite = flash_sprite;
+        sprite_renderer.sprite = flash_sprite;
+    }
+
+    public void Dead()
+    {
+        flash_time = 0;
+        sprite_renderer.sprite = dead_sprite;
     }
 
     void Update()
@@ -42,7 +51,7 @@ public class PlayerSprite : MonoBehaviour
             return;
         }
 
-        if (player.invincible)
+        if (player.invincible || player.dying)
         {
             flash_time += Time.deltaTime;
             if (flash_time > flash_speed)
@@ -106,13 +115,20 @@ public class PlayerSprite : MonoBehaviour
 
     void FlipFlashSprite()
     {
-        if (sprite_renderer.sprite == walking_up[0])
+        if (sprite_renderer.sprite == walking_up[0] || sprite_renderer.sprite == dead_sprite)
         {
             sprite_renderer.sprite = flash_sprite;
         }
         else
         {
-            sprite_renderer.sprite = walking_up[0];
+            if (player.dying)
+            {
+                sprite_renderer.sprite = dead_sprite;
+            }
+            else
+            {
+                sprite_renderer.sprite = walking_up[0];
+            }
         }
     }
 
