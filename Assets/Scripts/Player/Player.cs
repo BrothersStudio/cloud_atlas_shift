@@ -34,6 +34,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // Make sure we aren't frozen
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         // Shift
         if (Input.GetKey(KeyCode.LeftShift))
         {

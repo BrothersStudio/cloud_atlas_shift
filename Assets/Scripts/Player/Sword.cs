@@ -31,6 +31,11 @@ public class Sword : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         if (swing_frame_count >= 10)
         {
             gameObject.SetActive(false);
@@ -92,4 +97,16 @@ public class Sword : MonoBehaviour
         GetComponent<SpriteRenderer>().sortingLayerName = "Weapons";
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (!enemy.invincible)
+            {
+                enemy.Hit();
+                Hitstop.current.FreezeFor(0.2f);
+            }
+        }
+    }
 }

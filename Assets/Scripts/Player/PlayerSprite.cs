@@ -24,6 +24,11 @@ public class PlayerSprite : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         // Facing direction
         // We do the swinging check weird like this so we can stop the feet if we have to
         if (Input.GetKey(KeyCode.W))
