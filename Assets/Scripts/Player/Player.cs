@@ -20,16 +20,14 @@ public class Player : MonoBehaviour
     float knockback_force = 1000f;
     float knockback_time = 0.05f;
 
-    public Flash flash;
-    Dimension dimension = Dimension.Blue;
-    float last_shift = 0f;
+    float last_shift = -1f;
     float shift_cooldown = 1f;
 
-    float last_shot = 0f;
+    float last_shot = -0.2f;
     float shot_cooldown = 0.2f;
 
     Sword sword;
-    float last_swing = 0f;
+    float last_swing = -0.25f;
     float swing_cooldown = 0.25f;
 
     // Movement
@@ -78,15 +76,7 @@ public class Player : MonoBehaviour
         {
             if (Time.timeSinceLevelLoad > last_shift + shift_cooldown)
             {
-                if (dimension == Dimension.Blue)
-                {
-                    dimension = Dimension.Orange;
-                }
-                else
-                {
-                    dimension = Dimension.Blue;
-                }
-                flash.Engage();
+                TimeChange.current.Switch();
                 last_shift = Time.timeSinceLevelLoad;
             }
         }
@@ -95,7 +85,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             // Gun
-            if (dimension == Dimension.Blue && (Time.timeSinceLevelLoad > last_shot + shot_cooldown))
+            if (TimeChange.current.dimension == Dimension.Blue && (Time.timeSinceLevelLoad > last_shot + shot_cooldown))
             {
                 last_shot = Time.timeSinceLevelLoad;
 
@@ -109,7 +99,7 @@ public class Player : MonoBehaviour
                 GetComponent<PlayerSprite>().ForceSpriteForTime(0.2f);
             }
             // Sword
-            else if (dimension == Dimension.Orange && (Time.timeSinceLevelLoad > last_swing + swing_cooldown))
+            else if (TimeChange.current.dimension == Dimension.Orange && (Time.timeSinceLevelLoad > last_swing + swing_cooldown))
             {
                 last_swing = Time.timeSinceLevelLoad;
                 sword.Swing();
@@ -229,12 +219,6 @@ public class Player : MonoBehaviour
     {
         FindObjectOfType<LevelController>().ResetLevel();
     }
-}
-
-public enum Dimension
-{
-    Blue,
-    Orange
 }
 
 public enum FacingDirection

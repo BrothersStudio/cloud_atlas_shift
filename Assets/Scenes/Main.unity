@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2661201e0efc2a64e9c80dc1094feba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1846309563}
   dist_from_center: 0
 --- !u!1001 &514123462
 PrefabInstance:
@@ -881,6 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1432819350}
   - component: {fileID: 1432819351}
+  - component: {fileID: 1432819352}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -914,6 +916,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d29bcfd6cde2e418d89601eec7a29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1432819352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432819349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242e47e92a50ce04d900f4a2185643f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flash: {fileID: 484092830}
+  dimension: 0
 --- !u!1001 &1672892342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1316,7 +1332,6 @@ MonoBehaviour:
   dying: 0
   invincible: 0
   knockback_state: 0
-  flash: {fileID: 484092830}
 --- !u!50 &1846309567
 Rigidbody2D:
   serializedVersion: 4

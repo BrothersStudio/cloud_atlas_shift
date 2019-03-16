@@ -7,8 +7,10 @@ public class Flash : MonoBehaviour
 {
     Image image;
 
+    public Transform player;
+
     bool flashing = false;
-    public int dist_from_center = 0;
+    int dist_from_center = 0;
 
     Vector2 center_pos = new Vector2(480 / 2, 270 / 2);
 
@@ -17,10 +19,12 @@ public class Flash : MonoBehaviour
         image = GetComponent<Image>();
     }
 
-    public void Engage()
+    public void FlashStart()
     {
         flashing = true;
         dist_from_center = 0;
+
+        center_pos = Camera.main.WorldToScreenPoint(player.position);
 
         gameObject.SetActive(true);
     }
