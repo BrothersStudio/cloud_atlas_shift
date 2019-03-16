@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    SpriteRenderer sprite_renderer;
-    public Sprite normal_sprite;
-    public Sprite flash_sprite;
-
     float flash_time = 0;
     float flash_speed = 0.2f;
 
     public bool invincible = false;
     float invincibility_end_time = 0f;
     float invincibility_time = 1f;
+
+    SpriteRenderer sprite_renderer;
+    public Sprite normal_sprite;
+    public Sprite flash_sprite;
 
     void Awake()
     {
@@ -57,6 +57,19 @@ public class Enemy : MonoBehaviour
         else
         {
             sprite_renderer.sprite = normal_sprite;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Player player = collision.GetComponent<Player>();
+            Debug.Log(player);
+            if (!player.invincible)
+            {
+                player.DamagePlayer(transform);
+            }
         }
     }
 }

@@ -5,6 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Combat
+    int health = 3;
+    public GameObject heart_bar;
+
+    [HideInInspector]
+    public bool invincible = false;
+    float invincible_stop_time = 0f;
+    float invincible_time = 1f;
+
+    public bool knockback_state = false;
+    float knockback_force = 1000f;
+    float knockback_time = 0.05f;
+
     Dimension dimension = Dimension.Blue;
     float last_shift = 0f;
     float shift_cooldown = 1f;
@@ -38,6 +50,16 @@ public class Player : MonoBehaviour
         if (Hitstop.current.Hitstopped)
         {
             return;
+        }
+
+        // Recovering from damage
+        if (invincible)
+        {
+            if (Time.timeSinceLevelLoad > invincible_stop_time)
+            {
+                invincible = false;
+                GetComponent<SpriteRenderer>().sprite = GetComponent<PlayerSprite>().walking_up[0];
+            }
         }
 
         // Shift
@@ -84,28 +106,31 @@ public class Player : MonoBehaviour
             }
         }
 
-        // Movement
-        if (Input.GetKey(KeyCode.W))
+        if (!knockback_state)
         {
-            y_speed = Mathf.Clamp(y_speed + acceleration, -max_speed, max_speed);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            x_speed = Mathf.Clamp(x_speed - acceleration, -max_speed, max_speed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            x_speed = Mathf.Clamp(x_speed + acceleration, -max_speed, max_speed);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            y_speed = Mathf.Clamp(y_speed - acceleration, -max_speed, max_speed);
-        }
+            // Movement
+            if (Input.GetKey(KeyCode.W))
+            {
+                y_speed = Mathf.Clamp(y_speed + acceleration, -max_speed, max_speed);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                x_speed = Mathf.Clamp(x_speed - acceleration, -max_speed, max_speed);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                x_speed = Mathf.Clamp(x_speed + acceleration, -max_speed, max_speed);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                y_speed = Mathf.Clamp(y_speed - acceleration, -max_speed, max_speed);
+            }
 
-        x_speed *= (1 - friction);
-        y_speed *= (1 - friction);
+            x_speed *= (1 - friction);
+            y_speed *= (1 - friction);
 
-        transform.position = new Vector3(transform.position.x + x_speed, transform.position.y + y_speed, transform.position.z);
+            transform.position = new Vector3(transform.position.x + x_speed, transform.position.y + y_speed, transform.position.z);
+        }
     }
 
     public FacingDirection GetFacingDirection()
@@ -147,6 +172,41 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void DamagePlayer(Transform source)
+    {
+        health--;
+        heart_bar.GetComponentsInChildren<Heart>()[health].FlipHeartSprite();
+
+        if (health == 0)
+        {
+            Debug.Log("Player is dead, restart level");
+        }
+        else
+        {
+            // Invincibility
+            invincible = true;
+            invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
+            GetComponent<PlayerSprite>().Hit();
+
+            Knockback(source);
+        }
+    }
+
+    void Knockback(Transform source)
+    {
+        Vector2 direction = source.position - transform.position;
+        Vector2 norm_direction = direction.normalized;
+        GetComponent<Rigidbody2D>().AddForce(-norm_direction * knockback_force);
+        Invoke("EndKnockback", knockback_time);
+        knockback_state = true;
+    }
+
+    void EndKnockback()
+    {
+        knockback_state = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
 

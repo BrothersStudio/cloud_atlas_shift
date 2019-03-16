@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerSprite : MonoBehaviour
 {
-    float stick_time = 0;
+    Player player;
+
+    float flash_time = 0;
+    float flash_speed = 0.2f;
+
+    float sprite_force_time = 0;
 
     int walk_sprite_ind = 0;
     float walk_sprite_time = 0;
@@ -13,19 +18,38 @@ public class PlayerSprite : MonoBehaviour
     public Sprite[] walking_up;
     public Sprite[] walking_down;
     public Sprite[] walking_left;
-    //public Sprite[] walking_right;  probably not needed
+    public Sprite flash_sprite;
 
     private SpriteRenderer sprite_renderer;
 
     void Start()
     {
         sprite_renderer = GetComponent<SpriteRenderer>();
+
+        player = GetComponent<Player>();
+    }
+
+    public void Hit()
+    {
+        flash_time = 0;
+        GetComponent<SpriteRenderer>().sprite = flash_sprite;
     }
 
     void Update()
     {
         if (Hitstop.current.Hitstopped)
         {
+            return;
+        }
+
+        if (player.invincible)
+        {
+            flash_time += Time.deltaTime;
+            if (flash_time > flash_speed)
+            {
+                FlipFlashSprite();
+                flash_time = 0;
+            }
             return;
         }
 
@@ -80,6 +104,18 @@ public class PlayerSprite : MonoBehaviour
         }
     }
 
+    void FlipFlashSprite()
+    {
+        if (sprite_renderer.sprite == walking_up[0])
+        {
+            sprite_renderer.sprite = flash_sprite;
+        }
+        else
+        {
+            sprite_renderer.sprite = walking_up[0];
+        }
+    }
+
     void Up()
     {
         sprite_renderer.sprite = walking_up[walk_sprite_ind];
@@ -104,8 +140,7 @@ public class PlayerSprite : MonoBehaviour
 
     public void ForceSpriteForTime(float time)
     {
-        stick_time = Time.timeSinceLevelLoad + time;
-
+        sprite_force_time = Time.timeSinceLevelLoad + time;
         switch (GetComponent<Player>().GetFacingDirection())
         {
             case FacingDirection.Up:
@@ -125,7 +160,7 @@ public class PlayerSprite : MonoBehaviour
 
     bool IsTimeUp()
     {
-        if (Time.timeSinceLevelLoad > stick_time)
+        if (Time.timeSinceLevelLoad > sprite_force_time)
         {
             return true;
         }
