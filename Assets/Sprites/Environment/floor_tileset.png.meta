@@ -28,6 +28,7 @@ TextureImporter:
     21300046: floor_tileset_23
     21300048: floor_tileset_24
     21300050: floor_tileset_25
+    21300052: floor_tileset_26
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -625,6 +626,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2072efb24238a9f4d8fd648d2463038f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_tileset_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948e206da1b23af49b8491948673b1e6
       vertices: []
       indices: 
       edges: []

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    public bool stair_room;
+
     public List<Direction> exits;
     public List<Vector3> exit_points;
 
@@ -27,7 +29,11 @@ public class Room : MonoBehaviour
             enemies.Add(new_enemy.GetComponent<Enemy>());
         }
 
+        Camera.main.GetComponent<CameraFollow>().SetMaxMinCameraPosForRoom(GetComponent<Room>().max_and_min_cam_pos, transform);
+
         AddDoors();
+
+        room_complete = false;
     }
 
     void AddDoors()
@@ -54,7 +60,7 @@ public class Room : MonoBehaviour
             }
             exit_inds.Add(ind);
 
-            GameObject new_door = Instantiate(doors[ind], exit_points[ind], Quaternion.identity);
+            GameObject new_door = Instantiate(doors[ind], transform.TransformPoint(exit_points[ind]), Quaternion.identity);
             doors_in_room.Add(new_door.GetComponent<Door>());
         }
 
@@ -63,7 +69,9 @@ public class Room : MonoBehaviour
         {
             if (exit_inds.Contains(i)) continue;
 
-            Instantiate(walls[i], exit_points[i], Quaternion.identity);
+            if (stair_room && i == 0) continue;
+
+            Instantiate(walls[i], transform.TransformPoint(exit_points[i]), Quaternion.identity);
         }
     }
 

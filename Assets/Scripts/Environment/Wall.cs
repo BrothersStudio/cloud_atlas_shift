@@ -13,6 +13,20 @@ public class Wall : MonoBehaviour
         sprite_renderer = GetComponent<SpriteRenderer>();
 
         TimeChange.current.walls.Add(this);
+
+        CheckColor();
+    }
+
+    void CheckColor()
+    {
+        if (TimeChange.current.dimension == Dimension.Blue)
+        {
+            sprite_renderer.sprite = blue_sprite;
+        }
+        else
+        {
+            sprite_renderer.sprite = orange_sprite;
+        }
     }
 
     public void SwitchDimensions()
