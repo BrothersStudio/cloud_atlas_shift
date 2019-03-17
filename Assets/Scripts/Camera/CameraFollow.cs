@@ -7,22 +7,35 @@ public class CameraFollow : MonoBehaviour
     float follow_speed = 0.1f;
     public Transform player;
 
+    float ortho_size;
+
     float trauma = 0;
 
-    float max_angle = 1f;
+    float max_angle = 0.2f;
     float max_offset = 0.5f;
 
     Vector3 default_position;
     Quaternion default_rotation;
 
+    public Vector3 max_allowed_position;
+    public Vector3 min_allowed_position;
+
     void Start()
     {
         default_rotation = transform.rotation;
+
+        ortho_size = GetComponent<Camera>().orthographicSize;
     }
 
     public void Shake(float amount)
     {
         trauma += amount;
+    }
+
+    public void SetMaxMinCameraPosForRoom(List<Vector3> vectors, Transform room_loc)
+    {
+        max_allowed_position = room_loc.TransformDirection(vectors[0]);
+        min_allowed_position = room_loc.TransformDirection(vectors[1]);
     }
 
     void Update()
@@ -37,10 +50,8 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         // Might want to follow the mouse a little as well as potentially enemies, see juicing with math talk
-
         float new_x = transform.position.x * (1 - follow_speed) + player.position.x * follow_speed;
         float new_y = transform.position.y * (1 - follow_speed) + player.position.y * follow_speed;
-
         transform.position = new Vector3(new_x, new_y, -10);
 
         if (trauma > 0)
@@ -52,5 +63,31 @@ public class CameraFollow : MonoBehaviour
             float offset_y = max_offset * Mathf.Pow(trauma, 2) * Random.Range(-1f, 1f);
             transform.Translate(new Vector2(offset_x, offset_y));
         }
+
+        CheckForMinMaxPos();
+    }
+
+    void CheckForMinMaxPos()
+    {
+        Vector3 tweaked_pos = transform.position;
+        if (transform.position.y > max_allowed_position.y - ortho_size)
+        {
+            tweaked_pos.y = max_allowed_position.y - ortho_size;
+        }
+        else if (transform.position.y < min_allowed_position.y + ortho_size)
+        {
+            tweaked_pos.y = min_allowed_position.y + ortho_size;
+        }
+
+        if (transform.position.x > min_allowed_position.x - ortho_size * 1.7777f)
+        {
+            tweaked_pos.x = max_allowed_position.x - ortho_size * 1.7777f;
+        }
+        else if (transform.position.x < max_allowed_position.x + ortho_size * 1.7777f)
+        {
+            tweaked_pos.x = min_allowed_position.x + ortho_size * 1.7777f;
+        }
+
+        transform.position = tweaked_pos;
     }
 }

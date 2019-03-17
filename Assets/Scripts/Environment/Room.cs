@@ -17,7 +17,9 @@ public class Room : MonoBehaviour
     List<Enemy> enemies = new List<Enemy>();
     bool room_complete = false;
 
-    void Start()
+    public List<Vector3> max_and_min_cam_pos;
+
+    public void Activate()
     {
         for (int i = 0; i < enemy_to_place.Count; i++)
         {
