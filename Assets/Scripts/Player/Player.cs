@@ -93,6 +93,9 @@ public class Player : MonoBehaviour
                 bullet.SetActive(true);
                 bullet.transform.position = transform.position;
 
+                bullet.GetComponent<Bullet>().side = BulletSide.Player;
+                bullet.GetComponent<Bullet>().SetSpriteAndSpeed();
+
                 Vector3 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
 

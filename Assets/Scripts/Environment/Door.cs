@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = sprites[1];
         Invoke("FullyOpen", opening_delay);
-        Camera.main.GetComponent<CameraFollow>().Shake(0.1f);
+        Camera.main.GetComponent<CameraFollow>().Shake(0.2f);
     }
 
     void FullyOpen()

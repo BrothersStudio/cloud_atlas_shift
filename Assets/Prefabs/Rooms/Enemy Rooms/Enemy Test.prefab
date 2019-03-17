@@ -3010,6 +3010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50cc36da7fc8024897b2cd98542de4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stair_room: 0
   exits: 0000000001000000
   exit_points:
   - {x: 0, y: 4, z: 0}
@@ -3026,10 +3027,10 @@ MonoBehaviour:
   - {fileID: 5480332307935545298, guid: 43873ae8a31738b49b490be1bd9c71b4, type: 3}
   - {fileID: 8026180518821095719, guid: 74efe0fb9544f104a962016a70420f9f, type: 3}
   - {fileID: 8280035279687394311, guid: caacea33e7b5f1541a8f86c35d480611, type: 3}
-  doors_in_room: []
+  doors_to_open: []
   enemy_to_place:
-  - {fileID: 1247012905590908576, guid: 7786b1aeb9f0b0342ae9e74be972aed9, type: 3}
-  - {fileID: 656218120820163270, guid: d305f1a7a0c5dec46b0a9512ddeb3c77, type: 3}
+  - {fileID: 1247012905590908576, guid: 450865fe11e0e8d45a6c9d2dc593a4a4, type: 3}
+  - {fileID: 656218120820163270, guid: 2a5144a4bb720a04e8944fcc2dfb260f, type: 3}
   location_to_place:
   - {x: -2, y: 2, z: 0}
   - {x: 2, y: 2, z: 0}

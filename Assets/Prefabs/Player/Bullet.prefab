@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9218583925272106311}
   - component: {fileID: 9218583925272106310}
   m_Layer: 0
-  m_Name: Player Bullet
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9218583925272106307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 376e80cdb4b77164e9213feedc93a447, type: 3}
+  m_Script: {fileID: 11500000, guid: d479772d35495574794bb28ab751c4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14
+  player_speed: 14
+  enemy_speed: 7
+  speed: 0
+  side: 0
+  bullet_dimension: 0
+  player_sprite: {fileID: 21300000, guid: 7c5d9972f9489374fbd082bc9841e7ac, type: 3}
+  enemy_sprites:
+  - {fileID: 21300000, guid: 1c4a3a30e39896c42befec9799b025a7, type: 3}
+  - {fileID: 21300000, guid: efb25b36ada49a947b1ca8df351fbd93, type: 3}

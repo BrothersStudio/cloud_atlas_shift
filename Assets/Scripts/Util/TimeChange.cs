@@ -8,9 +8,12 @@ public class TimeChange : MonoBehaviour
 
     public Flash flash;
     public Dimension dimension = Dimension.Blue;
+    public float last_change_time = 0f;
 
     List<Enemy> dead_enemies = new List<Enemy>();
     public List<Enemy> enemies = new List<Enemy>();
+
+    public List<Bullet> bullets = new List<Bullet>();
 
     public List<Wall> walls = new List<Wall>();
 
@@ -21,6 +24,8 @@ public class TimeChange : MonoBehaviour
 
     public void Switch()
     {
+        last_change_time = Time.timeSinceLevelLoad;
+
         if (dimension == Dimension.Blue)
         {
             dimension = Dimension.Orange;
@@ -44,12 +49,25 @@ public class TimeChange : MonoBehaviour
             }
         }
 
+        foreach (Bullet bullet in bullets)
+        {
+            if (bullet.gameObject.activeSelf)
+            {
+                bullet.SwitchDimensions();
+            }
+        }
+
         foreach (Wall wall in walls)
         {
             wall.SwitchDimensions();
         }
 
         Cleanup();
+    }
+
+    public void ForceRoomChangeDelay()
+    {
+        last_change_time = Time.timeSinceLevelLoad;
     }
 
     void Cleanup()

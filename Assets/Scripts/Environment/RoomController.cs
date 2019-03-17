@@ -41,6 +41,9 @@ public class RoomController : MonoBehaviour
     public void MoveToNextRoom()
     {
         player_room++;
+
+        TimeChange.current.ForceRoomChangeDelay();
+
         spawned_rooms[player_room].GetComponent<Room>().Activate();
 
         Player player = FindObjectOfType<Player>();

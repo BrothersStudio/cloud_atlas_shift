@@ -6,7 +6,7 @@ public class PlayerBulletPool : MonoBehaviour
 {
     public static PlayerBulletPool current;
 
-    public int num_bullet;
+    int num_bullet = 20;
     public GameObject bullet_prefab;
     List<GameObject> bullet_pool = new List<GameObject>();
 

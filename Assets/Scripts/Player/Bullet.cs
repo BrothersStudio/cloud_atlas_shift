@@ -4,14 +4,70 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    int damage = 20;
+    int damage = 15;
+    public float player_speed;
+    public float enemy_speed;
 
+    [HideInInspector]
     public float speed;
+    [HideInInspector]
+    public BulletSide side;
+    [HideInInspector]
+    public Dimension bullet_dimension;
+
+    public Sprite player_sprite;
+    public List<Sprite> enemy_sprites;
+
     Rigidbody2D rigid;
+    SpriteRenderer sprite_renderer;
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
+
+        TimeChange.current.bullets.Add(this);
+    }
+
+    public void SetSpriteAndSpeed()
+    {
+        if (side == BulletSide.Player)
+        {
+            speed = player_speed;
+            sprite_renderer.sprite = player_sprite;
+        }
+        else
+        {
+            speed = enemy_speed;
+            if (TimeChange.current.dimension == Dimension.Blue)
+            {
+                sprite_renderer.sprite = enemy_sprites[0];
+            }
+            else
+            {
+                sprite_renderer.sprite = enemy_sprites[1];
+            }
+        }
+    }
+
+    public void SwitchDimensions()
+    {
+        if (TimeChange.current.dimension != bullet_dimension)
+        {
+            sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
+            foreach (Collider2D collider in GetComponents<Collider2D>())
+            {
+                collider.enabled = false;
+            }
+        }
+        else
+        {
+            sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
+            foreach (Collider2D collider in GetComponents<Collider2D>())
+            {
+                collider.enabled = true;
+            }
+        }
     }
 
     void Update()
@@ -28,11 +84,19 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Player" && side == BulletSide.Enemy)
+        {
+            if (TimeChange.current.dimension == bullet_dimension)
+            {
+                Disappear();
+                collision.GetComponent<Player>().DamagePlayer(transform);
+            }
+        }
+        else if (collision.tag == "Enemy" && side == BulletSide.Player)
         {
             if (collision.GetComponent<Enemy>().enemy_dimension == Dimension.Blue)
             {
-                gameObject.SetActive(false);
+                Disappear();
                 collision.GetComponent<Enemy>().Hit(damage);
             }
         }
@@ -46,4 +110,10 @@ public class Bullet : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+}
+
+public enum BulletSide
+{
+    Player,
+    Enemy
 }
