@@ -36,5 +36,14 @@ public class Bullet : MonoBehaviour
                 collision.GetComponent<Enemy>().Hit(damage);
             }
         }
+        else if (collision.tag == "Wall")
+        {
+            Invoke("Disappear", 0.04f);
+        }
+    }
+
+    void Disappear()
+    {
+        gameObject.SetActive(false);
     }
 }
