@@ -46,6 +46,7 @@ public class CameraFollow : MonoBehaviour
         new_pos = new_room_pos;
         new_pos.x -= +0.5f;
         new_pos.z = -10f;
+        Hitstop.current.HitstopFor(1);
         animating = true;
     }
 
