@@ -9,7 +9,9 @@ public class TimeChange : MonoBehaviour
     public Flash flash;
     public Dimension dimension = Dimension.Blue;
 
+    List<Enemy> dead_enemies = new List<Enemy>();
     public List<Enemy> enemies = new List<Enemy>();
+
     public List<Wall> walls = new List<Wall>();
 
     void Awake()
@@ -32,13 +34,31 @@ public class TimeChange : MonoBehaviour
 
         foreach (Enemy enemy in enemies)
         {
-            enemy.SwitchDimensions();
+            if (enemy.health > 0)
+            {
+                enemy.SwitchDimensions();
+            }
+            else
+            {
+                dead_enemies.Add(enemy);
+            }
         }
 
         foreach (Wall wall in walls)
         {
             wall.SwitchDimensions();
         }
+
+        Cleanup();
+    }
+
+    void Cleanup()
+    {
+        foreach (Enemy enemy in dead_enemies)
+        {
+            enemies.Remove(enemy);
+        }
+        dead_enemies.Clear();
     }
 }
 
