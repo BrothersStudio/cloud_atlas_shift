@@ -11,7 +11,7 @@ public class Room : MonoBehaviour
 
     public List<GameObject> walls;
     public List<GameObject> doors;
-    public List<Door> doors_in_room = new List<Door>();
+    public List<Door> doors_to_open = new List<Door>();
 
     public List<GameObject> enemy_to_place;
     public List<Vector3> location_to_place;
@@ -61,7 +61,10 @@ public class Room : MonoBehaviour
             exit_inds.Add(ind);
 
             GameObject new_door = Instantiate(doors[ind], transform.TransformPoint(exit_points[ind]), Quaternion.identity);
-            doors_in_room.Add(new_door.GetComponent<Door>());
+            if (ind != 1)
+            {
+                doors_to_open.Add(new_door.GetComponent<Door>());
+            }
         }
 
         // Spawn walls in leftover slots
@@ -93,7 +96,7 @@ public class Room : MonoBehaviour
 
     void OpenDoors()
     {
-        foreach (Door door in doors_in_room)
+        foreach (Door door in doors_to_open)
         {
             door.Open();
         }
