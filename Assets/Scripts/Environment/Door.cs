@@ -11,11 +11,13 @@ public class Door : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = sprites[1];
         Invoke("FullyOpen", opening_delay);
+        Camera.main.GetComponent<CameraFollow>().Shake(0.1f);
     }
 
     void FullyOpen()
     {
         GetComponent<SpriteRenderer>().sprite = sprites[2];
         GetComponent<BoxCollider2D>().enabled = false;
+        Camera.main.GetComponent<CameraFollow>().Shake(1f);
     }
 }
