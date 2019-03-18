@@ -87,10 +87,11 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Player" && side == BulletSide.Enemy)
         {
-            if (TimeChange.current.dimension == bullet_dimension)
+            Player player = collision.GetComponent<Player>();
+            if (TimeChange.current.dimension == bullet_dimension && !player.invincible)
             {
                 Disappear();
-                collision.GetComponent<Player>().DamagePlayer(transform);
+                player.DamagePlayer(transform);
             }
         }
         else if (collision.tag == "Enemy" && side == BulletSide.Player)

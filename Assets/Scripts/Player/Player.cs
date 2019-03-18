@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool invincible = false;
     float invincible_stop_time = 0f;
-    float invincible_time = 1f;
+    float invincible_time = 2f;
 
     public bool knockback_state = false;
     float knockback_force = 1000f;
@@ -181,20 +181,22 @@ public class Player : MonoBehaviour
 
     public void DamagePlayer(Transform source)
     {
+        invincible = true;
+        invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
+
         health--;
         heart_bar.GetComponentsInChildren<Heart>()[health].FlipHeartSprite();
 
         camera_shake.Shake(0.5f);
         Knockback(source);
 
-        invincible = true;
-        invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
-
         if (health == 0)
         {
             dying = true;
             GetComponent<ParticleSystem>().Play();
             GetComponent<PlayerSprite>().Dead();
+            camera_shake.Shake(0.5f);
+            Invoke("KeepShaking", 0.2f);
             Invoke("Restart", 1f);
         }
         else
@@ -216,6 +218,11 @@ public class Player : MonoBehaviour
     {
         knockback_state = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+
+    void KeepShaking()
+    {
+        camera_shake.Shake(0.5f);
     }
 
     void Restart()

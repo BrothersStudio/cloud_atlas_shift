@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
     float trauma = 0;
 
     float max_angle = 0.2f;
-    float max_offset = 0.5f;
+    float max_offset = 1f;
 
     Vector3 default_position;
     Quaternion default_rotation;
