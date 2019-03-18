@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
     public Sprite flash_sprite;
-    public Sprite dead_sprite;
+    public Sprite dead_sprite = null;
 
     void Awake()
     {
@@ -41,7 +41,10 @@ public class Enemy : MonoBehaviour
                 sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
                 foreach (Collider2D collider in GetComponents<Collider2D>())
                 {
-                    collider.enabled = false;
+                    if (!collider.isTrigger)
+                    {
+                        collider.enabled = false;
+                    }
                 }
             }
             else
@@ -86,12 +89,19 @@ public class Enemy : MonoBehaviour
                 collider.enabled = false;
             }
 
-            sprite_renderer.sprite = dead_sprite;
+            if (dead_sprite != null)
+            {
+                sprite_renderer.sprite = dead_sprite;
+            }
 
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             Knockback(FindObjectOfType<Player>().transform);
             camera_shake.Shake(0.2f);
-            GetComponent<ParticleSystem>().Play();
+
+            if (GetComponent<ParticleSystem>() != null)
+            {
+                GetComponent<ParticleSystem>().Play();
+            }
         }
     }
 
