@@ -113,5 +113,11 @@ public class Sword : MonoBehaviour
                 Hitstop.current.HitstopFor(0.2f);
             }
         }
+        else if (collision.tag == "Bullet")
+        {
+            collision.gameObject.SetActive(false);
+            Hitstop.current.HitstopFor(0.1f);
+            FindObjectOfType<SwordFlash>().Flash();
+        }
     }
 }
