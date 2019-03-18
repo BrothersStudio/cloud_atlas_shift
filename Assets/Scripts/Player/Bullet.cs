@@ -39,6 +39,7 @@ public class Bullet : MonoBehaviour
         else
         {
             speed = enemy_speed;
+            bullet_dimension = TimeChange.current.dimension;
             if (TimeChange.current.dimension == Dimension.Blue)
             {
                 sprite_renderer.sprite = enemy_sprites[0];

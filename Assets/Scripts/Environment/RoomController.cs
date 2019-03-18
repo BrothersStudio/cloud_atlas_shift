@@ -25,7 +25,6 @@ public class RoomController : MonoBehaviour
 
             // Reposition
             Vector3 new_position = new_room.transform.position;
-            Debug.Log((new_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_room.GetComponent<Room>().max_and_min_cam_pos[1].y));
             new_position.y = i * (new_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_room.GetComponent<Room>().max_and_min_cam_pos[1].y);
             new_room.transform.position = new_position;
             new_room_height_factor += (int)(new_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_room.GetComponent<Room>().max_and_min_cam_pos[1].y);
