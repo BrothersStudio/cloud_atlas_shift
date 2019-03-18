@@ -68,7 +68,7 @@ public class Room : MonoBehaviour
         }
 
         // Spawn walls in leftover slots
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < exit_points.Count; i++)
         {
             if (exit_inds.Contains(i)) continue;
 

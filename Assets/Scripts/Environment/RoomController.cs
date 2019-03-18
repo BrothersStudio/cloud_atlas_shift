@@ -6,6 +6,7 @@ public class RoomController : MonoBehaviour
 {
     int player_room = 0;
     int num_rooms = 3;
+    int new_room_height_factor = 0;
     List<GameObject> spawned_rooms = new List<GameObject>();
 
     public List<GameObject> available_rooms;
@@ -15,6 +16,7 @@ public class RoomController : MonoBehaviour
     {
         for (int i = 0; i < num_rooms; i++)
         {
+            // TODO: Room selection, somehow
             GameObject new_room = Instantiate(available_rooms[0]);
             if (i == 0)
             {
@@ -23,15 +25,18 @@ public class RoomController : MonoBehaviour
 
             // Reposition
             Vector3 new_position = new_room.transform.position;
+            Debug.Log((new_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_room.GetComponent<Room>().max_and_min_cam_pos[1].y));
             new_position.y = i * (new_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_room.GetComponent<Room>().max_and_min_cam_pos[1].y);
             new_room.transform.position = new_position;
+            new_room_height_factor += (int)(new_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_room.GetComponent<Room>().max_and_min_cam_pos[1].y);
 
             spawned_rooms.Add(new_room);
         }
 
         GameObject new_stair_room = Instantiate(stair_room);
+
         Vector3 stair_position = new_stair_room.transform.position;
-        stair_position.y = num_rooms * (new_stair_room.GetComponent<Room>().max_and_min_cam_pos[0].y - new_stair_room.GetComponent<Room>().max_and_min_cam_pos[1].y);
+        stair_position.y = new_room_height_factor;
         new_stair_room.transform.position = stair_position;
         spawned_rooms.Add(new_stair_room);
 

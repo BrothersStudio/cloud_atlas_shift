@@ -3010,6 +3010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50cc36da7fc8024897b2cd98542de4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  height: 1
+  width: 1
   stair_room: 0
   exits: 0000000001000000
   exit_points:

@@ -7803,6 +7803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50cc36da7fc8024897b2cd98542de4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  height: 1
+  width: 1
+  stair_room: 0
   exits: 
   exit_points:
   - {x: 0, y: 4, z: 0}
@@ -7819,7 +7822,7 @@ MonoBehaviour:
   - {fileID: 5480332307935545298, guid: 43873ae8a31738b49b490be1bd9c71b4, type: 3}
   - {fileID: 8026180518821095719, guid: 74efe0fb9544f104a962016a70420f9f, type: 3}
   - {fileID: 8280035279687394311, guid: caacea33e7b5f1541a8f86c35d480611, type: 3}
-  doors_in_room: []
+  doors_to_open: []
   enemy_to_place: []
   location_to_place: []
   max_and_min_cam_pos:
