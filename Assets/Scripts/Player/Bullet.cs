@@ -102,6 +102,10 @@ public class Bullet : MonoBehaviour
                 collision.GetComponent<Enemy>().Hit(damage);
             }
         }
+        else if (collision.tag == "Shield" && side == BulletSide.Player)
+        {
+            Disappear();
+        }
         else if (collision.tag == "Wall")
         {
             Invoke("Disappear", 0.04f);

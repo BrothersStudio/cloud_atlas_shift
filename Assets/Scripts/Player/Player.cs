@@ -195,8 +195,6 @@ public class Player : MonoBehaviour
             dying = true;
             GetComponent<ParticleSystem>().Play();
             GetComponent<PlayerSprite>().Dead();
-            camera_shake.Shake(0.5f);
-            Invoke("KeepShaking", 0.2f);
             Invoke("Restart", 1f);
         }
         else
@@ -218,11 +216,6 @@ public class Player : MonoBehaviour
     {
         knockback_state = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
-
-    void KeepShaking()
-    {
-        camera_shake.Shake(0.5f);
     }
 
     void Restart()

@@ -9,8 +9,10 @@ public class Enemy : MonoBehaviour
     public int health;
     public Dimension enemy_dimension;
 
+    [HideInInspector]
     public int last_swing_id = -1;
 
+    [HideInInspector]
     public bool knockback_state = false;
     float knockback_force = 1000f;
     float knockback_time = 0.05f;
@@ -41,7 +43,13 @@ public class Enemy : MonoBehaviour
                 sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
                 foreach (Collider2D collider in GetComponents<Collider2D>())
                 {
-                    if (!collider.isTrigger)
+                    collider.enabled = false;
+                }
+                
+                foreach (Transform child in transform)
+                {
+                    child.GetComponent<SpriteRenderer>().color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
+                    foreach (Collider2D collider in child.GetComponents<Collider2D>())
                     {
                         collider.enabled = false;
                     }
@@ -53,6 +61,15 @@ public class Enemy : MonoBehaviour
                 foreach (Collider2D collider in GetComponents<Collider2D>())
                 {
                     collider.enabled = true;
+                }
+
+                foreach (Transform child in transform)
+                {
+                    child.GetComponent<SpriteRenderer>().color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
+                    foreach (Collider2D collider in child.GetComponents<Collider2D>())
+                    {
+                        collider.enabled = true;
+                    }
                 }
             }
         }

@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    public float speed;
+
     float last_shot = 0;
     float shot_cooldown = 1f;
     float shift_attack_delay = 0.5f;
+
     Enemy enemy;
+    Player player;
 
     void Awake()
     {
         enemy = GetComponent<Enemy>();
+        player = FindObjectOfType<Player>();
     }
 
     void Update()
     {
+        // Shooting
         if (TimeChange.current.dimension == enemy.enemy_dimension && 
             (Time.timeSinceLevelLoad > last_shot + shot_cooldown) && 
             enemy.health > 0 &&
@@ -33,5 +39,24 @@ public class Shooter : MonoBehaviour
             Vector3 direction = FindObjectOfType<Player>().transform.position - transform.position;
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
         }
+
+        // Moving
+        if (TimeChange.current.dimension == enemy.enemy_dimension &&
+                enemy.health > 0 &&
+                Time.timeSinceLevelLoad > shift_attack_delay + TimeChange.current.last_change_time)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed * Time.deltaTime;
+        }
+        else if (TimeChange.current.dimension != enemy.enemy_dimension)
+        {
+            Invoke("StopSoon", 0.5f);
+        }
+    }
+
+    void StopSoon()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 }
+

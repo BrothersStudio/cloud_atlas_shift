@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   available_rooms:
-  - {fileID: 7148320562747277706, guid: fb8099a7409b67347a44279233dcfb92, type: 3}
+  - {fileID: 7950326965343713441, guid: 92bbf0a2ad99ff6409d58d24923a1e50, type: 3}
   stair_room: {fileID: 7950326965343713441, guid: 5c07395c4e0388f49bed168ec2fb2a58,
     type: 3}
 --- !u!1001 &1672892342
@@ -1290,7 +1290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846309561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: -1}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1364447504}
