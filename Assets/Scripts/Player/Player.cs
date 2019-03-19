@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     float knockback_time = 0.05f;
 
     float last_shift = -0.5f;
-    float shift_cooldown = 0.5f;
+    float shift_cooldown = 0.25f;
 
     float last_shot = -0.2f;
     float shot_cooldown = 0.2f;
