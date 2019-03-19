@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public bool homing;
+
     int damage = 15;
     public float player_speed;
     public float enemy_speed;
@@ -18,6 +20,7 @@ public class Bullet : MonoBehaviour
     public Sprite player_sprite;
     public List<Sprite> enemy_sprites;
 
+    Player player;
     Rigidbody2D rigid;
     SpriteRenderer sprite_renderer;
 
@@ -27,6 +30,7 @@ public class Bullet : MonoBehaviour
         sprite_renderer = GetComponent<SpriteRenderer>();
 
         TimeChange.current.bullets.Add(this);
+        player = FindObjectOfType<Player>();
     }
 
     public void SetSpriteAndSpeed()
@@ -80,6 +84,14 @@ public class Bullet : MonoBehaviour
         else if (rigid.simulated == false)
         {
             rigid.simulated = true;
+            if (homing)
+            {
+                if (TimeChange.current.dimension == bullet_dimension)
+                {
+                    Vector3 direction = player.transform.position - transform.position;
+                    GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed * Time.deltaTime;
+                }
+            }
         }
     }
 

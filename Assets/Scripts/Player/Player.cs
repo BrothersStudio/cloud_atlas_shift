@@ -183,6 +183,8 @@ public class Player : MonoBehaviour
 
     public void DamagePlayer(Transform source)
     {
+        if (invincible) return;
+
         invincible = true;
         invincible_stop_time = invincible_time + Time.timeSinceLevelLoad;
 
