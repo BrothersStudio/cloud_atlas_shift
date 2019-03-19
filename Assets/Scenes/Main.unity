@@ -1359,6 +1359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc25813375925f4799d769ae5cb6a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dust_cloud: {fileID: 4022020314596167618, guid: 31bf5b6fa75dbf141a3536c0ecb82ed5,
+    type: 3}
   walking_up:
   - {fileID: 21300000, guid: 842af17db3d25e74aba871727f1d4a31, type: 3}
   - {fileID: 21300000, guid: 897c98bb7ae347d4e82e61ac1b4c1191, type: 3}

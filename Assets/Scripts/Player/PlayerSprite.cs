@@ -15,6 +15,8 @@ public class PlayerSprite : MonoBehaviour
     float walk_sprite_time = 0;
     float walk_sprite_flip_time = 0.5f;
 
+    public GameObject dust_cloud;
+
     public Sprite[] walking_up;
     public Sprite[] walking_down;
     public Sprite[] walking_left;
@@ -110,6 +112,10 @@ public class PlayerSprite : MonoBehaviour
             {
                 walk_sprite_ind = 0;
             }
+
+            Vector3 spawn_loc = transform.position;
+            spawn_loc.y -= -0.06f;
+            Instantiate(dust_cloud, spawn_loc, Quaternion.identity);
         }
     }
 
