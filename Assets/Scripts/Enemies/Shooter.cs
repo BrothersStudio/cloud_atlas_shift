@@ -10,6 +10,8 @@ public class Shooter : MonoBehaviour
     float shot_cooldown = 1f;
     float shift_attack_delay = 0.5f;
 
+    public AudioClip enemy_shot;
+
     Enemy enemy;
     Player player;
 
@@ -38,6 +40,10 @@ public class Shooter : MonoBehaviour
 
             Vector3 direction = FindObjectOfType<Player>().transform.position - transform.position;
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
+
+            GetComponent<AudioSource>().clip = enemy_shot;
+            GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
         }
 
         // Moving

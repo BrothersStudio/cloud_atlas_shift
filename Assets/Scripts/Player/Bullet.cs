@@ -104,6 +104,7 @@ public class Bullet : MonoBehaviour
         }
         else if (collision.tag == "Shield" && side == BulletSide.Player)
         {
+            collision.GetComponent<Shield>().HitShield();
             Disappear();
         }
         else if (collision.tag == "Wall")

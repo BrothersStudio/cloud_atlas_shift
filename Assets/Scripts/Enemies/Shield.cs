@@ -6,6 +6,8 @@ public class Shield : MonoBehaviour
 {
     public float shift_attack_delay;
 
+    public AudioClip hit_shield;
+
     Enemy enemy;
     Player player;
 
@@ -29,5 +31,12 @@ public class Shield : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void HitShield()
+    {
+        GetComponent<AudioSource>().clip = hit_shield;
+        GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+        GetComponent<AudioSource>().Play();
     }
 }

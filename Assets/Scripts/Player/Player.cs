@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
                 bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
 
                 GetComponent<PlayerSprite>().ForceSpriteForTime(0.2f);
+                GetComponent<PlayerAudio>().Shoot();
             }
             // Sword
             else if (TimeChange.current.dimension == Dimension.Orange && (Time.timeSinceLevelLoad > last_swing + swing_cooldown))
@@ -108,6 +109,7 @@ public class Player : MonoBehaviour
                 sword.Swing();
 
                 GetComponent<PlayerSprite>().ForceSpriteForTime(0.2f);
+                GetComponent<PlayerAudio>().Slash();
             }
         }
 
@@ -200,6 +202,7 @@ public class Player : MonoBehaviour
         else
         {
             GetComponent<PlayerSprite>().Hit();
+            GetComponent<PlayerAudio>().Hurt();
         }
     }
 
