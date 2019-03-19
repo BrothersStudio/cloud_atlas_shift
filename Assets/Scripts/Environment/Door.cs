@@ -18,6 +18,6 @@ public class Door : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = sprites[2];
         GetComponent<BoxCollider2D>().enabled = false;
-        Camera.main.GetComponent<CameraFollow>().Shake(1f);
+        Camera.main.GetComponent<CameraFollow>().Shake(0.4f);
     }
 }
