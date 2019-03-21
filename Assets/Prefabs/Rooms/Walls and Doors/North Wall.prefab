@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2971088902850520696}
   - component: {fileID: 6068080754383599462}
   - component: {fileID: 1669848123099884950}
-  m_Layer: 0
-  m_Name: floor_tileset_9 (244)
+  m_Layer: 8
+  m_Name: North Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

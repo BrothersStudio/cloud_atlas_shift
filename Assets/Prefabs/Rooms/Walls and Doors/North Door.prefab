@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2561124868363222136}
   - component: {fileID: 3720204189040541149}
   - component: {fileID: 4575918393038309691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: North Door
   m_TagString: Wall
   m_Icon: {fileID: 0}

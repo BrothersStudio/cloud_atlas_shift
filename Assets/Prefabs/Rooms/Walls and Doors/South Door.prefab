@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5480332307935545311}
   - component: {fileID: 3965536554041441580}
   - component: {fileID: 925725532279366561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: South Door
   m_TagString: Wall
   m_Icon: {fileID: 0}

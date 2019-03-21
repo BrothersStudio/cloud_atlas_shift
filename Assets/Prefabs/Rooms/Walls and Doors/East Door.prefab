@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1619506179385321807}
   - component: {fileID: 455853992196761834}
   - component: {fileID: 4604341996204074112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: East Door
   m_TagString: Wall
   m_Icon: {fileID: 0}

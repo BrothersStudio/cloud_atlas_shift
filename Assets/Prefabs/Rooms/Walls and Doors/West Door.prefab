@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8280035279687394314}
   - component: {fileID: 715790287491243769}
   - component: {fileID: 8008971361827128747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: West Door
   m_TagString: Wall
   m_Icon: {fileID: 0}

@@ -915,6 +915,9 @@ GameObject:
   - component: {fileID: 1432819351}
   - component: {fileID: 1432819352}
   - component: {fileID: 1432819353}
+  - component: {fileID: 1432819355}
+  - component: {fileID: 1432819354}
+  - component: {fileID: 1432819356}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -982,6 +985,48 @@ MonoBehaviour:
   - {fileID: 7950326965343713441, guid: 92bbf0a2ad99ff6409d58d24923a1e50, type: 3}
   stair_room: {fileID: 7950326965343713441, guid: 5c07395c4e0388f49bed168ec2fb2a58,
     type: 3}
+--- !u!114 &1432819354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432819349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffde37d4b2689e4493dc2f8760cb349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1432819355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432819349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2b86472d6baa348aebf31bcdb76383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1432819356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432819349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e293122ab86464bb276117a513166d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayGridGizmos: 0
+  unwalkableMask:
+    serializedVersion: 2
+    m_Bits: 256
+  gridWorldSize: {x: 15, y: 9}
+  nodeRadius: 0.1
 --- !u!1001 &1672892342
 PrefabInstance:
   m_ObjectHideFlags: 0

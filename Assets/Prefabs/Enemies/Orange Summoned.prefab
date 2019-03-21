@@ -189,4 +189,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shift_attack_delay: 0.2
-  speed: 200
+  speed: 2
