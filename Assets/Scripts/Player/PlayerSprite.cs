@@ -138,6 +138,10 @@ public class PlayerSprite : MonoBehaviour
                 flash_time = 0;
             }
         }
+        else
+        {
+            flashing = false;
+        }
 
         SetPlayerDirectionSprite();
     }
