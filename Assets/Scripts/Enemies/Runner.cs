@@ -42,7 +42,7 @@ public class Runner : MonoBehaviour
         {
             PathRequestManager.RequestPath(transform.position, player.transform.position, OnPathFound);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 

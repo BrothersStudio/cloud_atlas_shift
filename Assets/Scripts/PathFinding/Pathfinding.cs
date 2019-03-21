@@ -6,13 +6,11 @@ using System;
 public class Pathfinding : MonoBehaviour {
 	
 	PathRequestManager requestManager;
-	Grid grid;
+	public Grid grid;
 	
 	void Awake() {
 		requestManager = GetComponent<PathRequestManager>();
-		grid = GetComponent<Grid>();
 	}
-	
 	
 	public void StartFindPath(Vector3 startPos, Vector3 targetPos) {
 		StartCoroutine(FindPath(startPos,targetPos));
@@ -24,10 +22,9 @@ public class Pathfinding : MonoBehaviour {
 		bool pathSuccess = false;
 		
 		Node startNode = grid.NodeFromWorldPoint(startPos);
-		Node targetNode = grid.NodeFromWorldPoint(targetPos);
-		
-		
-		if (startNode.walkable && targetNode.walkable) {
+        Node targetNode = grid.NodeFromWorldPoint(targetPos);
+
+        if (startNode.walkable && targetNode.walkable) {
 			Heap<Node> openSet = new Heap<Node>(grid.MaxSize);
 			HashSet<Node> closedSet = new HashSet<Node>();
 			openSet.Add(startNode);
