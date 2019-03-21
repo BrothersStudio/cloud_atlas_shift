@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flash: {fileID: 484092830}
-  dimension: 0
+  dimension: 1
   last_change_time: 0
   enemies: []
   bullets: []
@@ -1271,18 +1271,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.03}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.14, y: 0.14}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.91}
+  m_Size: {x: 0.5, y: 0.91}
   m_EdgeRadius: 0
 --- !u!4 &1846309563
 Transform:
@@ -1336,12 +1336,12 @@ SpriteRenderer:
   m_SortingLayerID: 1937226157
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 842af17db3d25e74aba871727f1d4a31, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.14, y: 0.14}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1361,17 +1361,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust_cloud: {fileID: 4022020314596167618, guid: 31bf5b6fa75dbf141a3536c0ecb82ed5,
     type: 3}
-  walking_up:
-  - {fileID: 21300000, guid: 842af17db3d25e74aba871727f1d4a31, type: 3}
-  - {fileID: 21300000, guid: 897c98bb7ae347d4e82e61ac1b4c1191, type: 3}
-  walking_down:
-  - {fileID: 21300000, guid: 8ce0214a5a972e34cb8766e4ad18e0b8, type: 3}
-  - {fileID: 21300000, guid: 5bc05ecfc3555ad43b11359d9ac40329, type: 3}
-  walking_left:
-  - {fileID: 21300000, guid: 2ed7a58674663e34a9b5f2c9a2d37c6b, type: 3}
-  - {fileID: 21300000, guid: da45372c7c16ccd45827bb0a7c946f93, type: 3}
-  flash_sprite: {fileID: 21300000, guid: bff1faadb1eb1bb4c84124df57650f42, type: 3}
-  dead_sprite: {fileID: 21300000, guid: 35c7fb7accba2a04fbae3837c978599f, type: 3}
+  past_walking_up: {fileID: 21300002, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_down: {fileID: 21300000, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_left: {fileID: 21300006, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_right: {fileID: 21300004, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_flash_up: {fileID: 21300002, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
+  past_flash_down: {fileID: 21300000, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
+  past_flash_left: {fileID: 21300006, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
+  past_flash_right: {fileID: 21300004, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
+  past_walking_up_swordless: {fileID: 21300010, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_walking_down_swordless: {fileID: 21300008, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_walking_left_swordless: {fileID: 21300014, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_walking_right_swordless: {fileID: 21300012, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_flash_up_swordless: {fileID: 21300010, guid: be4db1aca551aa5409dd40cc69dc496a,
+    type: 3}
+  past_flash_down_swordless: {fileID: 21300008, guid: be4db1aca551aa5409dd40cc69dc496a,
+    type: 3}
+  past_flash_left_swordless: {fileID: 21300014, guid: be4db1aca551aa5409dd40cc69dc496a,
+    type: 3}
+  past_flash_right_swordless: {fileID: 21300012, guid: be4db1aca551aa5409dd40cc69dc496a,
+    type: 3}
+  past_dead: {fileID: 21300000, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
+  future_walking_up: {fileID: 21300002, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  future_walking_down: {fileID: 21300000, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
+    type: 3}
+  future_walking_left: {fileID: 21300006, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
+    type: 3}
+  future_walking_right: {fileID: 21300004, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
+    type: 3}
+  future_flash_up: {fileID: 21300002, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
+  future_flash_down: {fileID: 21300000, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
+  future_flash_left: {fileID: 21300006, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
+  future_flash_right: {fileID: 21300004, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
+  future_dead: {fileID: 21300000, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
 --- !u!114 &1846309566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,7 +1426,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.5005
+  m_Mass: 0.455
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0

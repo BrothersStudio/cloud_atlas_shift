@@ -6,6 +6,7 @@ public class PlayerSprite : MonoBehaviour
 {
     Player player;
 
+    bool flashing = false;
     float flash_time = 0;
     float flash_speed = 0.2f;
 
@@ -17,13 +18,43 @@ public class PlayerSprite : MonoBehaviour
 
     public GameObject dust_cloud;
 
-    public Sprite[] walking_up;
-    public Sprite[] walking_down;
-    public Sprite[] walking_left;
+    WalkDir player_direction = WalkDir.Up;
 
-    public Sprite flash_sprite;
+    // Past
+    public Sprite past_walking_up;
+    public Sprite past_walking_down;
+    public Sprite past_walking_left;
+    public Sprite past_walking_right;
 
-    public Sprite dead_sprite;
+    public Sprite past_flash_up;
+    public Sprite past_flash_down;
+    public Sprite past_flash_left;
+    public Sprite past_flash_right;
+
+    public Sprite past_walking_up_swordless;
+    public Sprite past_walking_down_swordless;
+    public Sprite past_walking_left_swordless;
+    public Sprite past_walking_right_swordless;
+
+    public Sprite past_flash_up_swordless;
+    public Sprite past_flash_down_swordless;
+    public Sprite past_flash_left_swordless;
+    public Sprite past_flash_right_swordless;
+
+    public Sprite past_dead;
+
+    // Future
+    public Sprite future_walking_up;
+    public Sprite future_walking_down;
+    public Sprite future_walking_left;
+    public Sprite future_walking_right;
+
+    public Sprite future_flash_up;
+    public Sprite future_flash_down;
+    public Sprite future_flash_left;
+    public Sprite future_flash_right;
+
+    public Sprite future_dead;
 
     private SpriteRenderer sprite_renderer;
 
@@ -37,13 +68,13 @@ public class PlayerSprite : MonoBehaviour
     public void Hit()
     {
         flash_time = 0;
-        sprite_renderer.sprite = flash_sprite;
+        flashing = true;
     }
 
     public void Dead()
     {
         flash_time = 0;
-        sprite_renderer.sprite = dead_sprite;
+        flashing = true;
     }
 
     void Update()
@@ -53,111 +84,241 @@ public class PlayerSprite : MonoBehaviour
             return;
         }
 
-        if (player.invincible || player.dying)
-        {
-            flash_time += Time.deltaTime;
-            if (flash_time > flash_speed)
-            {
-                FlipFlashSprite();
-                flash_time = 0;
-            }
-            return;
-        }
-
-        // Facing direction
-        // We do the swinging check weird like this so we can stop the feet if we have to
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (IsTimeUp())
-            {
-                Up();
-            }
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            if (IsTimeUp())
-            {
-                Left();
-            }
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            if (IsTimeUp())
-            {
-                Right();
-            }
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            if (IsTimeUp())
-            {
-                Down();
-            }
-        }
-        else
-        {
-            walk_sprite_time = 0;
-        }
-
         // Walk cycle
         walk_sprite_time += Time.deltaTime;
         if (walk_sprite_time >= walk_sprite_flip_time)
         {
             walk_sprite_time = 0;
-            if (walk_sprite_ind == 0)
-            {
-                walk_sprite_ind = 1;
-            }
-            else if (walk_sprite_ind == 1)
-            {
-                walk_sprite_ind = 0;
-            }
 
             Vector3 spawn_loc = transform.position;
             spawn_loc.y -= -0.06f;
             Instantiate(dust_cloud, spawn_loc, Quaternion.identity);
         }
-    }
 
-    void FlipFlashSprite()
-    {
-        if (sprite_renderer.sprite == walking_up[0] || sprite_renderer.sprite == dead_sprite)
+        // Facing direction
+        if (Input.GetKey(KeyCode.W))
         {
-            sprite_renderer.sprite = flash_sprite;
+            if (IsForceTimeUp())
+            {
+                player_direction = WalkDir.Up;
+            }
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            if (IsForceTimeUp())
+            {
+                player_direction = WalkDir.Left;
+            }
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            if (IsForceTimeUp())
+            {
+                player_direction = WalkDir.Right;
+            }
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            if (IsForceTimeUp())
+            {
+                player_direction = WalkDir.Down;
+            }
         }
         else
         {
-            if (player.dying)
+            walk_sprite_time = 0;
+        }
+
+        if (player.invincible || player.dying)
+        {
+            flash_time += Time.deltaTime;
+            if (flash_time > flash_speed)
             {
-                sprite_renderer.sprite = dead_sprite;
+                flashing = !flashing;
+                flash_time = 0;
+            }
+        }
+
+        SetPlayerDirectionSprite();
+    }
+
+    void SetPlayerDirectionSprite()
+    {
+        switch (player_direction)
+        {
+            case WalkDir.Up:
+                SetUpSprite();
+                break;
+            case WalkDir.Down:
+                SetDownSprite();
+                break;
+            case WalkDir.Left:
+                SetLeftSprite();
+                break;
+            case WalkDir.Right:
+                SetRightSprite();
+                break;
+        }
+    }
+
+    void SetUpSprite()
+    {
+        if (TimeChange.current.dimension == Dimension.Blue)
+        {
+            if (flashing)
+            {
+                sprite_renderer.sprite = future_flash_up;
             }
             else
             {
-                sprite_renderer.sprite = walking_up[0];
+                sprite_renderer.sprite = future_walking_up;
+            }
+        }
+        else if (TimeChange.current.dimension == Dimension.Orange)
+        {
+            if (flashing)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_flash_up;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_flash_up_swordless;
+                }
+            }
+            else
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_walking_up;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_walking_up_swordless;
+                }
             }
         }
     }
 
-    void Up()
+    void SetDownSprite()
     {
-        sprite_renderer.sprite = walking_up[walk_sprite_ind];
+        if (TimeChange.current.dimension == Dimension.Blue)
+        {
+            if (flashing)
+            {
+                sprite_renderer.sprite = future_flash_down;
+            }
+            else
+            {
+                sprite_renderer.sprite = future_walking_down;
+            }
+        }
+        else if (TimeChange.current.dimension == Dimension.Orange)
+        {
+            if (flashing)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_flash_down;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_flash_down_swordless;
+                }
+            }
+            else
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_walking_down;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_walking_down_swordless;
+                }
+            }
+        }
     }
 
-    void Down()
+    void SetLeftSprite()
     {
-        sprite_renderer.sprite = walking_down[walk_sprite_ind];
+        if (TimeChange.current.dimension == Dimension.Blue)
+        {
+            if (flashing)
+            {
+                sprite_renderer.sprite = future_flash_left;
+            }
+            else
+            {
+                sprite_renderer.sprite = future_walking_left;
+            }
+        }
+        else if (TimeChange.current.dimension == Dimension.Orange)
+        {
+            if (flashing)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_flash_left;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_flash_left_swordless;
+                }
+            }
+            else
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_walking_left;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_walking_left_swordless;
+                }
+            }
+        }
     }
 
-    void Left()
+    void SetRightSprite()
     {
-        sprite_renderer.flipX = false;
-        sprite_renderer.sprite = walking_left[walk_sprite_ind];
-    }
-
-    void Right()
-    {
-        sprite_renderer.flipX = true;
-        sprite_renderer.sprite = walking_left[walk_sprite_ind];
+        if (TimeChange.current.dimension == Dimension.Blue)
+        {
+            if (flashing)
+            {
+                sprite_renderer.sprite = future_flash_right;
+            }
+            else
+            {
+                sprite_renderer.sprite = future_walking_right;
+            }
+        }
+        else if (TimeChange.current.dimension == Dimension.Orange)
+        {
+            if (flashing)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_flash_right;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_flash_right_swordless;
+                }
+            }
+            else
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_walking_right;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_walking_right_swordless;
+                }
+            }
+        }
     }
 
     public void ForceSpriteForTime(float time)
@@ -166,21 +327,21 @@ public class PlayerSprite : MonoBehaviour
         switch (GetComponent<Player>().GetFacingDirection())
         {
             case FacingDirection.Up:
-                Up();
+                player_direction = WalkDir.Up;
                 break;
             case FacingDirection.Down:
-                Down();
+                player_direction = WalkDir.Down;
                 break;
             case FacingDirection.Left:
-                Left();
+                player_direction = WalkDir.Left;
                 break;
             case FacingDirection.Right:
-                Right();
+                player_direction = WalkDir.Right;
                 break;
         }
     }
 
-    bool IsTimeUp()
+    bool IsForceTimeUp()
     {
         if (Time.timeSinceLevelLoad > sprite_force_time)
         {
@@ -191,4 +352,12 @@ public class PlayerSprite : MonoBehaviour
             return false;
         }
     }
+}
+
+public enum WalkDir
+{
+    Up,
+    Down,
+    Left,
+    Right
 }

@@ -67,7 +67,6 @@ public class Player : MonoBehaviour
             if (Time.timeSinceLevelLoad > invincible_stop_time)
             {
                 invincible = false;
-                GetComponent<SpriteRenderer>().sprite = GetComponent<PlayerSprite>().walking_up[0];
             }
         }
 
