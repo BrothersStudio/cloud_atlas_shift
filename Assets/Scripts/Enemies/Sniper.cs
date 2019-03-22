@@ -17,8 +17,6 @@ public class Sniper : MonoBehaviour
     Player player;
     Enemy enemy;
 
-    public LayerMask block_mask;
-
     void Awake()
     {
         player = FindObjectOfType<Player>();
@@ -36,7 +34,7 @@ public class Sniper : MonoBehaviour
     {
         if (TimeChange.current.dimension == GetComponentInParent<Enemy>().enemy_dimension &&
             enemy.health > 0 &&
-            CanSeePlayer() &&
+            enemy.CanSeePlayer() &&
             Time.timeSinceLevelLoad > last_shot + fire_shot.length)
         {
             if (charge_time <= 0.1f && !source.isPlaying)
@@ -74,26 +72,6 @@ public class Sniper : MonoBehaviour
             charge_time = 0;
 
             source.Stop();
-        }
-    }
-
-    bool CanSeePlayer()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position, 400, block_mask);
-        if (hit.collider != null)
-        {
-            if (hit.transform.tag == "Player")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return false;
         }
     }
 }

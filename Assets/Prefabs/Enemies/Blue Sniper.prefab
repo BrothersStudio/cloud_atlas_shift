@@ -157,6 +157,9 @@ MonoBehaviour:
   normal_sprite: {fileID: 21300000, guid: af563e70e0b1abf40b3aa74c4d531040, type: 3}
   flash_sprite: {fileID: 21300000, guid: 9d0799e952ed1db4ba036ec6966f3d4c, type: 3}
   dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!114 &5432114058869886684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,9 +174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charge_up: {fileID: 8300000, guid: 5d263efac9b690c4cb398be17b55d028, type: 3}
   fire_shot: {fileID: 8300000, guid: 6c7b6b5ab758fca4fb133a98bacccd8b, type: 3}
-  block_mask:
-    serializedVersion: 2
-    m_Bits: 768
 --- !u!82 &5584068356395037662
 AudioSource:
   m_ObjectHideFlags: 0

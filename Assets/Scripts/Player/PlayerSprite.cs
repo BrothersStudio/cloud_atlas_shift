@@ -12,7 +12,6 @@ public class PlayerSprite : MonoBehaviour
 
     float sprite_force_time = 0;
 
-    int walk_sprite_ind = 0;
     float walk_sprite_time = 0;
     float walk_sprite_flip_time = 0.5f;
 

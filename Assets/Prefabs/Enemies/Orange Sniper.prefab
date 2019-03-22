@@ -157,6 +157,9 @@ MonoBehaviour:
   normal_sprite: {fileID: 21300000, guid: 8b001b57ae79ecc46bd7148c1616db54, type: 3}
   flash_sprite: {fileID: 21300000, guid: 9d0799e952ed1db4ba036ec6966f3d4c, type: 3}
   dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!114 &5432114058869886684
 MonoBehaviour:
   m_ObjectHideFlags: 0

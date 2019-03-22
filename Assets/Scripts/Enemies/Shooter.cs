@@ -12,6 +12,9 @@ public class Shooter : MonoBehaviour
 
     public AudioClip enemy_shot;
 
+    Vector3[] path = new Vector3[] { };
+    int targetIndex;
+
     Enemy enemy;
     Player player;
 
@@ -19,6 +22,23 @@ public class Shooter : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         player = FindObjectOfType<Player>();
+    }
+
+    void Start()
+    {
+        StartCoroutine(RefreshPath());
+    }
+
+    public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
+    {
+        if (pathSuccessful)
+        {
+            path = newPath;
+            targetIndex = 0;
+
+            StopCoroutine("FollowPath");
+            StartCoroutine("FollowPath");
+        }
     }
 
     void Update()
@@ -45,24 +65,41 @@ public class Shooter : MonoBehaviour
             GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
             GetComponent<AudioSource>().Play();
         }
+    }
 
-        // Moving
-        if (TimeChange.current.dimension == enemy.enemy_dimension &&
-                enemy.health > 0 &&
-                Time.timeSinceLevelLoad > shift_attack_delay + TimeChange.current.last_change_time)
+    IEnumerator RefreshPath()
+    {
+        while (enemy.health > 0)
         {
-            Vector3 direction = player.transform.position - transform.position;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed * Time.deltaTime;
-        }
-        else if (TimeChange.current.dimension != enemy.enemy_dimension)
-        {
-            Invoke("StopSoon", 0.5f);
+            PathRequestManager.RequestPath(transform.position, player.transform.position, OnPathFound);
+
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
-    void StopSoon()
+    IEnumerator FollowPath()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        if (path.Length > 0)
+        {
+            Vector3 currentWaypoint = path[0];
+            while (TimeChange.current.dimension == enemy.enemy_dimension && 
+                enemy.health > 0 &&
+                !enemy.CanSeePlayer())
+            {
+                if (transform.position == currentWaypoint)
+                {
+                    targetIndex++;
+                    if (targetIndex >= path.Length)
+                    {
+                        yield break;
+                    }
+                    currentWaypoint = path[targetIndex];
+                }
+
+                transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+                yield return null;
+            }
+        }
     }
 }
 

@@ -14,18 +14,24 @@ public class Enemy : MonoBehaviour
 
     [HideInInspector]
     public bool knockback_state = false;
-    float knockback_force = 1000f;
-    float knockback_time = 0.075f;
+    float knockback_force = 500f;
+    float knockback_time = 0.05f;
 
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
     public Sprite flash_sprite;
     public Sprite dead_sprite = null;
 
+    Player player;
+    public LayerMask block_mask;
+
+
     void Awake()
     {
         camera_shake = Camera.main.GetComponent<CameraFollow>();
         sprite_renderer = GetComponent<SpriteRenderer>();
+
+        player = FindObjectOfType<Player>();
     }
 
     void Start()
@@ -151,6 +157,26 @@ public class Enemy : MonoBehaviour
             {
                 player.DamagePlayer(transform);
             }
+        }
+    }
+
+    public bool CanSeePlayer()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position, 400, block_mask);
+        if (hit.collider != null)
+        {
+            if (hit.transform.tag == "Player")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
         }
     }
 }

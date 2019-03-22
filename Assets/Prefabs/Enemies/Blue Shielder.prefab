@@ -375,6 +375,9 @@ MonoBehaviour:
   normal_sprite: {fileID: 21300000, guid: 51489162a7ddec446a17b1f231fe1290, type: 3}
   flash_sprite: {fileID: 21300000, guid: f93e39b18abdf24459be8019bef4260a, type: 3}
   dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &7755434271270301876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df974522061e04d41a298d18b878ff8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 1
   enemy_shot: {fileID: 8300000, guid: 7d8a11086b40fa9408ddb2a37aa51f83, type: 3}
 --- !u!50 &5308247986410619763
 Rigidbody2D:
