@@ -38,7 +38,7 @@ public class Runner : MonoBehaviour
 
     IEnumerator RefreshPath()
     {
-        while (true)
+        while (enemy.health > 0)
         {
             PathRequestManager.RequestPath(transform.position, player.transform.position, OnPathFound);
 
