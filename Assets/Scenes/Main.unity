@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 1364447506}
   - component: {fileID: 1364447507}
   - component: {fileID: 1364447508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 1846309568}
   - component: {fileID: 1846309570}
   - component: {fileID: 1846309571}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
