@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public bool knockback_state = false;
     float knockback_force = 1000f;
-    float knockback_time = 0.05f;
+    float knockback_time = 0.1f;
 
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
@@ -101,10 +101,6 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             CancelInvoke();
-            foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
-            {
-                collider.enabled = false;
-            }
 
             if (dead_sprite != null)
             {
@@ -135,6 +131,14 @@ public class Enemy : MonoBehaviour
     {
         knockback_state = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+        if (health <= 0)
+        {
+            foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
+            {
+                collider.enabled = false;
+            }
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision)

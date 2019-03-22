@@ -21,6 +21,13 @@ public class Room : MonoBehaviour
 
     public List<Vector3> max_and_min_cam_pos;
 
+    Grid pathfinding_grid;
+
+    void Awake()
+    {
+        pathfinding_grid = FindObjectOfType<Grid>();
+    }
+
     public void Activate()
     {
         for (int i = 0; i < enemy_to_place.Count; i++)
@@ -34,6 +41,8 @@ public class Room : MonoBehaviour
         AddDoors();
 
         room_complete = false;
+
+        pathfinding_grid.CreateGrid();
     }
 
     void AddDoors()

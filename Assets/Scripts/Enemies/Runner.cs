@@ -51,7 +51,7 @@ public class Runner : MonoBehaviour
         if (path.Length > 0)
         {
             Vector3 currentWaypoint = path[0];
-            while (true)
+            while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
             {
                 if (transform.position == currentWaypoint)
                 {
@@ -67,25 +67,5 @@ public class Runner : MonoBehaviour
                 yield return null;
             }
         }
-    }
-
-    void Update()
-    {
-        if (TimeChange.current.dimension == enemy.enemy_dimension && 
-            enemy.health > 0 &&
-            Time.timeSinceLevelLoad > shift_attack_delay + TimeChange.current.last_change_time)
-        {
-            //Vector3 direction = player.transform.position - transform.position;
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed * Time.deltaTime;
-        }
-        else if (TimeChange.current.dimension != enemy.enemy_dimension)
-        {
-            //Invoke("StopSoon", 0.5f);
-        }
-    }
-
-    void StopSoon()
-    {
-        //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 }
