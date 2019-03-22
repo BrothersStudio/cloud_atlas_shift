@@ -171,6 +171,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charge_up: {fileID: 8300000, guid: 5d263efac9b690c4cb398be17b55d028, type: 3}
   fire_shot: {fileID: 8300000, guid: 6c7b6b5ab758fca4fb133a98bacccd8b, type: 3}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!82 &5584068356395037662
 AudioSource:
   m_ObjectHideFlags: 0
