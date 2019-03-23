@@ -17,6 +17,13 @@ public class Enemy : MonoBehaviour
     float knockback_force = 500f;
     float knockback_time = 0.05f;
 
+    [HideInInspector]
+    public bool flashing = false;
+
+    bool fading = false;
+    float start_fade_time = 2;
+    float fade_rate = 5 / 255f;
+
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
     public Sprite flash_sprite;
@@ -25,6 +32,10 @@ public class Enemy : MonoBehaviour
     Player player;
     public LayerMask block_mask;
 
+    [HideInInspector]
+    public Vector3 max_pos;
+    [HideInInspector]
+    public Vector3 min_pos;
 
     void Awake()
     {
@@ -40,16 +51,32 @@ public class Enemy : MonoBehaviour
         SwitchDimensions();
     }
 
+    void Update()
+    {
+        if (fading)
+        {
+            Color current_color = sprite_renderer.color;
+            current_color.a -= fade_rate;
+            sprite_renderer.color = current_color;
+
+            if (current_color.a == 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     public void SwitchDimensions()
     {
         if (health > 0)
         {
+            Collider2D player_collider = player.GetComponent<Collider2D>();
             if (TimeChange.current.dimension != enemy_dimension)
             {
                 sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
                 foreach (Collider2D collider in GetComponents<Collider2D>())
                 {
-                    collider.enabled = false;
+                    Physics2D.IgnoreCollision(player_collider, collider, true);
                 }
                 
                 foreach (Transform child in transform)
@@ -57,7 +84,7 @@ public class Enemy : MonoBehaviour
                     child.GetComponent<SpriteRenderer>().color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
                     foreach (Collider2D collider in child.GetComponents<Collider2D>())
                     {
-                        collider.enabled = false;
+                        Physics2D.IgnoreCollision(player_collider, collider, true);
                     }
                 }
             }
@@ -66,7 +93,7 @@ public class Enemy : MonoBehaviour
                 sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
                 foreach (Collider2D collider in GetComponents<Collider2D>())
                 {
-                    collider.enabled = true;
+                    Physics2D.IgnoreCollision(player_collider, collider, false);
                 }
 
                 foreach (Transform child in transform)
@@ -74,7 +101,7 @@ public class Enemy : MonoBehaviour
                     child.GetComponent<SpriteRenderer>().color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
                     foreach (Collider2D collider in child.GetComponents<Collider2D>())
                     {
-                        collider.enabled = true;
+                        Physics2D.IgnoreCollision(player_collider, collider, false);
                     }
                 }
             }
@@ -91,6 +118,8 @@ public class Enemy : MonoBehaviour
     {
         CancelInvoke();
         sprite_renderer.sprite = flash_sprite;
+
+        flashing = true;
         Invoke("EndFlash", 0.1f);
 
         ParseDamage(damage);
@@ -98,7 +127,7 @@ public class Enemy : MonoBehaviour
 
     void EndFlash()
     {
-        sprite_renderer.sprite = normal_sprite;
+        flashing = false;
     }
 
     void ParseDamage(int damage)
@@ -112,6 +141,8 @@ public class Enemy : MonoBehaviour
             {
                 sprite_renderer.sprite = dead_sprite;
             }
+
+            Invoke("Fade", start_fade_time);
 
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             Knockback(FindObjectOfType<Player>().transform);
@@ -145,6 +176,17 @@ public class Enemy : MonoBehaviour
                 collider.enabled = false;
             }
         }
+    }
+
+    void Fade()
+    {
+        fading = true;
+    }
+
+    public void SetRoomPosition(Vector3 max_pos, Vector3 min_pos)
+    {
+        this.max_pos = max_pos - Vector3.one;
+        this.min_pos = min_pos + Vector3.one;
     }
 
     void OnTriggerStay2D(Collider2D collision)

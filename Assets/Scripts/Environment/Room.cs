@@ -30,13 +30,17 @@ public class Room : MonoBehaviour
 
     public void Activate()
     {
+        Vector3 global_max_pos = transform.TransformPoint(GetComponent<Room>().max_and_min_cam_pos[0]);
+        Vector3 global_min_pos = transform.TransformPoint(GetComponent<Room>().max_and_min_cam_pos[1]);
+
         for (int i = 0; i < enemy_to_place.Count; i++)
         {
             GameObject new_enemy = Instantiate(enemy_to_place[i], transform.TransformPoint(location_to_place[i]), Quaternion.identity);
+            new_enemy.GetComponent<Enemy>().SetRoomPosition(global_max_pos, global_min_pos);
             enemies.Add(new_enemy.GetComponent<Enemy>());
         }
 
-        Camera.main.GetComponent<CameraFollow>().SetMaxMinCameraPosForRoom(GetComponent<Room>().max_and_min_cam_pos, transform);
+        Camera.main.GetComponent<CameraFollow>().SetMaxMinCameraPosForRoom(global_max_pos, global_min_pos);
 
         AddDoors();
 

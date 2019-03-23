@@ -35,10 +35,10 @@ public class CameraFollow : MonoBehaviour
         trauma += amount;
     }
 
-    public void SetMaxMinCameraPosForRoom(List<Vector3> vectors, Transform room_loc)
+    public void SetMaxMinCameraPosForRoom(Vector3 max_pos, Vector3 min_pos)
     {
-        max_allowed_position = room_loc.TransformPoint(vectors[0]);
-        min_allowed_position = room_loc.TransformPoint(vectors[1]);
+        max_allowed_position = max_pos;
+        min_allowed_position = min_pos;
     }
 
     public void MoveToNextRoom(Vector3 new_room_pos)
