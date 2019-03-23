@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &209042965596252317
+--- !u!1 &473406649134029396
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 209042965596252315}
-  - component: {fileID: 209042965596252314}
-  - component: {fileID: 209042965596252312}
-  - component: {fileID: 209042965596252313}
-  - component: {fileID: 209042965596252294}
-  - component: {fileID: 2045100892545141595}
+  - component: {fileID: 473406649134029398}
+  - component: {fileID: 473406649134029399}
+  - component: {fileID: 473406649134029393}
+  - component: {fileID: 473406649134029392}
+  - component: {fileID: 473406649134029395}
+  - component: {fileID: 8045936487379934081}
   m_Layer: 0
-  m_Name: Orange Summoned
+  m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &209042965596252315
+--- !u!4 &473406649134029398
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209042965596252317}
+  m_GameObject: {fileID: 473406649134029396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,13 +35,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &209042965596252314
+--- !u!114 &473406649134029399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473406649134029396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  enemy_dimension: 0
+  last_swing_id: -1
+  knockback_state: 0
+  flashing: 0
+  normal_sprite: {fileID: 21300000, guid: abd5a003db51754488217df6aab8a60c, type: 3}
+  flash_sprite: {fileID: 21300000, guid: 0fb22844fcf341e4eace62b3c98a19db, type: 3}
+  dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 256
+  max_pos: {x: 0, y: 0, z: 0}
+  min_pos: {x: 0, y: 0, z: 0}
+--- !u!212 &473406649134029393
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209042965596252317}
+  m_GameObject: {fileID: 473406649134029396}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,7 +97,7 @@ SpriteRenderer:
   m_SortingLayerID: 1937226157
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5d80d8cccdc32034b928c4de45597ed3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: abd5a003db51754488217df6aab8a60c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,66 +108,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &209042965596252312
+--- !u!114 &473406649134029392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209042965596252317}
+  m_GameObject: {fileID: 473406649134029396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
+  m_Script: {fileID: 11500000, guid: a9aaeced42404d54cac05158000b9720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
-  enemy_dimension: 1
-  last_swing_id: -1
-  knockback_state: 0
-  flashing: 0
-  normal_sprite: {fileID: 21300000, guid: 5d80d8cccdc32034b928c4de45597ed3, type: 3}
-  flash_sprite: {fileID: 21300000, guid: fc13b2a4a0842c94ca40f616d9fb9da1, type: 3}
-  dead_sprite: {fileID: 0}
-  block_mask:
-    serializedVersion: 2
-    m_Bits: 0
-  max_pos: {x: 0, y: 0, z: 0}
-  min_pos: {x: 0, y: 0, z: 0}
---- !u!50 &209042965596252313
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209042965596252317}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &209042965596252294
+  speed: 1
+--- !u!61 &473406649134029395
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209042965596252317}
+  m_GameObject: {fileID: 473406649134029396}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -153,19 +145,26 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.25}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2045100892545141595
-MonoBehaviour:
+--- !u!50 &8045936487379934081
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209042965596252317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9620ab4e240c0ee49ac92766c5398c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shift_attack_delay: 0.2
-  speed: 2
+  m_GameObject: {fileID: 473406649134029396}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

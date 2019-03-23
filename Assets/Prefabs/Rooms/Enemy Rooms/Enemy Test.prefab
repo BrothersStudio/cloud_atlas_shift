@@ -3034,8 +3034,8 @@ MonoBehaviour:
   - {fileID: 8280035279687394311, guid: caacea33e7b5f1541a8f86c35d480611, type: 3}
   doors_to_open: []
   enemy_to_place:
-  - {fileID: 5432114058869886678, guid: fb6117d414f3524448d57259f847d586, type: 3}
-  - {fileID: 5432114058869886678, guid: 7861a9f0e58392a43b005a8e6aad4a9d, type: 3}
+  - {fileID: 473406649134029396, guid: ce44ab128c78e824a98388492cdb9a20, type: 3}
+  - {fileID: 473406649134029396, guid: ce44ab128c78e824a98388492cdb9a20, type: 3}
   location_to_place:
   - {x: -1, y: 2, z: 0}
   - {x: 1, y: 2, z: 0}
