@@ -5,7 +5,13 @@ using UnityEngine;
 public class Bull : MonoBehaviour
 {
     bool charging = false;
-    Vector3 charge_position;
+    float charge_start = 0;
+    float charge_delay = 0.5f;
+    Vector3 charge_direction;
+    Vector3 player_charge_position;
+    bool looking_for_wall = false;
+
+    public AudioClip charge_sound;
 
     float orig_speed;
     public float speed;
@@ -36,16 +42,15 @@ public class Bull : MonoBehaviour
 
     void Update()
     {
-        if (charging)
+        if (charging &&
+            Time.timeSinceLevelLoad > charge_delay + charge_start)
         {
-            speed += 0.03f;
+            speed = Mathf.Clamp(speed + 0.03f, 0, 4);
 
-            transform.position = Vector3.MoveTowards(transform.position, charge_position, speed * speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, charge_position) < 0.1f)
+            transform.position = Vector3.MoveTowards(transform.position, charge_direction, speed * speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, player_charge_position) < 1f)
             {
-                charging = false;
-                speed = orig_speed;
-                StartCoroutine(RefreshPath());
+                looking_for_wall = true;
             }
         }
 
@@ -121,8 +126,34 @@ public class Bull : MonoBehaviour
         StopAllCoroutines();
 
         charging = true;
-        charge_position = player.transform.position;
+        charge_start = Time.timeSinceLevelLoad;
+
+        if (!GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().clip = charge_sound;
+            GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
+        }
+
+        charge_direction = (transform.position - player.transform.position) * -100;
+        player_charge_position = player.transform.position;
 
         speed = 0;
+    }
+
+    void StopCharge()
+    {
+        charging = false;
+        speed = orig_speed;
+        StartCoroutine(RefreshPath());
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Wall" && looking_for_wall)
+        {
+            looking_for_wall = false;
+            StopCharge();
+        }
     }
 }
