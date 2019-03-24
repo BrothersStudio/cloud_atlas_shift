@@ -48,13 +48,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_boss: 0
   health: 200
   enemy_dimension: 0
   last_swing_id: -1
   knockback_state: 0
-  normal_sprite: {fileID: 21300000, guid: 9295c0aa88ffbc24182096e87fbc0a2f, type: 3}
+  flashing: 0
+  normal_sprite: {fileID: 21300000, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
   flash_sprite: {fileID: 21300000, guid: f753ad96c790b4247a42b5acd91aed1b, type: 3}
   dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 0
+  max_pos: {x: 0, y: 0, z: 0}
+  min_pos: {x: 0, y: 0, z: 0}
 --- !u!212 &8425944060813414142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,7 +99,7 @@ SpriteRenderer:
   m_SortingLayerID: 1937226157
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9295c0aa88ffbc24182096e87fbc0a2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,6 +197,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shift_attack_delay: 0.2
   speed: 40
+  summon_animation_sprites:
+  - {fileID: 21300008, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300010, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300012, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300014, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300016, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300018, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300020, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  walking_animation_sprites:
+  - {fileID: 21300000, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300002, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
   enemy_to_summon: {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559,
     type: 3}
-  num_to_summon: 4
+  num_to_summon: 3
