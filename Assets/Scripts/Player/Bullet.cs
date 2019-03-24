@@ -84,13 +84,15 @@ public class Bullet : MonoBehaviour
         else if (rigid.simulated == false)
         {
             rigid.simulated = true;
-            if (homing)
+
+        }
+
+        if (rigid.simulated && homing)
+        {
+            if (TimeChange.current.dimension == bullet_dimension)
             {
-                if (TimeChange.current.dimension == bullet_dimension)
-                {
-                    Vector3 direction = player.transform.position - transform.position;
-                    GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed * Time.deltaTime;
-                }
+                Vector3 direction = player.transform.position - transform.position;
+                GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed / 2f;
             }
         }
     }
@@ -108,7 +110,7 @@ public class Bullet : MonoBehaviour
         }
         else if (collision.tag == "Enemy" && side == BulletSide.Player)
         {
-            if (collision.GetComponent<Enemy>().enemy_dimension == Dimension.Blue)
+            if (collision.GetComponent<Enemy>().enemy_dimension == Dimension.Blue || collision.GetComponent<Enemy>().is_boss)
             {
                 Disappear();
                 collision.GetComponent<Enemy>().Hit(damage);
