@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     CameraFollow camera_shake;
 
+    public bool is_boss;
+
     public int health;
     public Dimension enemy_dimension;
 
@@ -68,7 +70,7 @@ public class Enemy : MonoBehaviour
 
     public void SwitchDimensions()
     {
-        if (health > 0)
+        if (health > 0 && !is_boss)
         {
             Collider2D player_collider = player.GetComponent<Collider2D>();
             if (TimeChange.current.dimension != enemy_dimension)
@@ -195,7 +197,7 @@ public class Enemy : MonoBehaviour
         if (collision.tag == "Player")
         {
             Player player = collision.GetComponent<Player>();
-            if (!player.invincible && TimeChange.current.dimension == enemy_dimension)
+            if (!player.invincible && (TimeChange.current.dimension == enemy_dimension || is_boss))
             {
                 player.DamagePlayer(transform);
             }

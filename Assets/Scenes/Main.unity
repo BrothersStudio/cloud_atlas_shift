@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   available_rooms:
-  - {fileID: 7950326965343713441, guid: 92bbf0a2ad99ff6409d58d24923a1e50, type: 3}
+  - {fileID: 7950326965343713441, guid: 92d8713bf119b41488e4eaa7ad919979, type: 3}
   stair_room: {fileID: 7950326965343713441, guid: 5c07395c4e0388f49bed168ec2fb2a58,
     type: 3}
   pathfinding_grid: {fileID: 1041530785}

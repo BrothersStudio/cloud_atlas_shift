@@ -107,7 +107,7 @@ public class Sword : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy.last_swing_id != swing_id && enemy.enemy_dimension == Dimension.Orange)
+            if (enemy.last_swing_id != swing_id && (enemy.enemy_dimension == Dimension.Orange || enemy.is_boss))
             {
                 enemy.SwordHit(damage, transform.parent, swing_id);
                 Hitstop.current.HitstopFor(0.2f);
