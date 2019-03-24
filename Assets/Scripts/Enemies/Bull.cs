@@ -10,6 +10,7 @@ public class Bull : MonoBehaviour
     Vector3 charge_direction;
     Vector3 player_charge_position;
     bool looking_for_wall = false;
+    public List<Sprite> charge_sprites;
 
     public AudioClip charge_sound;
 
@@ -43,7 +44,8 @@ public class Bull : MonoBehaviour
     void Update()
     {
         if (charging &&
-            Time.timeSinceLevelLoad > charge_delay + charge_start)
+            Time.timeSinceLevelLoad > charge_delay + charge_start &&
+            enemy.health > 0)
         {
             speed = Mathf.Clamp(speed + 0.03f, 0, 4);
 
@@ -59,11 +61,24 @@ public class Bull : MonoBehaviour
 
     void SetSprite()
     {
-        if (!enemy.flashing)
+        if (TimeChange.current.dimension == enemy.enemy_dimension && !charging)
+        {
+            Vector3 check = transform.position - player.transform.position;
+            if (check.x > 0)
+            {
+                sprite_renderer.flipX = true;
+            }
+            else
+            {
+                sprite_renderer.flipX = false;
+            }
+        }
+
+        if (!enemy.flashing && !charging)
         {
             sprite_renderer.sprite = enemy.normal_sprite;
         }
-        else
+        else if (enemy.flashing)
         {
             sprite_renderer.sprite = enemy.flash_sprite;
         }
@@ -135,10 +150,23 @@ public class Bull : MonoBehaviour
             GetComponent<AudioSource>().Play();
         }
 
+        StartCoroutine(PreChargeAnimation());
+
         charge_direction = (transform.position - player.transform.position) * -100;
         player_charge_position = player.transform.position;
 
         speed = 0;
+    }
+
+    IEnumerator PreChargeAnimation()
+    {
+        sprite_renderer.sprite = charge_sprites[0];
+        yield return new WaitForSeconds(0.2f);
+        sprite_renderer.sprite = charge_sprites[1];
+        yield return new WaitForSeconds(0.2f);
+        sprite_renderer.sprite = charge_sprites[2];
+        yield return new WaitForSeconds(0.2f);
+        sprite_renderer.sprite = charge_sprites[3];
     }
 
     void StopCharge()
