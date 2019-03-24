@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
+    public bool is_block;
+
     public Sprite orange_sprite;
     public Sprite blue_sprite;
     SpriteRenderer sprite_renderer;
@@ -19,25 +21,39 @@ public class Wall : MonoBehaviour
 
     void CheckColor()
     {
-        if (TimeChange.current.dimension == Dimension.Blue)
+        if (!is_block)
         {
-            sprite_renderer.sprite = blue_sprite;
+            if (TimeChange.current.dimension == Dimension.Blue)
+            {
+                sprite_renderer.sprite = blue_sprite;
+            }
+            else
+            {
+                sprite_renderer.sprite = orange_sprite;
+            }
         }
         else
         {
-            sprite_renderer.sprite = orange_sprite;
+            GetComponent<BlockAnimation>().CheckColor();
         }
     }
 
     public void SwitchDimensions()
     {
-        if (sprite_renderer.sprite == orange_sprite)
+        if (!is_block)
         {
-            sprite_renderer.sprite = blue_sprite;
+            if (sprite_renderer.sprite == orange_sprite)
+            {
+                sprite_renderer.sprite = blue_sprite;
+            }
+            else
+            {
+                sprite_renderer.sprite = orange_sprite;
+            }
         }
         else
         {
-            sprite_renderer.sprite = orange_sprite;
+            GetComponent<BlockAnimation>().SwitchDimensions();
         }
     }
 }
