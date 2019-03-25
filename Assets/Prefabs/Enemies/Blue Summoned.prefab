@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 1937226157
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0e434546e0dc3dd46b0abe46bff3428d, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_boss: 0
   health: 30
   enemy_dimension: 0
   last_swing_id: -1
   knockback_state: 0
   flashing: 0
-  normal_sprite: {fileID: 21300000, guid: 0e434546e0dc3dd46b0abe46bff3428d, type: 3}
+  normal_sprite: {fileID: 21300006, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   flash_sprite: {fileID: 21300000, guid: fc13b2a4a0842c94ca40f616d9fb9da1, type: 3}
   dead_sprite: {fileID: 0}
   block_mask:
@@ -142,7 +143,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15}
+  m_Offset: {x: -0.06, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -153,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.54, y: 0.37}
+  m_Size: {x: 0.75, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &3695513890354233343
 MonoBehaviour:
@@ -168,4 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shift_attack_delay: 0.2
-  speed: 200
+  speed: 2
+  animation:
+  - {fileID: 21300006, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
+  - {fileID: 21300008, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
+  - {fileID: 21300010, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}

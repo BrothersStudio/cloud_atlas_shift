@@ -61,7 +61,9 @@ public class Bull : MonoBehaviour
 
     void SetSprite()
     {
-        if (TimeChange.current.dimension == enemy.enemy_dimension && !charging)
+        if (TimeChange.current.dimension == enemy.enemy_dimension && 
+            !charging &&
+            enemy.health > 0)
         {
             Vector3 check = transform.position - player.transform.position;
             if (check.x > 0)
