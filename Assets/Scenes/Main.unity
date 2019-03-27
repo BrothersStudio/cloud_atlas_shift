@@ -6491,6 +6491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet_prefab: {fileID: 9218583925272106307, guid: 67ca9f7de301b2a4e9fef5d7d316f0ad,
     type: 3}
+  bullet_wall_hit_prefab: {fileID: 3184836797996547923, guid: 024b6147392ec864bb7b8d8a6252c764,
+    type: 3}
 --- !u!4 &2085885650
 Transform:
   m_ObjectHideFlags: 0

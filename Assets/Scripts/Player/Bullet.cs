@@ -119,16 +119,25 @@ public class Bullet : MonoBehaviour
         else if (collision.tag == "Shield" && side == BulletSide.Player)
         {
             collision.GetComponent<Shield>().HitShield();
-            Disappear();
+            HitWall();
         }
         else if (collision.tag == "Wall")
         {
-            Invoke("Disappear", 0.04f);
+            Invoke("HitWall", 0.03f);
         }
     }
 
     void Disappear()
     {
+        gameObject.SetActive(false);
+    }
+
+    void HitWall()
+    {
+        GameObject wall_hit = PlayerBulletPool.current.GetPooledWallHit();
+        wall_hit.transform.position = transform.position;
+        wall_hit.SetActive(true);
+
         gameObject.SetActive(false);
     }
 }
