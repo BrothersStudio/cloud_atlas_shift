@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     [HideInInspector]
     public int last_swing_id = -1;
+    DamageType last_damage_type;
 
     [HideInInspector]
     public bool knockback_state = false;
@@ -114,11 +115,21 @@ public class Enemy : MonoBehaviour
     public void SwordHit(int damage, Transform source, int swing_id)
     {
         last_swing_id = swing_id;
-        Hit(damage);
+        last_damage_type = DamageType.Sword;
+
+        CancelInvoke();
+        sprite_renderer.sprite = flash_sprite;
+
+        flashing = true;
+        Invoke("EndFlash", 0.1f);
+
+        ParseDamage(damage);
     }
 
-    public void Hit(int damage)
+    public void GunHit(int damage)
     {
+        last_damage_type = DamageType.Gun;
+
         CancelInvoke();
         sprite_renderer.sprite = flash_sprite;
 
@@ -140,6 +151,8 @@ public class Enemy : MonoBehaviour
         {
             CancelInvoke();
 
+            PlayDeathSound();
+
             if (dead_sprite != null)
             {
                 sprite_renderer.sprite = dead_sprite;
@@ -158,6 +171,14 @@ public class Enemy : MonoBehaviour
                 GetComponent<ParticleSystem>().Play();
             }
         }
+    }
+
+    void PlayDeathSound()
+    {
+        AudioClip chosen_clip = last_damage_type == DamageType.Sword ? player.GetComponent<PlayerAudio>().enemy_sword_death : player.GetComponent<PlayerAudio>().enemy_gun_death;
+        GetComponent<AudioSource>().clip = chosen_clip;
+        GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+        GetComponent<AudioSource>().Play();
     }
 
     void Knockback(Transform source)
@@ -225,5 +246,11 @@ public class Enemy : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public enum DamageType
+    {
+        Sword,
+        Gun
     }
 }

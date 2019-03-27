@@ -603,6 +603,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1846309563}
+--- !u!1 &633302461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633302462}
+  m_Layer: 0
+  m_Name: MusicController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &633302462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633302461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.37268066, y: 0.4161377, z: 0.068359375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677571930
 GameObject:
   m_ObjectHideFlags: 0
@@ -6542,6 +6572,9 @@ MonoBehaviour:
   shot: {fileID: 8300000, guid: acea7369b44d1074eb15ed15705098e1, type: 3}
   sword: {fileID: 8300000, guid: 200303f5f1ca35c48bcf688c4d59f510, type: 3}
   player_hurt: {fileID: 8300000, guid: 4caca21b5b15f8740862f953a9eefaf4, type: 3}
+  player_death: {fileID: 8300000, guid: d5d337fda5e9c234db0e85959dfb264d, type: 3}
+  enemy_sword_death: {fileID: 8300000, guid: d0aba852bd186874fba2ef953bfea309, type: 3}
+  enemy_gun_death: {fileID: 8300000, guid: 936b0d41f3d485747b750509e99f126a, type: 3}
 --- !u!1 &2085885648
 GameObject:
   m_ObjectHideFlags: 0

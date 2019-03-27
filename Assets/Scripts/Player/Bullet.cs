@@ -113,7 +113,7 @@ public class Bullet : MonoBehaviour
             if (collision.GetComponent<Enemy>().enemy_dimension == Dimension.Blue || collision.GetComponent<Enemy>().is_boss)
             {
                 Disappear();
-                collision.GetComponent<Enemy>().Hit(damage);
+                collision.GetComponent<Enemy>().GunHit(damage);
             }
         }
         else if (collision.tag == "Shield" && side == BulletSide.Player)

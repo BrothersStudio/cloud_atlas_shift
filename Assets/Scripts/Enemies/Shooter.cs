@@ -43,6 +43,11 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         // Shooting
         if (TimeChange.current.dimension == enemy.enemy_dimension && 
             (Time.timeSinceLevelLoad > last_shot + shot_cooldown) && 
@@ -86,6 +91,12 @@ public class Shooter : MonoBehaviour
                 enemy.health > 0 &&
                 !enemy.CanSeePlayer())
             {
+                if (Hitstop.current.Hitstopped)
+                {
+                    yield return null;
+                    continue;
+                }
+
                 if (transform.position == currentWaypoint)
                 {
                     targetIndex++;

@@ -101,8 +101,9 @@ public class RoomController : MonoBehaviour
 
         Player player = FindObjectOfType<Player>();
         Vector3 player_pos = spawned_rooms[player_room].transform.position;
-        player_pos.y -= 3;
+        player_pos.y -= 3f;
         player.transform.position = player_pos;
+        player.ResetSpeed();
 
         Camera.main.GetComponent<CameraFollow>().MoveToNextRoom(spawned_rooms[player_room].transform.position);
     }

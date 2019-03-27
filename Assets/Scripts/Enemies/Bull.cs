@@ -43,6 +43,11 @@ public class Bull : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         if (charging &&
             Time.timeSinceLevelLoad > charge_delay + charge_start &&
             enemy.health > 0)
@@ -115,6 +120,12 @@ public class Bull : MonoBehaviour
             Vector3 currentWaypoint = path[0];
             while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
             {
+                if (Hitstop.current.Hitstopped)
+                {
+                    yield return null;
+                    continue;
+                }
+
                 if (!enemy.CanSeePlayer())
                 {
                     if (transform.position == currentWaypoint)

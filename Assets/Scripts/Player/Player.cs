@@ -139,6 +139,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ResetSpeed()
+    {
+        x_speed = 0;
+        y_speed = 0;
+    }
+
     public FacingDirection GetFacingDirection()
     {
         Vector3 dir_vec = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
@@ -198,7 +204,8 @@ public class Player : MonoBehaviour
             dying = true;
             GetComponent<ParticleSystem>().Play();
             GetComponent<PlayerSprite>().Dead();
-            Invoke("Restart", 1f);
+            GetComponent<PlayerAudio>().Dead();
+            Invoke("Restart", 2f);
         }
         else
         {

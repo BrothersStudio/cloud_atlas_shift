@@ -71,6 +71,12 @@ public class Zombie : MonoBehaviour
             Vector3 currentWaypoint = path[0];
             while (true)
             {
+                if (Hitstop.current.Hitstopped)
+                {
+                    yield return null;
+                    continue;
+                }
+
                 if (enemy.health > 0)
                 {
                     if (transform.position == currentWaypoint)

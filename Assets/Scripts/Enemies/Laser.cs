@@ -34,6 +34,11 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         Collider2D top_collider = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(0, 0.2f)), 0.1f);
         if (top_collider != null)
         {

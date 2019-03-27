@@ -64,6 +64,11 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         if (enemy.health > 0)
         {
             ChooseAttackLogic();

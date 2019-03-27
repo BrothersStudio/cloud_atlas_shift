@@ -37,6 +37,11 @@ public class Summoner : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         // Summon animation
         if (summoning &&
             enemy.health > 0 &&

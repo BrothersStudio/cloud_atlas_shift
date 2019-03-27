@@ -41,6 +41,11 @@ public class Sniper : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         if (TimeChange.current.dimension == GetComponentInParent<Enemy>().enemy_dimension &&
             enemy.health > 0 &&
             enemy.CanSeePlayer() &&

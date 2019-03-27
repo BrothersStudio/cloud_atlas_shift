@@ -19,6 +19,11 @@ public class Shield : MonoBehaviour
 
     void Update()
     {
+        if (Hitstop.current.Hitstopped)
+        {
+            return;
+        }
+
         // Facing direction
         if (TimeChange.current.dimension == enemy.enemy_dimension &&
                 enemy.health > 0 &&
