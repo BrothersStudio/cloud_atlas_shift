@@ -757,7 +757,7 @@ MonoBehaviour:
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 256
-  gridWorldSize: {x: 15, y: 27}
+  gridWorldSize: {x: 1, y: 1}
   nodeRadius: 0.1
 --- !u!4 &1041530786
 Transform:
@@ -767,7 +767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041530784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -988,7 +988,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1432819350}
-  - component: {fileID: 1432819351}
   - component: {fileID: 1432819352}
   - component: {fileID: 1432819353}
   m_Layer: 0
@@ -1012,18 +1011,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1432819351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432819349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d29bcfd6cde2e418d89601eec7a29e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1432819352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,11 +1041,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb92addfe0ee20458d0eaa5643c708e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  available_rooms:
-  - {fileID: 7950326965343713441, guid: 92bbf0a2ad99ff6409d58d24923a1e50, type: 3}
+  level_1_rooms:
+  - {fileID: 7950326965343713441, guid: 1dd3d64224768df47beee5b8f3770519, type: 3}
+  - {fileID: 7950326965343713441, guid: 2d16e0928b003524ba3521c447f3c603, type: 3}
+  - {fileID: 7148320562747277706, guid: 41eccc0035600284c9eeb301f398321a, type: 3}
+  level_2_rooms: []
+  level_3_rooms: []
+  boss_rooms: []
   stair_room: {fileID: 7950326965343713441, guid: 5c07395c4e0388f49bed168ec2fb2a58,
     type: 3}
   pathfinding_grid: {fileID: 1041530785}
+--- !u!1 &1550669670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550669672}
+  - component: {fileID: 1550669671}
+  m_Layer: 0
+  m_Name: LevelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1550669671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550669670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d29bcfd6cde2e418d89601eec7a29e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_level: 1
+--- !u!4 &1550669672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550669670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.099242434, y: -1.6833311, z: 0.056075573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672892342
 PrefabInstance:
   m_ObjectHideFlags: 0

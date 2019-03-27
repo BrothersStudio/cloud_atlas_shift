@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     CameraFollow camera_shake;
 
     public bool is_boss;
+    public bool is_hazard;
 
     public int health;
     public Dimension enemy_dimension;
@@ -143,6 +144,8 @@ public class Enemy : MonoBehaviour
             {
                 sprite_renderer.sprite = dead_sprite;
             }
+
+            sprite_renderer.sortingLayerName = "Weapons";
 
             Invoke("Fade", start_fade_time);
 

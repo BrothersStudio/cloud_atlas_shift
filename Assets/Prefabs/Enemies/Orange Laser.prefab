@@ -96,13 +96,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_boss: 0
+  is_hazard: 1
   health: 1
   enemy_dimension: 1
   last_swing_id: -1
   knockback_state: 0
+  flashing: 0
   normal_sprite: {fileID: 0}
   flash_sprite: {fileID: 0}
   dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 0
+  max_pos: {x: 0, y: 0, z: 0}
+  min_pos: {x: 0, y: 0, z: 0}
 --- !u!114 &4862339850441511946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,13 +263,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_boss: 0
+  is_hazard: 0
   health: 0
   enemy_dimension: 0
   last_swing_id: -1
   knockback_state: 0
+  flashing: 0
   normal_sprite: {fileID: 0}
   flash_sprite: {fileID: 0}
   dead_sprite: {fileID: 0}
+  block_mask:
+    serializedVersion: 2
+    m_Bits: 0
+  max_pos: {x: 0, y: 0, z: 0}
+  min_pos: {x: 0, y: 0, z: 0}
 --- !u!61 &4862339851139695008
 BoxCollider2D:
   m_ObjectHideFlags: 0

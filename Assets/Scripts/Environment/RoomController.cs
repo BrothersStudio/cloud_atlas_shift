@@ -6,23 +6,51 @@ using UnityEngine;
 public class RoomController : MonoBehaviour
 {
     int player_room = 0;
-    int num_rooms = 3;
     int new_room_height_factor = 0;
     List<GameObject> spawned_rooms = new List<GameObject>();
 
-    public List<GameObject> available_rooms;
+    public List<GameObject> level_1_rooms;
+    public List<GameObject> level_2_rooms;
+    public List<GameObject> level_3_rooms;
+    public List<GameObject> boss_rooms;
+
+    List<GameObject> current_rooms;
     public GameObject stair_room;
 
     List<float> x_vals = new List<float>();
     List<float> y_vals = new List<float>();
     public Grid pathfinding_grid;
 
+    LevelController lev_con;
+
     void Awake()
     {
-        for (int i = 0; i < num_rooms; i++)
+        lev_con = FindObjectOfType<LevelController>();
+
+        switch (lev_con.current_level)
         {
-            // TODO: Room selection, somehow
-            GameObject new_room = Instantiate(available_rooms[0]);
+            case 1:
+                current_rooms = level_1_rooms;
+                break;
+            case 2:
+                current_rooms = level_2_rooms;
+                break;
+            case 3:
+                current_rooms = level_3_rooms;
+                break;
+            case 4:
+                current_rooms = boss_rooms;
+                break;
+        }
+
+        SpawnRooms();
+    }
+
+    void SpawnRooms()
+    {
+        for (int i = 0; i < current_rooms.Count; i++)
+        {
+            GameObject new_room = Instantiate(current_rooms[i]);
             Room room_comp = new_room.GetComponent<Room>();
             if (i == 0)
             {
@@ -31,7 +59,7 @@ public class RoomController : MonoBehaviour
 
             // Reposition
             Vector3 new_position = new_room.transform.position;
-            new_position.y = i * (room_comp.max_and_min_cam_pos[0].y - room_comp.max_and_min_cam_pos[1].y);
+            new_position.y = new_room_height_factor;
             new_room.transform.position = new_position;
             new_room_height_factor += (int)(room_comp.max_and_min_cam_pos[0].y - room_comp.max_and_min_cam_pos[1].y);
 
@@ -46,6 +74,7 @@ public class RoomController : MonoBehaviour
 
             spawned_rooms.Add(new_room);
         }
+
         // Position stair room
         GameObject new_stair_room = Instantiate(stair_room);
         Vector3 stair_position = new_stair_room.transform.position;

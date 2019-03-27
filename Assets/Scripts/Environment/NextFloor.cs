@@ -8,7 +8,10 @@ public class NextFloor : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FindObjectOfType<LevelController>().ResetLevel();
+            LevelController lev_con = FindObjectOfType<LevelController>();
+
+            lev_con.current_level++;
+            lev_con.ResetLevel();
         }
     }
 }

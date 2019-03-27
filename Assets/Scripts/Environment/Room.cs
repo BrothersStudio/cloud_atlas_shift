@@ -97,7 +97,7 @@ public class Room : MonoBehaviour
         {
             foreach (Enemy enemy in enemies)
             {
-                if (enemy.health > 0)
+                if (enemy.health > 0 && !enemy.is_hazard)
                 {
                     return;
                 }
