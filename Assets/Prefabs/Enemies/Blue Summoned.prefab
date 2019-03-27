@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_boss: 0
+  is_hazard: 0
   health: 30
   enemy_dimension: 0
   last_swing_id: -1
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shift_attack_delay: 0.2
   speed: 2
-  animation:
+  skull_animation:
   - {fileID: 21300006, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   - {fileID: 21300008, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   - {fileID: 21300010, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}

@@ -9,7 +9,7 @@ public class Runner : MonoBehaviour
 
     bool animating = true;
     int animation_ind = 0;
-    public List<Sprite> animation;
+    public List<Sprite> skull_animation;
 
     Vector3[] path = new Vector3[] { };
     int targetIndex;
@@ -31,7 +31,7 @@ public class Runner : MonoBehaviour
     {
         StartCoroutine(RefreshPath());
 
-        animation_ind = Random.Range(0, animation.Count);
+        animation_ind = Random.Range(0, skull_animation.Count);
         StartCoroutine(SkullAnimation());
     }
 
@@ -74,12 +74,12 @@ public class Runner : MonoBehaviour
         while (enemy.health > 0)
         {
             animation_ind++;
-            if (animation_ind == animation.Count)
+            if (animation_ind == skull_animation.Count)
             {
                 animation_ind = 0;
             }
                
-            sprite_renderer.sprite = animation[animation_ind];
+            sprite_renderer.sprite = skull_animation[animation_ind];
             yield return new WaitForSeconds(0.2f);
         }
     }
