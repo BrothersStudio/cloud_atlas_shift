@@ -7,8 +7,12 @@ public class Laser : MonoBehaviour
     float current_speed = 4f;
     int num_beams = 1;
 
+    Enemy enemy;
+
     void Awake()
     {
+        enemy = GetComponent<Enemy>();
+
         while (true)
         {
             Collider2D check = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(-1 - num_beams, 0)), 0.1f);
@@ -34,7 +38,7 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
-        if (Hitstop.current.Hitstopped)
+        if (Hitstop.current.Hitstopped || enemy.health <= 0)
         {
             return;
         }

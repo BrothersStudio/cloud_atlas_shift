@@ -49,11 +49,14 @@ TagManager:
   - name: Ground
     uniqueID: 4107096709
     locked: 0
+  - name: Characters
+    uniqueID: 1937226157
+    locked: 0
   - name: Weapons
     uniqueID: 2110886205
     locked: 0
-  - name: Characters
-    uniqueID: 1937226157
+  - name: Player
+    uniqueID: 139587825
     locked: 0
   - name: Above Char Weapons
     uniqueID: 133930615

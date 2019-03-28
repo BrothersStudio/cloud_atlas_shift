@@ -7,7 +7,7 @@ public class Shooter : MonoBehaviour
     public float speed;
 
     float last_shot = 0;
-    float shot_cooldown = 1f;
+    public float shot_cooldown = 1f;
     float shift_attack_delay = 0.5f;
 
     public AudioClip enemy_shot;
@@ -17,11 +17,13 @@ public class Shooter : MonoBehaviour
 
     Enemy enemy;
     Player player;
+    SpriteRenderer sprite_renderer;
 
     void Awake()
     {
         enemy = GetComponent<Enemy>();
         player = FindObjectOfType<Player>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
     }
 
     void Start()
@@ -69,6 +71,20 @@ public class Shooter : MonoBehaviour
             GetComponent<AudioSource>().clip = enemy_shot;
             GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
             GetComponent<AudioSource>().Play();
+        }
+
+        SelectSprite();
+    }
+
+    void SelectSprite()
+    {
+        if (enemy.flashing)
+        {
+            sprite_renderer.sprite = enemy.flash_sprite;
+        }
+        else
+        {
+            sprite_renderer.sprite = enemy.normal_sprite;
         }
     }
 

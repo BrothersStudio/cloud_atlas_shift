@@ -164,7 +164,7 @@ public class Enemy : MonoBehaviour
 
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             Knockback(FindObjectOfType<Player>().transform);
-            camera_shake.Shake(0.2f);
+            camera_shake.Shake(0.1f);
 
             if (GetComponent<ParticleSystem>() != null)
             {
