@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    CameraFollow camera_shake;
+    CameraFollow main_camera;
 
     // Combat
     int health = 3;
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
 
-        camera_shake = Camera.main.GetComponent<CameraFollow>();
+        main_camera = Camera.main.GetComponent<CameraFollow>();
         sword = transform.Find("Sword").GetComponent<Sword>();
     }
 
@@ -196,7 +196,7 @@ public class Player : MonoBehaviour
         health--;
         heart_bar.GetComponentsInChildren<Heart>()[health].FlipHeartSprite();
 
-        camera_shake.Shake(0.5f);
+        main_camera.Shake(0.5f);
         Knockback(source);
 
         if (health == 0)
@@ -205,6 +205,9 @@ public class Player : MonoBehaviour
             GetComponent<ParticleSystem>().Play();
             GetComponent<PlayerSprite>().Dead();
             GetComponent<PlayerAudio>().Dead();
+
+            main_camera.PlayerDead();
+
             Invoke("Restart", 2f);
         }
         else

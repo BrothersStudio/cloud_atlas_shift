@@ -82,6 +82,11 @@ public class PlayerSprite : MonoBehaviour
         {
             return;
         }
+        else if (player.dying)
+        {
+            SelectDyingSprite();
+            return;
+        }
 
         // Walk cycle
         walk_sprite_time += Time.deltaTime;
@@ -161,6 +166,18 @@ public class PlayerSprite : MonoBehaviour
             case WalkDir.Right:
                 SetRightSprite();
                 break;
+        }
+    }
+
+    void SelectDyingSprite()
+    {
+        if (TimeChange.current.dimension == Dimension.Blue)
+        {
+            sprite_renderer.sprite = future_flash_down;
+        }
+        else
+        {
+            sprite_renderer.sprite = past_flash_down;
         }
     }
 

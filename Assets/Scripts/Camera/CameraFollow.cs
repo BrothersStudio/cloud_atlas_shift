@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     float follow_speed = 0.1f;
     public Transform player;
+    bool player_dead = false;
 
     float ortho_size;
 
@@ -52,6 +53,8 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
+        if (player_dead) return;
+
         trauma = Mathf.Clamp01(trauma - 0.01f);
         if (trauma == 0)
         {
@@ -61,6 +64,8 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
+        if (player_dead) return;
+
         if (animating)
         {
             transform.position = Vector3.Lerp(transform.position, new_pos, 0.02f);
@@ -114,5 +119,23 @@ public class CameraFollow : MonoBehaviour
         }
 
         transform.position = tweaked_pos;
+    }
+
+    public void PlayerDead()
+    {
+        player_dead = true;
+
+        StartCoroutine(SlowZoom());
+    }
+
+    IEnumerator SlowZoom()
+    {
+        while (true)
+        {
+            GetComponent<Camera>().orthographicSize -= 0.02f;
+            transform.position = player.transform.position + new Vector3(0, 0, -10);
+
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
