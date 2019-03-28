@@ -102,8 +102,23 @@ public class Room : MonoBehaviour
                     return;
                 }
             }
-            room_complete = true;
+
+            CompleteRoom();
+
             OpenDoors();
+        }
+    }
+
+    void CompleteRoom()
+    {
+        room_complete = true;
+
+        foreach (Enemy enemy in enemies)
+        {
+            if (enemy.is_hazard)
+            {
+                enemy.health = -10;
+            }
         }
     }
 

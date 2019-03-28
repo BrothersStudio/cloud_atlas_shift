@@ -52,7 +52,7 @@ public class Bullet : MonoBehaviour
             }
             else
             {
-                current_enemy_sprites = enemy_blue_sprites;
+                current_enemy_sprites = enemy_orange_sprites;
             }
             StartCoroutine(CycleSprite());
         }
