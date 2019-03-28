@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
                 sprite_renderer.sprite = dead_sprite;
             }
 
-            sprite_renderer.sortingLayerName = "Weapons";
+            sprite_renderer.sortingLayerName = "Corpses";
 
             Invoke("Fade", start_fade_time);
 

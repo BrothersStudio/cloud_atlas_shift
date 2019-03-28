@@ -16729,7 +16729,7 @@ GameObject:
   - component: {fileID: 7148320562747277707}
   - component: {fileID: 3519324538023356272}
   m_Layer: 0
-  m_Name: Shooters
+  m_Name: Slow Shooters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17021,10 +17021,10 @@ MonoBehaviour:
   - {fileID: 8280035279687394311, guid: caacea33e7b5f1541a8f86c35d480611, type: 3}
   doors_to_open: []
   enemy_to_place:
-  - {fileID: 1247012905590908576, guid: 723af2967b2aeff42acf6b7f46d8779e, type: 3}
-  - {fileID: 1247012905590908576, guid: 723af2967b2aeff42acf6b7f46d8779e, type: 3}
-  - {fileID: 656218120820163270, guid: 9c86d9e1e6ac4004db9b8fcecdca5260, type: 3}
-  - {fileID: 656218120820163270, guid: 9c86d9e1e6ac4004db9b8fcecdca5260, type: 3}
+  - {fileID: 4359221953413331220, guid: 779fa31b697eb4a42bc3cc2c48ce1926, type: 3}
+  - {fileID: 4359221953413331220, guid: 779fa31b697eb4a42bc3cc2c48ce1926, type: 3}
+  - {fileID: 5119167732669721511, guid: db76d8135220e6647bfd0205f886fa5b, type: 3}
+  - {fileID: 5119167732669721511, guid: db76d8135220e6647bfd0205f886fa5b, type: 3}
   location_to_place:
   - {x: 6, y: 10, z: 0}
   - {x: -6, y: 10, z: 0}
