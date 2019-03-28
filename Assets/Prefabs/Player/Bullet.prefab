@@ -131,12 +131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d479772d35495574794bb28ab751c4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  homing: 0
   player_speed: 14
   enemy_speed: 7
   speed: 0
   side: 0
   bullet_dimension: 0
   player_sprite: {fileID: 21300000, guid: 7c5d9972f9489374fbd082bc9841e7ac, type: 3}
-  enemy_sprites:
-  - {fileID: 21300000, guid: 1c4a3a30e39896c42befec9799b025a7, type: 3}
-  - {fileID: 21300000, guid: efb25b36ada49a947b1ca8df351fbd93, type: 3}
+  enemy_blue_sprites:
+  - {fileID: 21300002, guid: d96b05a3e57f7b546b7002a210e47e32, type: 3}
+  - {fileID: 21300000, guid: d96b05a3e57f7b546b7002a210e47e32, type: 3}
+  enemy_orange_sprites:
+  - {fileID: 21300002, guid: 02b74340f98bd2941ad7db27dee27b71, type: 3}
+  - {fileID: 21300000, guid: 02b74340f98bd2941ad7db27dee27b71, type: 3}

@@ -18,7 +18,9 @@ public class Bullet : MonoBehaviour
     public Dimension bullet_dimension;
 
     public Sprite player_sprite;
-    public List<Sprite> enemy_sprites;
+    List<Sprite> current_enemy_sprites;
+    public List<Sprite> enemy_blue_sprites;
+    public List<Sprite> enemy_orange_sprites;
 
     Player player;
     Rigidbody2D rigid;
@@ -46,12 +48,24 @@ public class Bullet : MonoBehaviour
             bullet_dimension = TimeChange.current.dimension;
             if (TimeChange.current.dimension == Dimension.Blue)
             {
-                sprite_renderer.sprite = enemy_sprites[0];
+                current_enemy_sprites = enemy_blue_sprites;
             }
             else
             {
-                sprite_renderer.sprite = enemy_sprites[1];
+                current_enemy_sprites = enemy_blue_sprites;
             }
+            StartCoroutine(CycleSprite());
+        }
+    }
+
+    IEnumerator CycleSprite()
+    {
+        while (true)
+        {
+            sprite_renderer.sprite = current_enemy_sprites[0];
+            yield return new WaitForSeconds(0.2f);
+            sprite_renderer.sprite = current_enemy_sprites[1];
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
