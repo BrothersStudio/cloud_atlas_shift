@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930761370204
@@ -186,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930837498228
@@ -280,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930859605676
@@ -374,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930861211975
@@ -495,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930876711221
@@ -589,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930883246913
@@ -710,6 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930883537131
@@ -804,6 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930920095743
@@ -898,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930922544866
@@ -992,6 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930940674135
@@ -1086,6 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930969012917
@@ -1180,6 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930973869544
@@ -1301,6 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930983039553
@@ -1395,6 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262930993744678
@@ -1489,6 +1503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931009180303
@@ -1583,6 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931019840309
@@ -1677,6 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931142585967
@@ -1771,6 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931144390365
@@ -1892,6 +1910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931171755550
@@ -1986,6 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931179655864
@@ -2107,6 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931185201928
@@ -2201,6 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931207853312
@@ -2295,6 +2317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931211995012
@@ -2389,6 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931220834993
@@ -2483,6 +2507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931244273166
@@ -2577,6 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931277672153
@@ -2698,6 +2724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931293462142
@@ -2792,6 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931305574442
@@ -2886,6 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931309408460
@@ -2980,6 +3009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931337249367
@@ -3074,6 +3104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931411825385
@@ -3195,6 +3226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931420305558
@@ -3289,6 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931423101327
@@ -3410,6 +3443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931430403361
@@ -3504,6 +3538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931435502156
@@ -3625,6 +3660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931448350197
@@ -3719,6 +3755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931450593097
@@ -3813,6 +3850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931480016975
@@ -3907,6 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931488557787
@@ -4001,6 +4040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931509239349
@@ -4095,6 +4135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931549280527
@@ -4216,6 +4257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931565572592
@@ -4416,6 +4458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931609521886
@@ -4537,6 +4580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931617150288
@@ -4631,6 +4675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931684166469
@@ -4752,6 +4797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931697953764
@@ -4846,6 +4892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931714063268
@@ -4940,6 +4987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931721035347
@@ -5061,6 +5109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931725027994
@@ -5155,6 +5204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931751732602
@@ -5249,6 +5299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931757878291
@@ -5370,6 +5421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931778657121
@@ -5464,6 +5516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931831820922
@@ -5558,6 +5611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931835096052
@@ -5652,6 +5706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931836888064
@@ -5746,6 +5801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931854919525
@@ -5840,6 +5896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931868652402
@@ -5934,6 +5991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931872495515
@@ -6028,6 +6086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931875547752
@@ -6149,6 +6208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931893564213
@@ -6243,6 +6303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931942463376
@@ -6337,6 +6398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262931976446411
@@ -6431,6 +6493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932007954065
@@ -6552,6 +6615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932018668824
@@ -6646,6 +6710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932031150001
@@ -6740,6 +6805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932056691575
@@ -6834,6 +6900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932059479314
@@ -6955,6 +7022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932074725846
@@ -7049,6 +7117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932096657399
@@ -7143,6 +7212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932097274220
@@ -7237,6 +7307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932099636113
@@ -7331,6 +7402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932105208125
@@ -7425,6 +7497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932111955873
@@ -7519,6 +7592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932120989712
@@ -7640,6 +7714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932170678892
@@ -7734,6 +7809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932180418423
@@ -7855,6 +7931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932188214879
@@ -7949,6 +8026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932225934391
@@ -8043,6 +8121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932234408366
@@ -8137,6 +8216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932234509720
@@ -8231,6 +8311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932240730894
@@ -8325,6 +8406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932252444825
@@ -8525,6 +8607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932279958119
@@ -8619,6 +8702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932288531497
@@ -8713,6 +8797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932331206022
@@ -8807,6 +8892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932340954598
@@ -8928,6 +9014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932345362085
@@ -9022,6 +9109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932351211522
@@ -9116,6 +9204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932414103322
@@ -9210,6 +9299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932423854052
@@ -9331,6 +9421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932429426489
@@ -9425,6 +9516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932453463796
@@ -9519,6 +9611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932454517893
@@ -9613,6 +9706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932463827275
@@ -9707,6 +9801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932493664185
@@ -9801,6 +9896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932511981874
@@ -9922,6 +10018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932537959488
@@ -10043,6 +10140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932538806903
@@ -10137,6 +10235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932577065500
@@ -10231,6 +10330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932588217552
@@ -10352,6 +10452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932605207818
@@ -10446,6 +10547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932624387491
@@ -10540,6 +10642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932656056247
@@ -10634,6 +10737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932676754135
@@ -10728,6 +10832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932692555671
@@ -10822,6 +10927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932694175711
@@ -10916,6 +11022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932703466832
@@ -11010,6 +11117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932706179297
@@ -11104,6 +11212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932739815146
@@ -11198,6 +11307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932755328816
@@ -11319,6 +11429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932778152429
@@ -11413,6 +11524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932779001334
@@ -11534,6 +11646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932798287754
@@ -11628,6 +11741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932821468863
@@ -11722,6 +11836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932825275204
@@ -11843,6 +11958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300002, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300042, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932832091868
@@ -11964,6 +12080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932856365457
@@ -12058,6 +12175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &1376262932858079354
@@ -12152,6 +12270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562034947720
@@ -12246,6 +12365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562036462939
@@ -12340,6 +12460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562063880549
@@ -12434,6 +12555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562077648495
@@ -12528,6 +12650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562081697788
@@ -12622,6 +12745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562082111582
@@ -12743,6 +12867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562092524686
@@ -12864,6 +12989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562102467190
@@ -12958,6 +13084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562127697138
@@ -13052,6 +13179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562157740094
@@ -13146,6 +13274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562159645818
@@ -13240,6 +13369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562161522136
@@ -13440,6 +13570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562260406470
@@ -13534,6 +13665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562278826931
@@ -13655,6 +13787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562287375720
@@ -13749,6 +13882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562300952535
@@ -13843,6 +13977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562324558597
@@ -13937,6 +14072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562349548444
@@ -14031,6 +14167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562350501049
@@ -14152,6 +14289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562376516832
@@ -14246,6 +14384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562391235656
@@ -14340,6 +14479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562430084589
@@ -14434,6 +14574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562432881424
@@ -14555,6 +14696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562471018776
@@ -14649,6 +14791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562475126107
@@ -14770,6 +14913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562487657082
@@ -14997,6 +15141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562510048823
@@ -15091,6 +15236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562534475934
@@ -15185,6 +15331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562555848726
@@ -15279,6 +15426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562564629208
@@ -15373,6 +15521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562584189359
@@ -15467,6 +15616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562597378528
@@ -15561,6 +15711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562609595210
@@ -15655,6 +15806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562649535084
@@ -15749,6 +15901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562652959109
@@ -15870,6 +16023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562654810194
@@ -15964,6 +16118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562663764164
@@ -16058,6 +16213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562689875194
@@ -16179,6 +16335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562723596906
@@ -16273,6 +16430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562732755877
@@ -16367,6 +16525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562738118646
@@ -16461,6 +16620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562740746830
@@ -16555,6 +16715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562747277706
@@ -16568,7 +16729,7 @@ GameObject:
   - component: {fileID: 7148320562747277707}
   - component: {fileID: 3519324538023356272}
   m_Layer: 0
-  m_Name: Long Shot
+  m_Name: Two Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16823,6 +16984,7 @@ Transform:
   - {fileID: 1376262932511981873}
   - {fileID: 1376262932825275211}
   - {fileID: 1376262931549280526}
+  - {fileID: 1008787279214306011}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16859,7 +17021,8 @@ MonoBehaviour:
   - {fileID: 4862339850441511990, guid: 560deaa13515fdb43a7d660d5a8735bd, type: 3}
   location_to_place:
   - {x: 6, y: 10, z: 0}
-  - {x: 6, y: 5, z: 0}
+  - {x: 6, y: 4, z: 0}
+  enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 11.5, z: 0}
   - {x: -7.5, y: -4.5, z: 0}
@@ -16955,6 +17118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562790632467
@@ -17049,6 +17213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562794003949
@@ -17170,6 +17335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562802476550
@@ -17264,6 +17430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562802999792
@@ -17358,6 +17525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562803262924
@@ -17479,6 +17647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562807274064
@@ -17573,6 +17742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562862841841
@@ -17694,6 +17864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562891303295
@@ -17788,6 +17959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562893965087
@@ -17882,6 +18054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562895446146
@@ -17976,6 +18149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562907083275
@@ -18070,6 +18244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562907883391
@@ -18191,6 +18366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562958004233
@@ -18312,6 +18488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562964778730
@@ -18433,6 +18610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320562985621020
@@ -18527,6 +18705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563075191417
@@ -18621,6 +18800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563080297105
@@ -18742,6 +18922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563082089842
@@ -18863,6 +19044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563106991252
@@ -18957,6 +19139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563108409063
@@ -19051,6 +19234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563126382972
@@ -19145,6 +19329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563148578108
@@ -19239,6 +19424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563154883495
@@ -19333,6 +19519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563164181361
@@ -19454,6 +19641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563180616801
@@ -19575,6 +19763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563201509848
@@ -19669,6 +19858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563272014386
@@ -19763,6 +19953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563342973036
@@ -19857,6 +20048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563345511815
@@ -19951,6 +20143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563357422562
@@ -20045,6 +20238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563363728457
@@ -20166,6 +20360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563373049022
@@ -20260,6 +20455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563376681169
@@ -20354,6 +20550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563378736897
@@ -20448,6 +20645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563407638817
@@ -20569,6 +20767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563520316912
@@ -20663,6 +20862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563541038228
@@ -20757,6 +20957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563594687861
@@ -20851,6 +21052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563594772681
@@ -20945,6 +21147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563597084394
@@ -21039,6 +21242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563600061239
@@ -21133,6 +21337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563603847185
@@ -21227,6 +21432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563615636147
@@ -21321,6 +21527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563624574326
@@ -21415,6 +21622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563652486480
@@ -21509,6 +21717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563655936625
@@ -21603,6 +21812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563658453839
@@ -21697,6 +21907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563663425664
@@ -21791,6 +22002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563688480119
@@ -21912,6 +22124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300016, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300044, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563705092253
@@ -22006,6 +22219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563738196203
@@ -22100,6 +22314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563739781939
@@ -22194,6 +22409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563749678891
@@ -22288,6 +22504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563750546562
@@ -22382,6 +22599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563804179834
@@ -22476,6 +22694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563805105275
@@ -22570,6 +22789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563809945874
@@ -22664,6 +22884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563865175745
@@ -22758,6 +22979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563869167212
@@ -22852,6 +23074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563872409249
@@ -22946,6 +23169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563888775483
@@ -23040,6 +23264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563911508128
@@ -23161,6 +23386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300020, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300048, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563932338516
@@ -23255,6 +23481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563965638443
@@ -23349,6 +23576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563981648257
@@ -23443,6 +23671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320563989446033
@@ -23537,6 +23766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320564015193628
@@ -23631,6 +23861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320564064945111
@@ -23725,6 +23956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320564084743421
@@ -23819,6 +24051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320564102551104
@@ -23940,6 +24173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300034, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300050, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320564134810377
@@ -24034,6 +24268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
 --- !u!1 &7148320564155975428
@@ -24128,5 +24363,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_block: 0
   orange_sprite: {fileID: 21300018, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
   blue_sprite: {fileID: 21300046, guid: e0458c6e2e4ceaf4bb43e7cbfb44d858, type: 3}
+--- !u!1001 &7443254152821578471
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7148320562747277707}
+    m_Modifications:
+    - target: {fileID: 3747092678103618426, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_Name
+      value: Next Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73788a65d25455c47abdc6df0cb84862, type: 3}
+--- !u!4 &1008787279214306011 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7688821697425831996, guid: 73788a65d25455c47abdc6df0cb84862,
+    type: 3}
+  m_PrefabInstance: {fileID: 7443254152821578471}
+  m_PrefabAsset: {fileID: 0}
