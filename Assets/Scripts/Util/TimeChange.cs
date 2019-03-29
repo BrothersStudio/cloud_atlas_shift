@@ -17,6 +17,8 @@ public class TimeChange : MonoBehaviour
 
     public List<Wall> walls = new List<Wall>();
 
+    public MusicController music;
+
     void Awake()
     {
         current = this;
@@ -24,6 +26,8 @@ public class TimeChange : MonoBehaviour
 
     public void Switch()
     {
+        music.SwapMusic();
+
         last_change_time = Time.timeSinceLevelLoad;
 
         if (dimension == Dimension.Blue)
