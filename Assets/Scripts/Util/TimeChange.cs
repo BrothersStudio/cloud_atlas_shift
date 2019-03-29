@@ -17,6 +17,8 @@ public class TimeChange : MonoBehaviour
 
     public List<Wall> walls = new List<Wall>();
 
+    public AudioClip past_to_future;
+    public AudioClip future_to_past;
     public MusicController music;
 
     void Awake()
@@ -33,10 +35,16 @@ public class TimeChange : MonoBehaviour
         if (dimension == Dimension.Blue)
         {
             dimension = Dimension.Orange;
+
+            GetComponent<AudioSource>().clip = future_to_past;
+            GetComponent<AudioSource>().Play();
         }
         else
         {
             dimension = Dimension.Blue;
+
+            GetComponent<AudioSource>().clip = past_to_future;
+            GetComponent<AudioSource>().Play();
         }
 
         flash.FlashStart();
