@@ -87,6 +87,7 @@ public class CameraFollow : MonoBehaviour
             }
             else
             {
+                // Might want to follow the mouse a little as well as potentially enemies, see juicing with math talk
                 float new_x = transform.position.x * (1 - follow_speed) + player.position.x * follow_speed;
                 float new_y = transform.position.y * (1 - follow_speed) + player.position.y * follow_speed;
                 transform.position = new Vector3(new_x, new_y, -10);
@@ -108,13 +109,21 @@ public class CameraFollow : MonoBehaviour
             tweaked_pos.y = min_allowed_position.y + ortho_size;
         }
 
-        if (transform.position.x > max_allowed_position.x - ortho_size * 1.7777f)
+        // Rooms can be smaller than camera
+        if (max_allowed_position.x - ortho_size * 1.7777f > min_allowed_position.x + ortho_size * 1.7777f)
+        {
+            if (transform.position.x > max_allowed_position.x - ortho_size * 1.7777f)
+            {
+                tweaked_pos.x = max_allowed_position.x - ortho_size * 1.7777f;
+            }
+            else if (transform.position.x < min_allowed_position.x + ortho_size * 1.7777f)
+            {
+                tweaked_pos.x = min_allowed_position.x + ortho_size * 1.7777f;
+            }
+        }
+        else
         {
             tweaked_pos.x = max_allowed_position.x - ortho_size * 1.7777f;
-        }
-        else if (transform.position.x < min_allowed_position.x + ortho_size * 1.7777f)
-        {
-            tweaked_pos.x = min_allowed_position.x + ortho_size * 1.7777f;
         }
 
         transform.position = tweaked_pos;
