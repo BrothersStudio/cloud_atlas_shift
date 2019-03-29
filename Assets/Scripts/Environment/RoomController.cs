@@ -85,10 +85,16 @@ public class RoomController : MonoBehaviour
         player_room = 0;
 
         // Position pathfinding grid
-        float x_dist = Mathf.Max(x_vals.ToArray()) - Mathf.Min(x_vals.ToArray());
-        float y_dist = Mathf.Max(y_vals.ToArray()) - Mathf.Min(y_vals.ToArray());
-        pathfinding_grid.transform.position = new Vector3(x_vals.Average(), y_vals.Average(), 0);
+        float max_x = Mathf.Max(x_vals.ToArray());
+        float min_x = Mathf.Min(x_vals.ToArray());
+        float max_y = Mathf.Max(y_vals.ToArray());
+        float min_y = Mathf.Min(y_vals.ToArray());
+
+        float x_dist = max_x - min_x;
+        float y_dist = max_y - min_y;
         pathfinding_grid.gridWorldSize = new Vector2(x_dist, y_dist);
+
+        pathfinding_grid.transform.position = new Vector3((max_x + min_x) / 2f, (max_y + min_y) / 2f, 0);
     }
 
     public void MoveToNextRoom()

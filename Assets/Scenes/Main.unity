@@ -1192,7 +1192,7 @@ MonoBehaviour:
   - {fileID: 7148320562747277706, guid: 41eccc0035600284c9eeb301f398321a, type: 3}
   - {fileID: 7148320562747277706, guid: e853dfb2a7a27694c87bf48305469c74, type: 3}
   - {fileID: 7950326965343713441, guid: 5acb7c7b0a904f347a9a95e2d6370a77, type: 3}
-  - {fileID: 7950326965343713441, guid: 3d488db4b762e68498770e2fc11d8fce, type: 3}
+  - {fileID: 8829987188488352948, guid: be688e353dc4ae14a8bee8c595d35a2b, type: 3}
   - {fileID: 7950326965343713441, guid: bfcb30cac3edf8d46b45dcd803104186, type: 3}
   level_2_rooms:
   - {fileID: 7950326965343713441, guid: c1d2a42feacb4634ea9e9d908b98ac5d, type: 3}

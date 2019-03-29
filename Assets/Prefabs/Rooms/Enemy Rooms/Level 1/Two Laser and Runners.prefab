@@ -15700,7 +15700,7 @@ GameObject:
   - component: {fileID: 5619827956549419577}
   - component: {fileID: 5288108078798690035}
   m_Layer: 0
-  m_Name: Wide Room
+  m_Name: Two Laser and Runners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16013,8 +16013,6 @@ MonoBehaviour:
   exit_points:
   - {x: 0, y: 4, z: 0}
   - {x: 0, y: -4, z: 0}
-  - {x: 7, y: 0, z: 0}
-  - {x: -7, y: 0, z: 0}
   walls:
   - {fileID: 1212850075853032964, guid: c0a5b426d2d8c7e4d8b92ded079ac46b, type: 3}
   - {fileID: 5811110855416167100, guid: b92a664d89b35e347a498cdf3b8235d8, type: 3}
@@ -16023,11 +16021,29 @@ MonoBehaviour:
   doors:
   - {fileID: 6526258597738282000, guid: 6c2a8d1671ad4794184d420b17df1b12, type: 3}
   - {fileID: 5480332307935545298, guid: 43873ae8a31738b49b490be1bd9c71b4, type: 3}
-  - {fileID: 8026180518821095719, guid: 74efe0fb9544f104a962016a70420f9f, type: 3}
-  - {fileID: 8280035279687394311, guid: caacea33e7b5f1541a8f86c35d480611, type: 3}
   doors_to_open: []
-  enemy_to_place: []
-  location_to_place: []
+  enemy_to_place:
+  - {fileID: 7126016353278326813, guid: 0c6f80ac07296ba478c313f10eb59a63, type: 3}
+  - {fileID: 6625965036889558194, guid: 8366951bd9ab39c4fbc523f1c8dbe1b7, type: 3}
+  - {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559, type: 3}
+  - {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559, type: 3}
+  - {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559, type: 3}
+  - {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559, type: 3}
+  - {fileID: 209042965596252317, guid: eba3e9cf9b0c40041810002c9cf0632e, type: 3}
+  - {fileID: 209042965596252317, guid: eba3e9cf9b0c40041810002c9cf0632e, type: 3}
+  - {fileID: 209042965596252317, guid: eba3e9cf9b0c40041810002c9cf0632e, type: 3}
+  - {fileID: 209042965596252317, guid: eba3e9cf9b0c40041810002c9cf0632e, type: 3}
+  location_to_place:
+  - {x: -6, y: 3, z: 0}
+  - {x: 19, y: 3, z: 0}
+  - {x: 19, y: 3, z: 0}
+  - {x: 19, y: -3, z: 0}
+  - {x: 6, y: 3, z: 0}
+  - {x: 6, y: -3, z: 0}
+  - {x: 6, y: 3, z: 0}
+  - {x: 6, y: -3, z: 0}
+  - {x: 19, y: -3, z: 0}
+  - {x: 19, y: 3, z: 0}
   enemies: []
   max_and_min_cam_pos:
   - {x: 20.5, y: 4.5, z: 0}
