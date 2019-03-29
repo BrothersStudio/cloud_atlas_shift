@@ -3117,7 +3117,7 @@ GameObject:
   - component: {fileID: 7950326965343713440}
   - component: {fileID: 4445603585947590235}
   m_Layer: 0
-  m_Name: Dual Laser
+  m_Name: Dual Laser Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3314,7 +3314,7 @@ MonoBehaviour:
   - {fileID: 209042965596252317, guid: eba3e9cf9b0c40041810002c9cf0632e, type: 3}
   location_to_place:
   - {x: -6, y: 3, z: 0}
-  - {x: -6, y: 3, z: 0}
+  - {x: 6, y: 3, z: 0}
   - {x: -6, y: 3, z: 0}
   - {x: 6, y: 3, z: 0}
   - {x: 6, y: -3, z: 0}
