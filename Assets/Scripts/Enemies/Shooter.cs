@@ -106,7 +106,8 @@ public class Shooter : MonoBehaviour
 
     void SetEnemyFacing()
     {
-        if (enemy.health > 0)
+        if (enemy.health > 0 &&
+            TimeChange.current.dimension == enemy.enemy_dimension)
         {
             Vector3 check = transform.position - player.transform.position;
             if (check.x > 0)
@@ -122,7 +123,7 @@ public class Shooter : MonoBehaviour
 
     IEnumerator WalkCycle()
     {
-        while (true)
+        while (enemy.health > 0)
         {
             sprite_renderer.sprite = walk_animation[0];
             yield return new WaitForSeconds(0.2f);
