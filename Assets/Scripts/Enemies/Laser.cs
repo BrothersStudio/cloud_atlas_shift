@@ -21,8 +21,17 @@ public class Laser : MonoBehaviour
 
         while (true)
         {
-            Collider2D check = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(-1 - num_beams, 0)), 0.1f);
-            if (check == null)
+            bool done_making_lasers = false;
+            Collider2D[] check = Physics2D.OverlapCircleAll(transform.TransformPoint(new Vector2(-1 - num_beams, 0)), 0.1f);
+            foreach (Collider2D collider in check)
+            {
+                if (collider.tag == "Wall")
+                {
+                    done_making_lasers = true;
+                }
+            }
+
+            if (!done_making_lasers)
             {
                 GameObject new_beam = Instantiate(transform.GetChild(0).gameObject, transform.TransformPoint(new Vector2(-1 - num_beams, 0)), Quaternion.identity);
                 new_beam.transform.SetParent(transform);
@@ -54,21 +63,23 @@ public class Laser : MonoBehaviour
             return;
         }
 
-        Collider2D top_collider = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(0, 0.2f)), 0.1f);
-        if (top_collider != null)
+        Collider2D[] top_colliders = Physics2D.OverlapCircleAll(transform.TransformPoint(new Vector2(0, 0.2f)), 0.1f);
+        foreach (Collider2D collider in top_colliders)
         {
-            if (top_collider.tag == "Wall")
+            if (collider.tag == "Wall")
             {
                 current_speed = -current_speed;
+                break;
             }
         }
 
-        Collider2D bot_collider = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(0, -0.2f)), 0.1f);
-        if (bot_collider != null)
+        Collider2D[] bot_colliders = Physics2D.OverlapCircleAll(transform.TransformPoint(new Vector2(0, -0.2f)), 0.1f);
+        foreach (Collider2D collider in bot_colliders)
         {
-            if (bot_collider.tag == "Wall")
+            if (collider.tag == "Wall")
             {
                 current_speed = -current_speed;
+                break;
             }
         }
 
