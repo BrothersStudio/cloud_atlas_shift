@@ -93,6 +93,14 @@ public class RoomController : MonoBehaviour
 
     public void MoveToNextRoom()
     {
+        foreach (Enemy enemy in spawned_rooms[player_room].GetComponent<Room>().enemies)
+        {
+            if (enemy.is_hazard)
+            {
+                enemy.health = -10;
+            }
+        }
+
         player_room++;
 
         TimeChange.current.ForceRoomChangeDelay();
@@ -104,6 +112,7 @@ public class RoomController : MonoBehaviour
         player_pos.y -= 3f;
         player.transform.position = player_pos;
         player.ResetSpeed();
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         Camera.main.GetComponent<CameraFollow>().MoveToNextRoom(spawned_rooms[player_room].transform.position);
     }

@@ -15,6 +15,9 @@ public class Shooter : MonoBehaviour
     Vector3[] path = new Vector3[] { };
     int targetIndex;
 
+    bool animating = false;
+    public List<Sprite> walk_animation;
+
     Enemy enemy;
     Player player;
     SpriteRenderer sprite_renderer;
@@ -78,13 +81,57 @@ public class Shooter : MonoBehaviour
 
     void SelectSprite()
     {
-        if (enemy.flashing)
+        SetEnemyFacing();
+
+        if (enemy.flashing || enemy.health <= 0)
         {
             sprite_renderer.sprite = enemy.flash_sprite;
+
+            animating = false;
+            StopCoroutine(WalkCycle());
         }
         else
         {
-            sprite_renderer.sprite = enemy.normal_sprite;
+            if (walk_animation.Count > 0 && !animating)
+            {
+                animating = true;
+                StartCoroutine(WalkCycle());
+            }
+            else if (walk_animation.Count == 0)
+            {
+                sprite_renderer.sprite = enemy.normal_sprite;
+            }
+        }
+    }
+
+    void SetEnemyFacing()
+    {
+        if (enemy.health > 0)
+        {
+            Vector3 check = transform.position - player.transform.position;
+            if (check.x > 0)
+            {
+                sprite_renderer.flipX = true;
+            }
+            else
+            {
+                sprite_renderer.flipX = false;
+            }
+        }
+    }
+
+    IEnumerator WalkCycle()
+    {
+        while (true)
+        {
+            sprite_renderer.sprite = walk_animation[0];
+            yield return new WaitForSeconds(0.2f);
+            sprite_renderer.sprite = walk_animation[1];
+            yield return new WaitForSeconds(0.2f);
+            sprite_renderer.sprite = walk_animation[2];
+            yield return new WaitForSeconds(0.2f);
+            sprite_renderer.sprite = walk_animation[3];
+            yield return new WaitForSeconds(0.2f);
         }
     }
 

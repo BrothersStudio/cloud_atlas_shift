@@ -49,6 +49,9 @@ TagManager:
   - name: Ground
     uniqueID: 4107096709
     locked: 0
+  - name: Corpses
+    uniqueID: 1722087249
+    locked: 0
   - name: Characters
     uniqueID: 1937226157
     locked: 0
