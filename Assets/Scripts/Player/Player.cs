@@ -31,12 +31,12 @@ public class Player : MonoBehaviour
     float swing_cooldown = 0.25f;
 
     // Movement
-    float acceleration = 0.5f;
+    float acceleration = 500f;
     
     float x_speed = 0;
     float y_speed = 0;
 
-    float max_speed = 40f;
+    float max_speed = 1200f;
     float friction = 0.06f;
 
     void Start()
@@ -52,7 +52,12 @@ public class Player : MonoBehaviour
         // Make sure we aren't frozen
         if (Hitstop.current.Hitstopped)
         {
+            GetComponent<Rigidbody2D>().simulated = false;
             return;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().simulated = true;
         }
 
         // Dying
@@ -112,7 +117,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (!knockback_state)
+        if (!knockback_state && Input.anyKey)
         {
             // Movement
             if (Input.GetKey(KeyCode.W))
@@ -135,7 +140,13 @@ public class Player : MonoBehaviour
             x_speed *= (1 - friction);
             y_speed *= (1 - friction);
 
-            transform.position = new Vector3(transform.position.x + x_speed * Time.deltaTime, transform.position.y + y_speed * Time.deltaTime, transform.position.z);
+            //transform.position = new Vector3(transform.position.x + x_speed * Time.deltaTime, transform.position.y + y_speed * Time.deltaTime, transform.position.z);
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(x_speed * Time.deltaTime, y_speed * Time.deltaTime));
+        }
+        else if (!knockback_state)
+        {
+            x_speed *= (1 - friction);
+            y_speed *= (1 - friction);
         }
     }
 
