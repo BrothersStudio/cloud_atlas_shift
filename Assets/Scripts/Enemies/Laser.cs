@@ -7,11 +7,17 @@ public class Laser : MonoBehaviour
     float current_speed = 4f;
     int num_beams = 1;
 
+    public bool is_vertical;
+
     Enemy enemy;
 
     void Awake()
     {
         enemy = GetComponent<Enemy>();
+        if (is_vertical)
+        {
+            transform.Rotate(new Vector3(0, 0, 90));
+        }
 
         while (true)
         {
@@ -20,6 +26,11 @@ public class Laser : MonoBehaviour
             {
                 GameObject new_beam = Instantiate(transform.GetChild(0).gameObject, transform.TransformPoint(new Vector2(-1 - num_beams, 0)), Quaternion.identity);
                 new_beam.transform.SetParent(transform);
+                if (is_vertical)
+                {
+                    new_beam.transform.Rotate(new Vector3(0, 0, 90));
+                }
+
                 num_beams++;
             }
             else
@@ -46,7 +57,7 @@ public class Laser : MonoBehaviour
         Collider2D top_collider = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(0, 0.2f)), 0.1f);
         if (top_collider != null)
         {
-            if (top_collider.tag != "Player" && top_collider.tag != "Laser")
+            if (top_collider.tag == "Wall")
             {
                 current_speed = -current_speed;
             }
@@ -55,14 +66,21 @@ public class Laser : MonoBehaviour
         Collider2D bot_collider = Physics2D.OverlapCircle(transform.TransformPoint(new Vector2(0, -0.2f)), 0.1f);
         if (bot_collider != null)
         {
-            if (bot_collider.tag != "Player" && bot_collider.tag != "Laser")
+            if (bot_collider.tag == "Wall")
             {
                 current_speed = -current_speed;
             }
         }
 
         Vector2 new_pos = transform.position;
-        new_pos.y -= current_speed * Time.deltaTime;
+        if (is_vertical)
+        {
+            new_pos.x -= current_speed * Time.deltaTime;
+        }
+        else
+        {
+            new_pos.y -= current_speed * Time.deltaTime;
+        }
         transform.position = new_pos;
     }
 }
