@@ -16,7 +16,8 @@ public class Room : MonoBehaviour
     public List<GameObject> enemy_to_place;
     public List<Vector3> location_to_place;
 
-    List<Enemy> enemies = new List<Enemy>();
+    [HideInInspector]
+    public List<Enemy> enemies = new List<Enemy>();
     bool room_complete = false;
 
     public List<Vector3> max_and_min_cam_pos;
@@ -103,22 +104,8 @@ public class Room : MonoBehaviour
                 }
             }
 
-            CompleteRoom();
-
+            room_complete = true;
             OpenDoors();
-        }
-    }
-
-    void CompleteRoom()
-    {
-        room_complete = true;
-
-        foreach (Enemy enemy in enemies)
-        {
-            if (enemy.is_hazard)
-            {
-                enemy.health = -10;
-            }
         }
     }
 
