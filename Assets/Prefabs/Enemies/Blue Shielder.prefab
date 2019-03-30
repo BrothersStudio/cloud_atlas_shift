@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f9cff8bc699dd4abc746ce8ed4a51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shift_attack_delay: 1
+  shift_attack_delay: 2
   hit_shield: {fileID: 8300000, guid: 823b815bb06c759429e698d7c2a3a301, type: 3}
 --- !u!61 &7755434270788424527
 BoxCollider2D:
