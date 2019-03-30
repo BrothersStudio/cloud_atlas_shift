@@ -14,8 +14,16 @@ public class Boss : MonoBehaviour
     public List<Vector3> dive_positions;
 
     // Shooting
+    float shot_position_reached_time = 0f;
+    float phase_time = 10f;
+
     float last_shot = 0f;
-    float shot_cooldown = 0.4f;
+    float last_player_shot = 0f;
+    float quick_shot = 0.4f;
+    float slow_shot = 0.8f;
+
+    int shoot_choice = 0;
+    public List<Vector3> shoot_positions;
 
     // Intensity
     int orig_health;
@@ -59,15 +67,25 @@ public class Boss : MonoBehaviour
 
     void ChooseAttack()
     {
-        current_attack = Attacks.Dive;
         speed = 0;
-        if (transform.position.x >= 0)
+        if (Random.Range(0f, 1f) < 0.5)
         {
-            dive_choice = Random.Range(0, dive_positions.Count / 2);
+            current_attack = Attacks.Dive;
+
+            // Choose location further away from yourself
+            if (transform.position.x >= 0)
+            {
+                dive_choice = Random.Range(0, dive_positions.Count / 2);
+            }
+            else
+            {
+                dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
+            }
         }
         else
         {
-            dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
+            current_attack = Attacks.Shoot;
+            shoot_choice = Random.Range(0, 4);
         }
 
         // Assess if health is below half
@@ -90,6 +108,10 @@ public class Boss : MonoBehaviour
 
             SetSprite();
         }
+        else
+        {
+            StopAllCoroutines();
+        }
     }
 
     void ChooseAttackLogic()
@@ -100,43 +122,73 @@ public class Boss : MonoBehaviour
                 ChooseAttack();
                 break;
             case Attacks.Dive:
-                Dive();
+                DiveAttack();
+                break;
+            case Attacks.Shoot:
+                ShootAttack();
                 break;
         }
     }
 
-    void Dive()
+    void DiveAttack()
     {
         speed += 0.008f;
 
         transform.position = Vector3.MoveTowards(transform.position, dive_positions[dive_choice], speed * speed * speed * Time.deltaTime);
-        if (critical) Shoot();
+        if (critical &&
+            Time.timeSinceLevelLoad > last_shot + quick_shot &&
+            enemy.CanSeePlayer())
+        {
+            last_shot = Time.timeSinceLevelLoad;
+            Shoot(player.transform.position);
+        }
 
         if (Vector3.Distance(transform.position, dive_positions[dive_choice]) < 0.1f)
         {
-            speed = orig_speed;
             current_attack = Attacks.None;
         }
     }
 
-    void Shoot()
+    void ShootAttack()
     {
-        // Shooting
-        if (Time.timeSinceLevelLoad > last_shot + shot_cooldown &&
-            enemy.CanSeePlayer())
+        if (Vector3.Distance(transform.position, shoot_positions[shoot_choice]) > 0.1f)
         {
-            last_shot = Time.timeSinceLevelLoad;
+            speed += 0.008f;
+            transform.position = Vector3.MoveTowards(transform.position, shoot_positions[shoot_choice], speed * speed * speed * Time.deltaTime);
 
-            GameObject bullet = PlayerBulletPool.current.GetPooledBullet();
-            bullet.SetActive(true);
-            bullet.transform.position = transform.position;
-
-            bullet.GetComponent<Bullet>().side = BulletSide.Enemy;
-            bullet.GetComponent<Bullet>().SetSpriteAndSpeed();
-
-            Vector3 direction = FindObjectOfType<Player>().transform.position - transform.position;
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
+            shot_position_reached_time = Time.timeSinceLevelLoad;
         }
+        else if (Time.timeSinceLevelLoad < shot_position_reached_time + phase_time)
+        {
+            if (Time.timeSinceLevelLoad > last_shot + quick_shot)
+            {
+                last_shot = Time.timeSinceLevelLoad;
+                Shoot(new Vector3(Random.Range(enemy.min_pos.x, enemy.max_pos.x), Random.Range(enemy.min_pos.y, enemy.max_pos.y), 0));
+            }
+
+            if (Time.timeSinceLevelLoad > last_player_shot + slow_shot)
+            {
+                last_player_shot = Time.timeSinceLevelLoad;
+                Shoot(player.transform.position);
+            }
+        }
+        else
+        {
+            current_attack = Attacks.None;
+        }
+    }
+
+    void Shoot(Vector3 location)
+    {
+        GameObject bullet = PlayerBulletPool.current.GetPooledBullet();
+        bullet.SetActive(true);
+        bullet.transform.position = transform.position;
+
+        bullet.GetComponent<Bullet>().side = BulletSide.Enemy;
+        bullet.GetComponent<Bullet>().SetSpriteAndSpeed();
+
+        Vector3 direction = location - transform.position;
+        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
     }
 
     void SetSprite()
@@ -153,7 +205,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator WalkCycle()
     {
-        while (true)
+        while (enemy.health > 0)
         {
             walk_cycle = 0;
             SpawnCloud();
@@ -198,6 +250,7 @@ public class Boss : MonoBehaviour
     public enum Attacks
     {
         None,
-        Dive
+        Dive,
+        Shoot
     }
 }
