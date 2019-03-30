@@ -189,7 +189,6 @@ public class Enemy : MonoBehaviour
 
         Invoke("Fade", start_fade_time);
 
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         Knockback(player.transform);
         camera_shake.Shake(0.1f);
 
@@ -221,7 +220,7 @@ public class Enemy : MonoBehaviour
                 player.DamagePlayer(transform);
             }
         }
-        else if (collision.tag == "Wall")
+        else if (collision.tag == "Wall" && GetComponent<Rigidbody2D>() != null)
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
