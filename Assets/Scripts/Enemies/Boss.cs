@@ -15,12 +15,12 @@ public class Boss : MonoBehaviour
 
     // Shooting
     float shot_position_reached_time = 0f;
-    float phase_time = 10f;
+    float phase_time = 8f;
 
-    float last_shot = 0f;
-    float last_player_shot = 0f;
-    float quick_shot = 0.4f;
-    float slow_shot = 0.8f;
+    float last_quick_shot = 0f;
+    float last_critical_shot = 0f;
+    float quick_shot_cooldown = 0.4f;
+    float critical_shot_cooldown = 1;
 
     int shoot_choice = 0;
     public List<Vector3> shoot_positions;
@@ -33,7 +33,7 @@ public class Boss : MonoBehaviour
     int walk_cycle = 0;
     public List<Sprite> sprites;
 
-    int num_clouds = 5;
+    int num_clouds = 3;
     public GameObject cloud_trail;
     List<GameObject> cloud_trail_pool = new List<GameObject>();
 
@@ -89,7 +89,7 @@ public class Boss : MonoBehaviour
         }
 
         // Assess if health is below half
-        if (enemy.health < (orig_health / 2f))
+        if (enemy.health < (orig_health / 2f) && !critical)
         {
             critical = true;
         }
@@ -136,10 +136,10 @@ public class Boss : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, dive_positions[dive_choice], speed * speed * speed * Time.deltaTime);
         if (critical &&
-            Time.timeSinceLevelLoad > last_shot + quick_shot &&
+            Time.timeSinceLevelLoad > last_quick_shot + quick_shot_cooldown &&
             enemy.CanSeePlayer())
         {
-            last_shot = Time.timeSinceLevelLoad;
+            last_quick_shot = Time.timeSinceLevelLoad;
             Shoot(player.transform.position);
         }
 
@@ -160,16 +160,29 @@ public class Boss : MonoBehaviour
         }
         else if (Time.timeSinceLevelLoad < shot_position_reached_time + phase_time)
         {
-            if (Time.timeSinceLevelLoad > last_shot + quick_shot)
-            {
-                last_shot = Time.timeSinceLevelLoad;
-                Shoot(new Vector3(Random.Range(enemy.min_pos.x, enemy.max_pos.x), Random.Range(enemy.min_pos.y, enemy.max_pos.y), 0));
-            }
+            if (critical) critical_shot_cooldown = 0.5f;
 
-            if (Time.timeSinceLevelLoad > last_player_shot + slow_shot)
+            if (Time.timeSinceLevelLoad > last_critical_shot + critical_shot_cooldown)
             {
-                last_player_shot = Time.timeSinceLevelLoad;
-                Shoot(player.transform.position);
+                last_critical_shot = Time.timeSinceLevelLoad;
+                for (float i = -Mathf.PI / 4f; i < 3 * Mathf.PI / 4f; i += 0.05f)
+                {
+                    switch (shoot_choice)
+                    {
+                        case 0:
+                            Shoot(transform.TransformPoint(new Vector3(i, -Mathf.Cos(i), 0)));
+                            break;
+                        case 1:
+                            Shoot(transform.TransformPoint(new Vector3(-i, -Mathf.Cos(i), 0)));
+                            break;
+                        case 2:
+                            Shoot(transform.TransformPoint(new Vector3(-i, Mathf.Cos(i), 0)));
+                            break;
+                        case 3:
+                            Shoot(transform.TransformPoint(new Vector3(i, Mathf.Cos(i), 0)));
+                            break;
+                    }
+                }
             }
         }
         else

@@ -74,18 +74,10 @@ public class Bullet : MonoBehaviour
         if (TimeChange.current.dimension != bullet_dimension)
         {
             sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
-            foreach (Collider2D collider in GetComponents<Collider2D>())
-            {
-                collider.enabled = false;
-            }
         }
         else
         {
             sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
-            foreach (Collider2D collider in GetComponents<Collider2D>())
-            {
-                collider.enabled = true;
-            }
         }
     }
 
@@ -151,6 +143,15 @@ public class Bullet : MonoBehaviour
         GameObject wall_hit = PlayerBulletPool.current.GetPooledWallHit();
         wall_hit.transform.position = transform.position;
         wall_hit.SetActive(true);
+
+        if (TimeChange.current.dimension != bullet_dimension)
+        {
+            wall_hit.GetComponent<SpriteRenderer>().color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 0.3f);
+        }
+        else
+        {
+            wall_hit.GetComponent<SpriteRenderer>().color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
+        }
 
         gameObject.SetActive(false);
     }
