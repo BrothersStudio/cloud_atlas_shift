@@ -363,7 +363,6 @@ GameObject:
   m_Component:
   - component: {fileID: 677571933}
   - component: {fileID: 677571932}
-  - component: {fileID: 677571931}
   - component: {fileID: 677571935}
   - component: {fileID: 677571936}
   - component: {fileID: 677571934}
@@ -374,14 +373,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &677571931
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677571930}
-  m_Enabled: 1
 --- !u!20 &677571932
 Camera:
   m_ObjectHideFlags: 0
@@ -993,7 +984,6 @@ MonoBehaviour:
   walls: []
   past_to_future: {fileID: 8300000, guid: 547a1f1951122b746ae9403aebcb7b6e, type: 3}
   future_to_past: {fileID: 8300000, guid: f8564299a1f7b864faa05196c33998a4, type: 3}
-  music: {fileID: 1550669673}
 --- !u!114 &1432819353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,6 +1520,7 @@ GameObject:
   - component: {fileID: 1846309568}
   - component: {fileID: 1846309570}
   - component: {fileID: 1846309571}
+  - component: {fileID: 1846309572}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -1550,7 +1541,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.06}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1561,7 +1552,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.55}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
 --- !u!4 &1846309563
 Transform:
@@ -6495,6 +6486,14 @@ MonoBehaviour:
   player_death: {fileID: 8300000, guid: d5d337fda5e9c234db0e85959dfb264d, type: 3}
   enemy_sword_death: {fileID: 8300000, guid: d0aba852bd186874fba2ef953bfea309, type: 3}
   enemy_gun_death: {fileID: 8300000, guid: 936b0d41f3d485747b750509e99f126a, type: 3}
+--- !u!81 &1846309572
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846309561}
+  m_Enabled: 1
 --- !u!1 &2085885648
 GameObject:
   m_ObjectHideFlags: 0
