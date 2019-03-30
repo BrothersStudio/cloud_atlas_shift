@@ -58,7 +58,7 @@ public class Zombie : MonoBehaviour
     {
         while (enemy.health > 0)
         {
-            PathRequestManager.RequestPath(transform.position, GetRandomPositionInRoom(), OnPathFound);
+            PathRequestManager.RequestPath(transform.position, enemy.GetRandomPositionInRoom(), OnPathFound);
 
             yield return new WaitForSeconds(10f);
         }
@@ -84,7 +84,7 @@ public class Zombie : MonoBehaviour
                         targetIndex++;
                         if (targetIndex >= path.Length)
                         {
-                            PathRequestManager.RequestPath(transform.position, GetRandomPositionInRoom(), OnPathFound);
+                            PathRequestManager.RequestPath(transform.position, enemy.GetRandomPositionInRoom(), OnPathFound);
                             yield break;
                         }
                         currentWaypoint = path[targetIndex];
@@ -95,13 +95,5 @@ public class Zombie : MonoBehaviour
                 yield return null;
             }
         }
-    }
-
-    Vector3 GetRandomPositionInRoom()
-    {
-        return new Vector3(
-            Random.Range(enemy.min_pos.x, enemy.max_pos.x),
-            Random.Range(enemy.min_pos.y, enemy.max_pos.y),
-            0);
     }
 }

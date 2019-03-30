@@ -246,6 +246,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public Vector3 GetRandomPositionInRoom()
+    {
+        return new Vector3(
+            Random.Range(min_pos.x, max_pos.x),
+            Random.Range(min_pos.y, max_pos.y),
+            0);
+    }
+
     public enum DamageType
     {
         Sword,

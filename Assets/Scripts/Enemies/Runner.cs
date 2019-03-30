@@ -12,8 +12,7 @@ public class Runner : MonoBehaviour
     int animation_ind = 0;
     public List<Sprite> skull_animation;
 
-    Vector3[] path = new Vector3[] { };
-    int targetIndex;
+    Vector3 random_target;
 
     Player player;
     Enemy enemy;
@@ -33,8 +32,7 @@ public class Runner : MonoBehaviour
         max_speed = speed;
         speed = 0;
 
-        StartCoroutine(RefreshPath());
-        StartCoroutine(FollowPath());
+        random_target = enemy.GetRandomPositionInRoom();
 
         animation_ind = Random.Range(0, skull_animation.Count);
         StartCoroutine(SkullAnimation());
@@ -45,6 +43,15 @@ public class Runner : MonoBehaviour
         speed = Mathf.Clamp(speed + 0.01f, 0, max_speed);
 
         SetSprite();
+
+        if (!player.invincible && TimeChange.current.dimension == enemy.enemy_dimension)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, random_target, speed * speed * Time.deltaTime);
+        }
     }
 
     void SetSprite()
@@ -65,13 +72,11 @@ public class Runner : MonoBehaviour
 
         if (enemy.flashing)
         {
-            StopCoroutine(SkullAnimation());
             sprite_renderer.sprite = enemy.flash_sprite;
-            animating = false;
         }
-        else if (!animating)
+        else
         {
-            StartCoroutine(SkullAnimation());
+            sprite_renderer.sprite = skull_animation[animation_ind];
             animating = true;
         }
     }
@@ -85,68 +90,7 @@ public class Runner : MonoBehaviour
             {
                 animation_ind = 0;
             }
-               
-            sprite_renderer.sprite = skull_animation[animation_ind];
             yield return new WaitForSeconds(0.2f);
-        }
-    }
-
-    public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
-    {
-        if (pathSuccessful)
-        {
-            path = newPath;
-            targetIndex = 0;
-
-            StopCoroutine("FollowPath");
-            StartCoroutine("FollowPath");
-        }
-    }
-
-    IEnumerator RefreshPath()
-    {
-        while (enemy.health > 0)
-        {
-            PathRequestManager.RequestPath(transform.position, player.transform.position, OnPathFound);
-
-            yield return new WaitForSeconds(0.2f);
-        }
-    }
-
-    IEnumerator FollowPath()
-    {
-        while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
-        {
-            if (path.Length > 0)
-            {
-                Vector3 currentWaypoint = path[0];
-                while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
-                {
-                    if (Hitstop.current.Hitstopped)
-                    {
-                        yield return null;
-                        continue;
-                    }
-
-                    if (transform.position == currentWaypoint)
-                    {
-                        targetIndex++;
-                        if (targetIndex >= path.Length)
-                        {
-                            yield break;
-                        }
-                        currentWaypoint = path[targetIndex];
-                    }
-
-                    transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
-                    yield return null;
-                }
-            }
-            else
-            {
-                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-            }
-            yield return null;
         }
     }
 }
