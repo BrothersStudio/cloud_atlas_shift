@@ -27,8 +27,8 @@ public class Player : MonoBehaviour
     float shot_cooldown = 0.2f;
 
     Sword sword;
-    float last_swing = -0.25f;
-    float swing_cooldown = 0.25f;
+    float last_swing = -0.50f;
+    float swing_cooldown = 0.50f;
 
     // Movement
     float acceleration = 500f;

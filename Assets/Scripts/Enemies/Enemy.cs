@@ -146,12 +146,12 @@ public class Enemy : MonoBehaviour
 
     void ParseDamage(int damage)
     {
+        PlayHitSound();
+
         health -= damage;
         if (health <= 0)
         {
             CancelInvoke();
-
-            PlayDeathSound();
 
             if (dead_sprite != null)
             {
@@ -173,7 +173,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void PlayDeathSound()
+    void PlayHitSound()
     {
         AudioClip chosen_clip = last_damage_type == DamageType.Sword ? player.GetComponent<PlayerAudio>().enemy_sword_death : player.GetComponent<PlayerAudio>().enemy_gun_death;
         GetComponent<AudioSource>().clip = chosen_clip;
