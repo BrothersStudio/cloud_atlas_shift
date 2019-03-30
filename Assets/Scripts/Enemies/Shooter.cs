@@ -15,7 +15,7 @@ public class Shooter : MonoBehaviour
     Vector3[] path = new Vector3[] { };
     int targetIndex;
 
-    bool animating = false;
+    int walk_cycle_int = 0;
     public List<Sprite> walk_animation;
 
     Enemy enemy;
@@ -32,6 +32,7 @@ public class Shooter : MonoBehaviour
     void Start()
     {
         StartCoroutine(RefreshPath());
+        StartCoroutine(WalkCycle());
     }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -83,19 +84,15 @@ public class Shooter : MonoBehaviour
     {
         SetEnemyFacing();
 
-        if (enemy.flashing || enemy.health <= 0)
+        if (enemy.flashing)
         {
             sprite_renderer.sprite = enemy.flash_sprite;
-
-            animating = false;
-            StopCoroutine(WalkCycle());
         }
         else
         {
-            if (walk_animation.Count > 0 && !animating)
+            if (walk_animation.Count > 0)
             {
-                animating = true;
-                StartCoroutine(WalkCycle());
+                sprite_renderer.sprite = walk_animation[walk_cycle_int];
             }
             else if (walk_animation.Count == 0)
             {
@@ -123,15 +120,13 @@ public class Shooter : MonoBehaviour
 
     IEnumerator WalkCycle()
     {
-        while (enemy.health > 0)
+        while (true)
         {
-            sprite_renderer.sprite = walk_animation[0];
+            walk_cycle_int = 0;
             yield return new WaitForSeconds(0.2f);
-            sprite_renderer.sprite = walk_animation[1];
+            walk_cycle_int = 1;
             yield return new WaitForSeconds(0.2f);
-            sprite_renderer.sprite = walk_animation[2];
-            yield return new WaitForSeconds(0.2f);
-            sprite_renderer.sprite = walk_animation[3];
+            walk_cycle_int = 2;
             yield return new WaitForSeconds(0.2f);
         }
     }

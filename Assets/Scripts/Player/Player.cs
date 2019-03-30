@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     CameraFollow main_camera;
 
     // Combat
-    int health = 3;
+    public int health = 3;
     public GameObject heart_bar;
     public bool dying = false;
 

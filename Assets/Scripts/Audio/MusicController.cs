@@ -8,6 +8,9 @@ public class MusicController : MonoBehaviour
     public AudioSource minor;
     public AudioSource major;
 
+    public AudioClip boss_minor;
+    public AudioClip boss_major;
+
     public void SwapMusic()
     {
         if (minor_playing)
@@ -22,5 +25,20 @@ public class MusicController : MonoBehaviour
             major.volume = 0;
             minor.volume = 0.5f;
         }
+    }
+
+    public void StopMusic()
+    {
+        minor.Stop();
+        major.Stop();
+    }
+
+    public void SetBossMusic()
+    {
+        minor.clip = boss_minor;
+        minor.Play();
+
+        major.clip = boss_major;
+        major.Play();
     }
 }

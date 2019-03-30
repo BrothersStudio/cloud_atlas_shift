@@ -19,7 +19,15 @@ public class Boss : MonoBehaviour
 
     // Intensity
     int orig_health;
-    bool critical = true;
+    bool critical = false;
+
+    // Sprites
+    int walk_cycle = 0;
+    public List<Sprite> sprites;
+
+    int num_clouds = 5;
+    public GameObject cloud_trail;
+    List<GameObject> cloud_trail_pool = new List<GameObject>();
 
     Enemy enemy;
     Player player;
@@ -37,7 +45,16 @@ public class Boss : MonoBehaviour
         orig_speed = speed;
         orig_health = enemy.health;
 
+        // Populate cloud trail pool
+        for (int i = 0; i < num_clouds; i++)
+        {
+            GameObject obj = Instantiate(cloud_trail) as GameObject;
+            obj.SetActive(false);
+            cloud_trail_pool.Add(obj);
+        }
+
         ChooseAttack();
+        StartCoroutine(WalkCycle());
     }
 
     void ChooseAttack()
@@ -59,8 +76,6 @@ public class Boss : MonoBehaviour
             critical = true;
         }
     }
-
-
 
     void Update()
     {
@@ -132,8 +147,52 @@ public class Boss : MonoBehaviour
         }
         else
         {
-            sprite_renderer.sprite = enemy.normal_sprite;
+            sprite_renderer.sprite = sprites[walk_cycle];
         }
+    }
+
+    IEnumerator WalkCycle()
+    {
+        while (true)
+        {
+            walk_cycle = 0;
+            SpawnCloud();
+            yield return new WaitForSeconds(0.25f);
+            SpawnCloud();
+            yield return new WaitForSeconds(0.25f);
+            walk_cycle = 1;
+            SpawnCloud();
+            yield return new WaitForSeconds(0.25f);
+            SpawnCloud();
+            yield return new WaitForSeconds(0.25f);
+            walk_cycle = 2;
+            SpawnCloud();
+            yield return new WaitForSeconds(0.25f);
+            SpawnCloud();
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
+    void SpawnCloud()
+    {
+        GameObject cloud = GetPooledCloud();
+        cloud.transform.position = transform.position;
+        cloud.SetActive(true);
+    }
+
+    GameObject GetPooledCloud()
+    {
+        for (int i = 0; i < cloud_trail_pool.Count; i++)
+        {
+            if (!cloud_trail_pool[i].activeInHierarchy)
+            {
+                return cloud_trail_pool[i];
+            }
+        }
+
+        GameObject obj = Instantiate(cloud_trail) as GameObject;
+        cloud_trail_pool.Add(obj);
+        return obj;
     }
 
     public enum Attacks

@@ -39,6 +39,7 @@ public class RoomController : MonoBehaviour
                 current_rooms = level_3_rooms;
                 break;
             case 4:
+                FindObjectOfType<MusicController>().StopMusic();
                 current_rooms = boss_rooms;
                 break;
         }

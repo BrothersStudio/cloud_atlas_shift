@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_boss: 1
+  is_hazard: 0
   health: 2000
   enemy_dimension: 0
   last_swing_id: -1
@@ -99,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 1937226157
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 259ca1b8de0dd5047868a6ed23721ac1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,11 +171,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dive_positions:
-  - {x: -10, y: 2, z: 0}
-  - {x: -10, y: -2, z: 0}
-  - {x: 10, y: 2, z: 0}
-  - {x: 10, y: -2, z: 0}
-  shot_clip: {fileID: 8300000, guid: 7d8a11086b40fa9408ddb2a37aa51f83, type: 3}
+  - {x: -10, y: 28, z: 0}
+  - {x: -10, y: 24, z: 0}
+  - {x: 10, y: 28, z: 0}
+  - {x: 10, y: 24, z: 0}
+  sprites:
+  - {fileID: 21300000, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300002, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300004, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  cloud_trail: {fileID: 5062693320930552533, guid: c257d179ce2c3f74a93ea83d24358960,
+    type: 3}
 --- !u!82 &8309924737297900343
 AudioSource:
   m_ObjectHideFlags: 0

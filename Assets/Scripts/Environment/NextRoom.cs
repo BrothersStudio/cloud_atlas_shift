@@ -8,6 +8,11 @@ public class NextRoom : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            if (FindObjectOfType<LevelController>().current_level == 4)
+            {
+                FindObjectOfType<MusicController>().SetBossMusic();
+            }
+
             FindObjectOfType<RoomController>().MoveToNextRoom();
             GetComponent<BoxCollider2D>().enabled = false;
         }
