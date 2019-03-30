@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
                 Destroy(gameObject);
             }
         } 
-        else if (IsOutOfBounds())
+        else if (IsOutOfBounds() && !is_hazard)
         {
             EmergencyKill();
         }

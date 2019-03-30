@@ -22,10 +22,12 @@ public class RoomController : MonoBehaviour
     public Grid pathfinding_grid;
 
     LevelController lev_con;
+    FadeToBlack fade;
 
     void Awake()
     {
         lev_con = FindObjectOfType<LevelController>();
+        fade = FindObjectOfType<FadeToBlack>();
 
         switch (lev_con.current_level)
         {
@@ -92,9 +94,12 @@ public class RoomController : MonoBehaviour
         pathfinding_grid.gridWorldSize = new Vector2(x_dist, y_dist);
 
         pathfinding_grid.transform.position = new Vector3((max_x + min_x) / 2f, (max_y + min_y) / 2f, 0);
+    }
 
-        // Start first room
+    void Start()
+    {
         spawned_rooms[0].GetComponent<Room>().Activate();
+        fade.FadeIn();
     }
 
     public void MoveToNextRoom()

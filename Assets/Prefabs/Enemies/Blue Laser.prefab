@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
   is_hazard: 1
   health: 1
@@ -361,8 +362,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
-  is_hazard: 0
+  is_hazard: 1
   health: 0
   enemy_dimension: 0
   last_swing_id: -1

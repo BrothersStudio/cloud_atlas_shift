@@ -9,6 +9,9 @@ public class LevelController : MonoBehaviour
 
     public int current_level = 1;
 
+    [HideInInspector]
+    public bool game_over = false;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -27,5 +30,10 @@ public class LevelController : MonoBehaviour
     {
         GetComponent<MusicController>().SetMinorMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameOver()
+    {
+        game_over = true;
     }
 }
