@@ -22,6 +22,10 @@ public class Bullet : MonoBehaviour
     public List<Sprite> enemy_blue_sprites;
     public List<Sprite> enemy_orange_sprites;
 
+    float enable_time = 0;
+    float wall_encounter_time = 0.05f;
+    float self_destruct_time = 20;
+
     Player player;
     Rigidbody2D rigid;
     SpriteRenderer sprite_renderer;
@@ -33,6 +37,11 @@ public class Bullet : MonoBehaviour
 
         TimeChange.current.bullets.Add(this);
         player = FindObjectOfType<Player>();
+    }
+
+    void OnEnable()
+    {
+        enable_time = Time.timeSinceLevelLoad;
     }
 
     public void SetSpriteAndSpeed()
@@ -101,6 +110,11 @@ public class Bullet : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * speed / 2f;
             }
         }
+
+        if (Time.timeSinceLevelLoad > enable_time + self_destruct_time)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -127,7 +141,8 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<Shield>().HitShield();
             HitWall();
         }
-        else if (collision.tag == "Wall")
+        else if (collision.tag == "Wall" && 
+            Time.timeSinceLevelLoad > wall_encounter_time + enable_time)
         {
             Invoke("HitWall", 0.03f);
         }
