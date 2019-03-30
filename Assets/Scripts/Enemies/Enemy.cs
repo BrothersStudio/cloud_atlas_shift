@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public bool knockback_state = false;
     float knockback_force = 500f;
-    float knockback_time = 0.05f;
 
     [HideInInspector]
     public bool flashing = false;
