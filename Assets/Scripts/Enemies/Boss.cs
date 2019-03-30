@@ -111,6 +111,8 @@ public class Boss : MonoBehaviour
         else
         {
             StopAllCoroutines();
+
+            FindObjectOfType<MusicController>().SetVictoryMusic();
         }
     }
 
