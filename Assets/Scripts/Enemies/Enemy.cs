@@ -123,6 +123,7 @@ public class Enemy : MonoBehaviour
         flashing = true;
         Invoke("EndFlash", 0.1f);
 
+        Knockback(player.transform);
         ParseDamage(damage);
     }
 
@@ -151,25 +152,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            CancelInvoke();
-
-            if (dead_sprite != null)
-            {
-                sprite_renderer.sprite = dead_sprite;
-            }
-
-            sprite_renderer.sortingLayerName = "Corpses";
-
-            Invoke("Fade", start_fade_time);
-
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            Knockback(FindObjectOfType<Player>().transform);
-            camera_shake.Shake(0.1f);
-
-            if (GetComponent<ParticleSystem>() != null)
-            {
-                GetComponent<ParticleSystem>().Play();
-            }
+            Die();
         }
     }
 
@@ -186,21 +169,33 @@ public class Enemy : MonoBehaviour
         Vector2 direction = source.position - transform.position;
         Vector2 norm_direction = direction.normalized;
         GetComponent<Rigidbody2D>().AddForce(-norm_direction * knockback_force);
-        Invoke("EndKnockback", knockback_time);
-        knockback_state = true;
     }
 
-    void EndKnockback()
+    void Die()
     {
-        knockback_state = false;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
-        if (health <= 0)
+        foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
         {
-            foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
-            {
-                collider.enabled = false;
-            }
+            collider.enabled = false;
+        }
+
+        CancelInvoke();
+
+        if (dead_sprite != null)
+        {
+            sprite_renderer.sprite = dead_sprite;
+        }
+
+        sprite_renderer.sortingLayerName = "Corpses";
+
+        Invoke("Fade", start_fade_time);
+
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        Knockback(player.transform);
+        camera_shake.Shake(0.1f);
+
+        if (GetComponent<ParticleSystem>() != null)
+        {
+            GetComponent<ParticleSystem>().Play();
         }
     }
 
@@ -225,6 +220,10 @@ public class Enemy : MonoBehaviour
             {
                 player.DamagePlayer(transform);
             }
+        }
+        else if (collision.tag == "Wall")
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
     }
 
