@@ -6,6 +6,7 @@ public class Runner : MonoBehaviour
 {
     public float shift_attack_delay;
     public float speed;
+    float max_speed;
 
     bool animating = true;
     int animation_ind = 0;
@@ -29,7 +30,11 @@ public class Runner : MonoBehaviour
 
     void Start()
     {
+        max_speed = speed;
+        speed = 0;
+
         StartCoroutine(RefreshPath());
+        StartCoroutine(FollowPath());
 
         animation_ind = Random.Range(0, skull_animation.Count);
         StartCoroutine(SkullAnimation());
@@ -37,6 +42,8 @@ public class Runner : MonoBehaviour
 
     void Update()
     {
+        speed = Mathf.Clamp(speed + 0.01f, 0, max_speed);
+
         SetSprite();
     }
 
@@ -108,30 +115,38 @@ public class Runner : MonoBehaviour
 
     IEnumerator FollowPath()
     {
-        if (path.Length > 0)
+        while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
         {
-            Vector3 currentWaypoint = path[0];
-            while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
+            if (path.Length > 0)
             {
-                if (Hitstop.current.Hitstopped)
+                Vector3 currentWaypoint = path[0];
+                while (TimeChange.current.dimension == enemy.enemy_dimension && enemy.health > 0)
                 {
-                    yield return null;
-                    continue;
-                }
-
-                if (transform.position == currentWaypoint)
-                {
-                    targetIndex++;
-                    if (targetIndex >= path.Length)
+                    if (Hitstop.current.Hitstopped)
                     {
-                        yield break;
+                        yield return null;
+                        continue;
                     }
-                    currentWaypoint = path[targetIndex];
-                }
 
-                transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
-                yield return null;
+                    if (transform.position == currentWaypoint)
+                    {
+                        targetIndex++;
+                        if (targetIndex >= path.Length)
+                        {
+                            yield break;
+                        }
+                        currentWaypoint = path[targetIndex];
+                    }
+
+                    transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+                    yield return null;
+                }
             }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            }
+            yield return null;
         }
     }
 }
