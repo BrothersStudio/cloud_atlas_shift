@@ -8,7 +8,6 @@ public class Runner : MonoBehaviour
     public float speed;
     float max_speed;
 
-    bool animating = true;
     int animation_ind = 0;
     public List<Sprite> skull_animation;
 
@@ -44,7 +43,8 @@ public class Runner : MonoBehaviour
 
         SetSprite();
 
-        if (enemy.health > 0)
+        if (!Hitstop.current.Hitstopped &&
+            enemy.health > 0)
         {
             if (!player.invincible && TimeChange.current.dimension == enemy.enemy_dimension)
             {
@@ -80,7 +80,6 @@ public class Runner : MonoBehaviour
         else
         {
             sprite_renderer.sprite = skull_animation[animation_ind];
-            animating = true;
         }
     }
 
