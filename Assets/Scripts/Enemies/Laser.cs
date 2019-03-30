@@ -58,8 +58,13 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
-        if (Hitstop.current.Hitstopped || enemy.health <= 0)
+        if (Hitstop.current.Hitstopped)
         {
+            return;
+        }
+        else if (enemy.health <= 0)
+        {
+            GetComponent<AudioSource>().Stop();
             return;
         }
 
