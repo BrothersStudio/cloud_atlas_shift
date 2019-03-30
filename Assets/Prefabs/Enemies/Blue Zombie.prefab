@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8045936487379934081}
   - component: {fileID: 6697470381446100445}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Blue Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05

@@ -25,8 +25,8 @@ public class Enemy : MonoBehaviour
     public bool flashing = false;
 
     bool fading = false;
-    float start_fade_time = 2;
-    float fade_rate = 5 / 255f;
+    float start_fade_time = 1;
+    float fade_rate = 10 / 255f;
 
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
             current_color.a -= fade_rate;
             sprite_renderer.color = current_color;
 
-            if (current_color.a == 0)
+            if (current_color.a <= 0)
             {
                 Destroy(gameObject);
             }
