@@ -25,6 +25,7 @@ public class LevelController : MonoBehaviour
 
     public void ResetLevel()
     {
+        GetComponent<MusicController>().SetMinorMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

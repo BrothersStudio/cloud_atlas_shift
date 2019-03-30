@@ -11,6 +11,13 @@ public class MusicController : MonoBehaviour
     public AudioClip boss_minor;
     public AudioClip boss_major;
 
+    public void SetMinorMusic()
+    {
+        minor_playing = true;
+        major.volume = 0;
+        minor.volume = 0.5f;
+    }
+
     public void SwapMusic()
     {
         if (minor_playing)
