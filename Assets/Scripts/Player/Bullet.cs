@@ -42,6 +42,7 @@ public class Bullet : MonoBehaviour
     void OnEnable()
     {
         enable_time = Time.timeSinceLevelLoad;
+        sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
     }
 
     public void SetSpriteAndSpeed()

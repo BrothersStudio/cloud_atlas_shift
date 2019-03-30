@@ -95,9 +95,6 @@ public class Player : MonoBehaviour
 
                 GameObject bullet = PlayerBulletPool.current.GetPooledBullet();
                 bullet.SetActive(true);
-
-                SpriteRenderer bullet_renderer = bullet.GetComponent<SpriteRenderer>();
-                bullet_renderer.color = new Color(bullet_renderer.color.r, bullet_renderer.color.g, bullet_renderer.color.b, 1);
                 bullet.transform.position = transform.position;
 
                 bullet.GetComponent<Bullet>().side = BulletSide.Player;

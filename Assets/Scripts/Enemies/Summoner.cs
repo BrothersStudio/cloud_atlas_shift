@@ -58,7 +58,8 @@ public class Summoner : MonoBehaviour
                     summoned_pos.x += Random.Range(-1, 1);
                     summoned_pos.y += Random.Range(-1, 1);
 
-                    Instantiate(enemy_to_summon, summoned_pos, Quaternion.identity);
+                    GameObject new_skull = Instantiate(enemy_to_summon, summoned_pos, Quaternion.identity);
+                    new_skull.GetComponent<Enemy>().SetRoomPosition(enemy.max_pos, enemy.min_pos);
                 }
 
                 summon_done = false;

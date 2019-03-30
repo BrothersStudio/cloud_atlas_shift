@@ -53,10 +53,6 @@ public class RoomController : MonoBehaviour
         {
             GameObject new_room = Instantiate(current_rooms[i]);
             Room room_comp = new_room.GetComponent<Room>();
-            if (i == 0)
-            {
-                room_comp.Activate();
-            }
 
             // Reposition
             Vector3 new_position = new_room.transform.position;
@@ -96,6 +92,9 @@ public class RoomController : MonoBehaviour
         pathfinding_grid.gridWorldSize = new Vector2(x_dist, y_dist);
 
         pathfinding_grid.transform.position = new Vector3((max_x + min_x) / 2f, (max_y + min_y) / 2f, 0);
+
+        // Start first room
+        spawned_rooms[0].GetComponent<Room>().Activate();
     }
 
     public void MoveToNextRoom()

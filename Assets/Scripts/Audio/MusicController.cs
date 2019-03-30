@@ -11,6 +11,8 @@ public class MusicController : MonoBehaviour
     public AudioClip boss_minor;
     public AudioClip boss_major;
 
+    bool victory = false;
+
     public void SetMinorMusic()
     {
         minor_playing = true;
@@ -20,17 +22,20 @@ public class MusicController : MonoBehaviour
 
     public void SwapMusic()
     {
-        if (minor_playing)
+        if (!victory)
         {
-            minor_playing = false;
-            minor.volume = 0;
-            major.volume = 0.5f;
-        }
-        else
-        {
-            minor_playing = true;
-            major.volume = 0;
-            minor.volume = 0.5f;
+            if (minor_playing)
+            {
+                minor_playing = false;
+                minor.volume = 0;
+                major.volume = 0.5f;
+            }
+            else
+            {
+                minor_playing = true;
+                major.volume = 0;
+                minor.volume = 0.5f;
+            }
         }
     }
 
@@ -47,5 +52,11 @@ public class MusicController : MonoBehaviour
 
         major.clip = boss_major;
         major.Play();
+    }
+
+    public void SetVictoryMusic()
+    {
+        victory = true;
+        StopMusic();
     }
 }

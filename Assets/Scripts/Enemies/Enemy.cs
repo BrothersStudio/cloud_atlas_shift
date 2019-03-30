@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    CameraFollow camera_shake;
+    [HideInInspector]
+    public CameraFollow camera_shake;
 
     public bool is_boss;
     public bool is_hazard;
@@ -19,7 +20,6 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public bool knockback_state = false;
     float knockback_force = 500f;
-    float knockback_time = 0.05f;
 
     [HideInInspector]
     public bool flashing = false;
@@ -244,6 +244,14 @@ public class Enemy : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public Vector3 GetRandomPositionInRoom()
+    {
+        return new Vector3(
+            Random.Range(min_pos.x, max_pos.x),
+            Random.Range(min_pos.y, max_pos.y),
+            0);
     }
 
     public enum DamageType
