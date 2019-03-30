@@ -19,11 +19,16 @@ public class TimeChange : MonoBehaviour
 
     public AudioClip past_to_future;
     public AudioClip future_to_past;
-    public MusicController music;
+    MusicController music;
 
     void Awake()
     {
         current = this;
+    }
+
+    void Start()
+    {
+        music = FindObjectOfType<MusicController>();
     }
 
     public void Switch()
