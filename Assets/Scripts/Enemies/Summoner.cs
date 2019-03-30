@@ -19,8 +19,8 @@ public class Summoner : MonoBehaviour
 
     public List<Sprite> walking_animation_sprites;
 
-    float last_summon = -3f;
-    float summon_cooldown = 4f;
+    float last_summon = -2f;
+    float summon_cooldown = 3f;
     public GameObject enemy_to_summon;
     public int num_to_summon;
 

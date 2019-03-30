@@ -30,7 +30,7 @@ public class Runner : MonoBehaviour
     void Start()
     {
         max_speed = speed;
-        speed = 0;
+        speed = max_speed / 2f;
 
         random_target = enemy.GetRandomPositionInRoom();
 
@@ -44,13 +44,16 @@ public class Runner : MonoBehaviour
 
         SetSprite();
 
-        if (!player.invincible && TimeChange.current.dimension == enemy.enemy_dimension)
+        if (enemy.health > 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, random_target, speed * speed * Time.deltaTime);
+            if (!player.invincible && TimeChange.current.dimension == enemy.enemy_dimension)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * speed * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, random_target, speed * speed * Time.deltaTime);
+            }
         }
     }
 
