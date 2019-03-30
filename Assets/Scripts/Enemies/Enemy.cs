@@ -67,6 +67,10 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        } 
+        else if (IsOutOfBounds())
+        {
+            EmergencyKill();
         }
     }
 
@@ -207,6 +211,27 @@ public class Enemy : MonoBehaviour
     {
         this.max_pos = max_pos - Vector3.one;
         this.min_pos = min_pos + Vector3.one;
+    }
+
+    bool IsOutOfBounds()
+    {
+        if (transform.position.x > max_pos.x + 10 ||
+            transform.position.x < min_pos.x - 10 ||
+            transform.position.y > max_pos.y + 10 ||
+            transform.position.y < min_pos.y - 10)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void EmergencyKill()
+    {
+        Debug.LogWarning(name + " is out bounds, killing now");
+        health -= 10000;
     }
 
     void OnTriggerStay2D(Collider2D collision)
