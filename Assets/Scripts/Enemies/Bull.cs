@@ -186,6 +186,9 @@ public class Bull : MonoBehaviour
     {
         charging = false;
         speed = orig_speed;
+
+        enemy.camera_shake.Shake(0.4f);
+
         StartCoroutine(RefreshPath());
     }
 

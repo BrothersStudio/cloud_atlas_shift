@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    CameraFollow camera_shake;
+    [HideInInspector]
+    public CameraFollow camera_shake;
 
     public bool is_boss;
     public bool is_hazard;
