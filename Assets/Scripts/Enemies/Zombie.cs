@@ -8,6 +8,10 @@ public class Zombie : MonoBehaviour
 
     Vector3[] path = new Vector3[] { };
     int targetIndex;
+    Vector3 target_location;
+
+    int current_ind;
+    public List<Sprite> sprites;
 
     Player player;
     Enemy enemy;
@@ -22,7 +26,11 @@ public class Zombie : MonoBehaviour
 
     void Start()
     {
+        SelectTarget();
         StartCoroutine(RefreshPath());
+
+        current_ind = Random.Range(0, sprites.Count);
+        StartCoroutine(WalkCycle());
     }
 
     void Update()
@@ -32,13 +40,39 @@ public class Zombie : MonoBehaviour
 
     void SetSprite()
     {
+        if (enemy.health > 0)
+        {
+            Vector3 check = transform.position - target_location;
+            if (check.x > 0)
+            {
+                sprite_renderer.flipX = true;
+            }
+            else
+            {
+                sprite_renderer.flipX = false;
+            }
+        }
+
         if (!enemy.flashing)
         {
-            sprite_renderer.sprite = enemy.normal_sprite;
+            sprite_renderer.sprite = sprites[current_ind];
         }
         else
         {
             sprite_renderer.sprite = enemy.flash_sprite;
+        }
+    }
+
+    IEnumerator WalkCycle()
+    {
+        while (true)
+        {
+            current_ind++;
+            if (current_ind == sprites.Count)
+            {
+                current_ind = 0;
+            }
+            yield return new WaitForSeconds(Random.Range(0.2f, 0.5f));
         }
     }
 
@@ -54,13 +88,25 @@ public class Zombie : MonoBehaviour
         }
     }
 
+    void SelectTarget()
+    {
+        while (true)
+        {
+            target_location = enemy.GetRandomPositionInRoom();
+            if (FindObjectOfType<Grid>().NodeFromWorldPoint(target_location).walkable)
+            {
+                return;
+            }
+        }
+    }
+    
     IEnumerator RefreshPath()
     {
         while (enemy.health > 0)
         {
-            PathRequestManager.RequestPath(transform.position, enemy.GetRandomPositionInRoom(), OnPathFound);
+            PathRequestManager.RequestPath(transform.position, target_location, OnPathFound);
 
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
@@ -69,7 +115,7 @@ public class Zombie : MonoBehaviour
         if (path.Length > 0)
         {
             Vector3 currentWaypoint = path[0];
-            while (true)
+            while (enemy.health > 0)
             {
                 if (Hitstop.current.Hitstopped)
                 {
@@ -77,23 +123,30 @@ public class Zombie : MonoBehaviour
                     continue;
                 }
 
-                if (enemy.health > 0)
+                if (transform.position == currentWaypoint)
                 {
-                    if (transform.position == currentWaypoint)
+                    targetIndex++;
+                    if (targetIndex >= path.Length)
                     {
-                        targetIndex++;
-                        if (targetIndex >= path.Length)
-                        {
-                            PathRequestManager.RequestPath(transform.position, enemy.GetRandomPositionInRoom(), OnPathFound);
-                            yield break;
-                        }
-                        currentWaypoint = path[targetIndex];
+                        SelectTarget();
+                        yield break;
                     }
-
-                    transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+                    currentWaypoint = path[targetIndex];
                 }
+
+                transform.position = Vector3.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
                 yield return null;
             }
+        }
+        else if (enemy.health > 0)
+        {
+            PathRequestManager.RequestPath(transform.position, target_location, OnPathFound);
+            transform.position = Vector3.MoveTowards(transform.position, target_location, speed * Time.deltaTime);
+            yield return null;
+        }
+        else
+        {
+            yield break;
         }
     }
 }

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 473406649134029396, guid: ce44ab128c78e824a98388492cdb9a20,
         type: 3}
       propertyPath: m_Name
-      value: Zombie
+      value: Orange Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 473406649134029398, guid: ce44ab128c78e824a98388492cdb9a20,
         type: 3}
@@ -72,5 +72,35 @@ PrefabInstance:
       propertyPath: enemy_dimension
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 473406649134029393, guid: ce44ab128c78e824a98388492cdb9a20,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300008, guid: c988b082fa277d44eb3fc88bc4e62854,
+        type: 3}
+    - target: {fileID: 473406649134029392, guid: ce44ab128c78e824a98388492cdb9a20,
+        type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300008, guid: c988b082fa277d44eb3fc88bc4e62854,
+        type: 3}
+    - target: {fileID: 473406649134029392, guid: ce44ab128c78e824a98388492cdb9a20,
+        type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300010, guid: c988b082fa277d44eb3fc88bc4e62854,
+        type: 3}
+    - target: {fileID: 473406649134029392, guid: ce44ab128c78e824a98388492cdb9a20,
+        type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300012, guid: c988b082fa277d44eb3fc88bc4e62854,
+        type: 3}
+    - target: {fileID: 473406649134029392, guid: ce44ab128c78e824a98388492cdb9a20,
+        type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300014, guid: c988b082fa277d44eb3fc88bc4e62854,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce44ab128c78e824a98388492cdb9a20, type: 3}

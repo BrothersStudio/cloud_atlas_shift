@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
   is_hazard: 0
   health: 100
@@ -55,7 +56,7 @@ MonoBehaviour:
   last_swing_id: -1
   knockback_state: 0
   flashing: 0
-  normal_sprite: {fileID: 21300000, guid: abd5a003db51754488217df6aab8a60c, type: 3}
+  normal_sprite: {fileID: 21300000, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
   flash_sprite: {fileID: 21300000, guid: 0fb22844fcf341e4eace62b3c98a19db, type: 3}
   dead_sprite: {fileID: 0}
   block_mask:
@@ -100,7 +101,7 @@ SpriteRenderer:
   m_SortingLayerID: 1937226157
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: abd5a003db51754488217df6aab8a60c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,6 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  sprites:
+  - {fileID: 21300000, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
+  - {fileID: 21300002, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
+  - {fileID: 21300004, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
+  - {fileID: 21300006, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
 --- !u!61 &473406649134029395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.88, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &8045936487379934081
 Rigidbody2D:
