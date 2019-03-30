@@ -23,6 +23,8 @@ public class Heal : MonoBehaviour
                     heart_bar.GetComponent<AudioSource>().clip = heal_sound;
                     heart_bar.GetComponent<AudioSource>().Play();
 
+                    collision.GetComponent<Player>().health++;
+
                     child.GetComponent<Heart>().FlipHeartSprite();
                     break;
                 }
