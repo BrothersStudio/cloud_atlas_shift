@@ -5,7 +5,10 @@ using UnityEngine;
 public class Bull : MonoBehaviour
 {
     int start_charge_health = 0;
+
     bool charging = false;
+    bool pre_charge_done = false;
+
     float charge_start = 0;
     float charge_delay = 0.5f;
     Vector3 charge_direction;
@@ -90,6 +93,10 @@ public class Bull : MonoBehaviour
         {
             sprite_renderer.sprite = enemy.flash_sprite;
         }
+        else if (charging && pre_charge_done)
+        {
+            sprite_renderer.sprite = charge_sprites[3];
+        }
     }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -167,6 +174,7 @@ public class Bull : MonoBehaviour
         }
 
         StartCoroutine(PreChargeAnimation());
+        pre_charge_done = false; 
 
         charge_direction = (transform.position - player.transform.position) * -100;
         player_charge_position = player.transform.position;
@@ -183,6 +191,8 @@ public class Bull : MonoBehaviour
         sprite_renderer.sprite = charge_sprites[2];
         yield return new WaitForSeconds(0.2f);
         sprite_renderer.sprite = charge_sprites[3];
+
+        pre_charge_done = true;
     }
 
     void StopCharge()
