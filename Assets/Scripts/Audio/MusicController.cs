@@ -14,6 +14,7 @@ public class MusicController : MonoBehaviour
     public AudioClip boss_major;
 
     bool victory = false;
+    public AudioClip victory_music;
 
     public void SetMinorMusic()
     {
@@ -61,5 +62,11 @@ public class MusicController : MonoBehaviour
     public void SetVictoryMusic()
     {
         victory = true;
+
+        major.clip = victory_music;
+        major.Play();
+
+        minor.clip = victory_music;
+        minor.Play();
     }
 }

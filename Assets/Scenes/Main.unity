@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d29bcfd6cde2e418d89601eec7a29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_level: 2
+  current_level: 1
   deaths: 0
   game_over: 0
 --- !u!4 &1550669672
@@ -1180,6 +1180,7 @@ MonoBehaviour:
   boss_laugh_source: {fileID: 1550669676}
   boss_minor: {fileID: 8300000, guid: cf2d6acfc3bf0c54d9a9ff69fdffeab1, type: 3}
   boss_major: {fileID: 8300000, guid: e16cd080d9ff61a41ba175815f467dc2, type: 3}
+  victory_music: {fileID: 8300000, guid: 52fa92589e092654888202939bd1638f, type: 3}
 --- !u!82 &1550669674
 AudioSource:
   m_ObjectHideFlags: 0

@@ -37,6 +37,13 @@ public class Boss : MonoBehaviour
     public GameObject cloud_trail;
     List<GameObject> cloud_trail_pool = new List<GameObject>();
 
+    bool playing_animation = false;
+    bool moving_to_die = false;
+    public Vector3 death_position;
+    public List<Sprite> death_animation_sprites;
+    bool done_death_animation = false;
+    bool ending = false;
+
     Enemy enemy;
     Player player;
     SpriteRenderer sprite_renderer;
@@ -108,14 +115,48 @@ public class Boss : MonoBehaviour
 
             SetSprite();
         }
-        else
+        else if (!moving_to_die)
         {
             StopAllCoroutines();
 
+            speed = 1;
+            moving_to_die = true;
+
             FindObjectOfType<LevelController>().GameOver();
             FindObjectOfType<MusicController>().SetVictoryMusic();
-            Application.Quit();
+
+            GetComponent<BoxCollider2D>().enabled = false;
+            player.GetComponent<EdgeCollider2D>().enabled = false;
         }
+        else if (!done_death_animation)
+        {
+            speed += Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, death_position, speed * speed * speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, death_position) < 0.1f && !playing_animation)
+            {
+                playing_animation = true;
+                StartCoroutine(PlayDeathAnimation());
+            }
+            else if (!playing_animation)
+            {
+                sprite_renderer.sprite = sprites[walk_cycle];
+            }
+        }
+        else if (!ending)
+        {
+            ending = true;
+            FindObjectOfType<FadeToBlack>().FadeOut();
+        }
+    }
+
+    IEnumerator PlayDeathAnimation()
+    {
+        for (int i = 0; i < death_animation_sprites.Count; i++)
+        {
+            sprite_renderer.sprite = death_animation_sprites[i];
+            yield return new WaitForSeconds(0.15f);
+        }
+        done_death_animation = true;
     }
 
     void ChooseAttackLogic()
@@ -136,7 +177,7 @@ public class Boss : MonoBehaviour
 
     void DiveAttack()
     {
-        speed += 0.008f;
+        speed += Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, dive_positions[dive_choice], speed * speed * speed * Time.deltaTime);
         if (critical &&
@@ -157,7 +198,7 @@ public class Boss : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, shoot_positions[shoot_choice]) > 0.1f)
         {
-            speed += 0.008f;
+            speed += Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, shoot_positions[shoot_choice], speed * speed * speed * Time.deltaTime);
 
             shot_position_reached_time = Time.timeSinceLevelLoad;
