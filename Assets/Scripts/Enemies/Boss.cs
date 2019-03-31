@@ -25,6 +25,8 @@ public class Boss : MonoBehaviour
     int shoot_choice = 0;
     public List<Vector3> shoot_positions;
 
+    public List<Sprite> shoot_animation;
+
     // Intensity
     int orig_health;
     bool critical = false;
@@ -104,19 +106,21 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        if (Hitstop.current.Hitstopped)
-        {
-            return;
-        }
-
         if (enemy.health > 0)
         {
+            if (Hitstop.current.Hitstopped)
+            {
+                return;
+            }
+
             ChooseAttackLogic();
 
             SetSprite();
         }
         else if (!moving_to_die)
         {
+            Hitstop.current.HitstopFor(30);
+
             StopAllCoroutines();
 
             speed = 1;
