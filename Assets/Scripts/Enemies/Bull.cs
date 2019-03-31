@@ -18,6 +18,9 @@ public class Bull : MonoBehaviour
 
     public AudioClip charge_sound;
 
+    bool death_playing = false;
+    public AudioClip death_sound;
+
     float orig_speed;
     public float speed;
 
@@ -63,6 +66,15 @@ public class Bull : MonoBehaviour
             {
                 looking_for_wall = true;
             }
+        }
+        else if (enemy.health <= 0 &&
+            !death_playing)
+        {
+            death_playing = true;
+
+            GetComponent<AudioSource>().clip = death_sound;
+            GetComponent<AudioSource>().pitch = 1;
+            GetComponent<AudioSource>().Play();
         }
 
         SetSprite();
@@ -200,7 +212,7 @@ public class Bull : MonoBehaviour
         charging = false;
         speed = orig_speed;
 
-        enemy.camera_shake.Shake(0.4f);
+        enemy.camera_shake.Shake(0.25f);
 
         StartCoroutine(RefreshPath());
     }

@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     public bool flashing = false;
 
     bool fading = false;
-    float start_fade_time = 1;
+    float start_fade_time = 0.5f;
     float fade_rate = 1000 / 255f;
 
     SpriteRenderer sprite_renderer;
@@ -65,6 +65,7 @@ public class Enemy : MonoBehaviour
 
             if (current_color.a <= 0)
             {
+                StopAllCoroutines();
                 Destroy(gameObject);
             }
         } 
@@ -195,6 +196,7 @@ public class Enemy : MonoBehaviour
 
         sprite_renderer.sortingLayerName = "Corpses";
 
+        StartCoroutine(Shrink());
         Invoke("Fade", start_fade_time);
 
         Knockback(player.transform);
@@ -203,6 +205,15 @@ public class Enemy : MonoBehaviour
         if (GetComponent<ParticleSystem>() != null)
         {
             GetComponent<ParticleSystem>().Play();
+        }
+    }
+
+    IEnumerator Shrink()
+    {
+        while (true)
+        {
+            transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
