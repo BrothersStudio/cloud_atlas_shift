@@ -232,6 +232,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.LogWarning(name + " is out bounds, killing now");
         health -= 10000;
+        Die();
     }
 
     void OnTriggerStay2D(Collider2D collision)

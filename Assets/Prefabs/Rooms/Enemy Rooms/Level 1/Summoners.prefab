@@ -3310,9 +3310,12 @@ MonoBehaviour:
   enemy_to_place:
   - {fileID: 8425944060813414143, guid: df5e2ca2405d857449433b8c091db0c1, type: 3}
   - {fileID: 8425944060813414143, guid: ccfdc4dc8d9c05540a21f7040c4b278a, type: 3}
+  - {fileID: 8425944060813414143, guid: df5e2ca2405d857449433b8c091db0c1, type: 3}
   location_to_place:
-  - {x: 4, y: 2, z: 0}
-  - {x: -4, y: 2, z: 0}
+  - {x: 5, y: 2, z: 0}
+  - {x: 0, y: 2, z: 0}
+  - {x: -5, y: 2, z: 0}
+  enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 4.5, z: 0}
   - {x: -7.5, y: -4.5, z: 0}

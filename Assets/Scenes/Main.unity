@@ -1100,8 +1100,8 @@ MonoBehaviour:
   - {fileID: 7950326965343713441, guid: d5271c623e3d3214c9e0a325da8a4930, type: 3}
   - {fileID: 7950326965343713441, guid: cbe1f0467bb0aae4badcf22fd233be43, type: 3}
   level_3_rooms:
-  - {fileID: 7950326965343713441, guid: 4a6986de257838145af1b080d15c56f1, type: 3}
   - {fileID: 7950326965343713441, guid: cee2bd1eb31aa324fa47d5d416880f69, type: 3}
+  - {fileID: 7950326965343713441, guid: 4a6986de257838145af1b080d15c56f1, type: 3}
   - {fileID: 7148320562747277706, guid: 038fe97678c88d3498fcb8669ba21355, type: 3}
   - {fileID: 7950326965343713441, guid: 1eae073e34b33454885d1cadcfb48b89, type: 3}
   - {fileID: 7950326965343713441, guid: 53f2aa2f42b2ba5489c4e1fb09ff8560, type: 3}
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d29bcfd6cde2e418d89601eec7a29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_level: 4
+  current_level: 1
   game_over: 0
 --- !u!4 &1550669672
 Transform:

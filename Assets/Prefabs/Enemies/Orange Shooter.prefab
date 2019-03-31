@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df974522061e04d41a298d18b878ff8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 0.5
   shot_cooldown: 1
   enemy_shot: {fileID: 8300000, guid: 7d8a11086b40fa9408ddb2a37aa51f83, type: 3}
   walk_animation:

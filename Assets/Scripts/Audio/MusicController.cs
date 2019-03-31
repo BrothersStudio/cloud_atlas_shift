@@ -51,7 +51,6 @@ public class MusicController : MonoBehaviour
 
     public void SetBossMusic()
     {
-
         minor.clip = boss_minor;
         minor.Play();
 

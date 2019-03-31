@@ -17026,10 +17026,11 @@ MonoBehaviour:
   - {fileID: 5119167732669721511, guid: db76d8135220e6647bfd0205f886fa5b, type: 3}
   - {fileID: 5119167732669721511, guid: db76d8135220e6647bfd0205f886fa5b, type: 3}
   location_to_place:
-  - {x: 6, y: 10, z: 0}
-  - {x: -6, y: 10, z: 0}
   - {x: 5, y: 9, z: 0}
   - {x: -5, y: 9, z: 0}
+  - {x: 5, y: -2, z: 0}
+  - {x: -5, y: -2, z: 0}
+  enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 11.5, z: 0}
   - {x: -7.5, y: -4.5, z: 0}
