@@ -12,6 +12,7 @@ public class Sniper : MonoBehaviour
     public AudioClip fire_shot;
     AudioSource source;
 
+    bool blinking = false;
     Transform child;
     SpriteRenderer laser_renderer;
     public Color charging_color;
@@ -58,7 +59,7 @@ public class Sniper : MonoBehaviour
                 source.Play();
             }
 
-            laser_renderer.enabled = true;
+            StartCoroutine(LaserBlink());
             laser_renderer.color = charging_color;
 
             child.right = player.transform.position - transform.position;
@@ -86,6 +87,10 @@ public class Sniper : MonoBehaviour
             TimeChange.current.dimension == GetComponentInParent<Enemy>().enemy_dimension &&
             enemy.CanSeePlayer())
         {
+            blinking = false;
+            StopCoroutine(LaserBlink());
+
+            laser_renderer.enabled = true;
             laser_renderer.color = firing_color;
             child.right = player.transform.position - transform.position;
             child.localPosition = (player.transform.position - transform.position + new Vector3(0, 0.6f, 0)) / 2f;
@@ -98,6 +103,8 @@ public class Sniper : MonoBehaviour
         }
         else 
         {
+            blinking = false;
+            StopCoroutine(LaserBlink());
             laser_renderer.enabled = false;
 
             firing = false;
@@ -107,6 +114,31 @@ public class Sniper : MonoBehaviour
         }
 
         SetSprite();
+    }
+
+    IEnumerator LaserBlink()
+    {
+        if (!blinking)
+        {
+            blinking = true;
+            for (int i = 0; i < 2; i++)
+            {
+                laser_renderer.enabled = !laser_renderer.enabled;
+                yield return new WaitForSeconds(0.5f);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                laser_renderer.enabled = !laser_renderer.enabled;
+                yield return new WaitForSeconds(0.25f);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                laser_renderer.enabled = !laser_renderer.enabled;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
     }
 
     void SetSprite()
