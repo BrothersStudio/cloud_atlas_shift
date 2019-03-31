@@ -116,11 +116,14 @@ public class Sword : MonoBehaviour
         }
         else if (collision.tag == "Bullet" && swing_id != last_bullet_swing_id)
         {
-            last_bullet_swing_id = swing_id;
+            if (collision.GetComponent<Bullet>().bullet_dimension == TimeChange.current.dimension)
+            {
+                last_bullet_swing_id = swing_id;
 
-            collision.gameObject.SetActive(false);
-            Hitstop.current.HitstopFor(0.1f);
-            FindObjectOfType<SwordFlash>().Flash();
+                collision.gameObject.SetActive(false);
+                Hitstop.current.HitstopFor(0.1f);
+                FindObjectOfType<SwordFlash>().Flash();
+            }
         }
     }
 }
