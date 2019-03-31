@@ -3311,7 +3311,7 @@ MonoBehaviour:
   enemy_to_place:
   - {fileID: 1247012905590908576, guid: 7786b1aeb9f0b0342ae9e74be972aed9, type: 3}
   location_to_place:
-  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 2, z: 0}
   enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 4.5, z: 0}

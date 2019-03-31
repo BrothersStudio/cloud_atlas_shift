@@ -189,6 +189,7 @@ MonoBehaviour:
   enemy_to_summon: {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559,
     type: 3}
   num_to_summon: 3
+  summon_sound: {fileID: 8300000, guid: 7d38cb32bbcdb5046bcf877cba72c764, type: 3}
 --- !u!82 &8232253917975275435
 AudioSource:
   m_ObjectHideFlags: 0

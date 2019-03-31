@@ -5,7 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     float speed;
-    float orig_speed = 4f;
+    public float orig_speed;
     int num_beams = 1;
 
     public bool is_vertical;
