@@ -20,6 +20,10 @@ TextureImporter:
     21300030: blue_summoner_new_15
     21300032: blue_summoner_new_16
     21300034: blue_summoner_new_17
+    21300036: blue_summoner_new_18
+    21300038: blue_summoner_new_19
+    21300040: blue_summoner_new_20
+    21300042: blue_summoner_new_21
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -106,7 +110,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -116,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4597ccf611936ca42bc556b9f812cf9a
+      spriteID: 899b43b8be275e14fb1e71481efc4d96
       vertices: []
       indices: 
       edges: []
@@ -126,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -136,7 +140,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6734e925e2a1cce4f967a39f47ca5369
+      spriteID: 929b9aeee2b2f2748ad6260b98d4ec00
       vertices: []
       indices: 
       edges: []
@@ -146,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -156,7 +160,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b38b1d4f107d76044b308ed7c70c2822
+      spriteID: 00e5d64da9024ce419c1d15c9f1d1d93
       vertices: []
       indices: 
       edges: []
@@ -166,6 +170,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0453f95b0dabfa74aa18cdb4196bd8b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_4
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 64
         width: 16
         height: 16
@@ -176,27 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f00ea209a95af45a1f630486cb39a8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_summoner_new_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ebf0b4e994bb85469a0e7c6b341f100
+      spriteID: f92ae21112ead3945993171186b1b450
       vertices: []
       indices: 
       edges: []
@@ -206,7 +210,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -216,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab89f49256d891b42804013b9ae3ed62
+      spriteID: 38ec21e184ad0ae45a0ce786e269404b
       vertices: []
       indices: 
       edges: []
@@ -226,7 +230,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -236,7 +240,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b7a645545eb714da8446e866cf444b
+      spriteID: 5d3b7a1915c9fa64fb9b91c6ca3a6514
       vertices: []
       indices: 
       edges: []
@@ -246,6 +250,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf3738a487da724b9d0862f2cdd1238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_8
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 48
         width: 16
         height: 16
@@ -256,27 +280,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 810fe0062febc9a49970b2ff30c5e912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_summoner_new_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3851aec6571b8574ab6892652e76b54b
+      spriteID: 9f88ce936502e52478298d5dd7e9ac34
       vertices: []
       indices: 
       edges: []
@@ -286,7 +290,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -296,7 +300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 386ca99eb2561544da2632ebdf314df1
+      spriteID: fd38b5a8f5f90e64187720cc176a7325
       vertices: []
       indices: 
       edges: []
@@ -306,6 +310,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9eae4a6652aef4196f8f5931e49a4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_11
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 32
         width: 16
         height: 16
@@ -316,27 +340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8100058fe7c69ee4e9080963987c6fb2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_summoner_new_11
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a0a606c7ce85354d9f08df857b1c32b
+      spriteID: c725a105e0756e644a92881009a83085
       vertices: []
       indices: 
       edges: []
@@ -346,6 +350,66 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9afb33831ebb594cbae17e86972be85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eccff76564fd1847981fbb8003e9f5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dae7212caef674c9ab4b040e3f757d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_15
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -356,13 +420,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45e11e465108578429d513949955e239
+      spriteID: bfd2cb39bd1c0d64191f6ca9019b755f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_summoner_new_13
+      name: blue_summoner_new_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d86d888f5908841ba61c40030ce588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_17
       rect:
         serializedVersion: 2
         x: 32
@@ -376,33 +460,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 864954ad8dd44824db352e4b0b37bcdc
+      spriteID: 7a929453096e8554a8137c8d802a026f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_summoner_new_14
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69f9dae6c532f574a8360224740d1739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_summoner_new_15
+      name: blue_summoner_new_18
       rect:
         serializedVersion: 2
         x: 0
@@ -416,13 +480,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02b8282a7237a02469f1c632895402e3
+      spriteID: 6e18087ba9ad68e479d0fd8354610920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_summoner_new_16
+      name: blue_summoner_new_19
       rect:
         serializedVersion: 2
         x: 16
@@ -436,13 +500,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef4b39b3d8c464e41a05276e27abbcac
+      spriteID: 8e5e6624fc94ab840b35b7331fa13539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_summoner_new_17
+      name: blue_summoner_new_20
       rect:
         serializedVersion: 2
         x: 32
@@ -456,7 +520,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 805b1417b686e714cbd8bc7bd19a269b
+      spriteID: c0ef2c38991ed2143a196cb69845927d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_summoner_new_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5574b7d99b3fa764d9d317a07bd64f90
       vertices: []
       indices: 
       edges: []

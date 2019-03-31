@@ -20,6 +20,10 @@ TextureImporter:
     21300030: summoner_15
     21300032: summoner_16
     21300034: summoner_17
+    21300036: summoner_18
+    21300038: summoner_19
+    21300040: summoner_20
+    21300042: summoner_21
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -106,7 +110,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -116,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926152e7d425314489293c94a482c77c
+      spriteID: c5009a46ec2e10d478a223cd9b232f02
       vertices: []
       indices: 
       edges: []
@@ -126,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -136,7 +140,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468dc8e7d10a4cf41bacbafe653e1659
+      spriteID: 76d27e6738f014b4e8b45a859c67349d
       vertices: []
       indices: 
       edges: []
@@ -146,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -156,7 +160,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9111f2859b6b19b489e3f7fb05d9f2ec
+      spriteID: 2bbce1e9f222b0246840752cb8edb855
       vertices: []
       indices: 
       edges: []
@@ -166,6 +170,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5772b10403507a9409df742a1e6d754b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_4
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 64
         width: 16
         height: 16
@@ -176,27 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dd0cc70544efd24994b84e9e068c403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: summoner_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07439d0a02f7e4145bc417f11d528183
+      spriteID: c136e571f14d3a34996fc56fd0e1d02e
       vertices: []
       indices: 
       edges: []
@@ -206,7 +210,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -216,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9791df9156ea924db73e7c7a8620d13
+      spriteID: 5397091c70331e34f91528db0a57cea2
       vertices: []
       indices: 
       edges: []
@@ -226,7 +230,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -236,7 +240,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72aa8ad4468ad34d86319e1a2539ae2
+      spriteID: fa930a6fd4234ea4aa51849dec7f5072
       vertices: []
       indices: 
       edges: []
@@ -246,6 +250,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f261636147f269246af586ed1f2ce4cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_8
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 48
         width: 16
         height: 16
@@ -256,27 +280,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3dd25ca1043d7846bc49f01a0326543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: summoner_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52910d9c24581dd479fdacd6139265fa
+      spriteID: 265ed76ae280bd34f91fe3b1a220a312
       vertices: []
       indices: 
       edges: []
@@ -286,7 +290,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -296,7 +300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0d34b866fd75404e917bc6ee3fc4a07
+      spriteID: f87f4de888ec3974ba2825a462756d7e
       vertices: []
       indices: 
       edges: []
@@ -306,6 +310,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddcb9af6b21a9a4aba293e168b976d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_11
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 32
         width: 16
         height: 16
@@ -316,27 +340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 839b06c223b76ce44a78935a928616ba
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: summoner_11
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8227ac4ee305985498f9666372acdafe
+      spriteID: 54959d380bd0eb64790fef73b393459c
       vertices: []
       indices: 
       edges: []
@@ -346,6 +350,66 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766017802d0a52a4b9ee7fcc4622579a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ae23e76ccb8824d94b9bc332767f3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6790fe48b25a69042aae5ef3ef788c75
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_15
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -356,13 +420,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df925ad409cbc6c4bbd65d83c8d690f3
+      spriteID: 0e625c10fad4c73449c133d0c91ebb41
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: summoner_13
+      name: summoner_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34266121bfa7bad43a212e8baae24c06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_17
       rect:
         serializedVersion: 2
         x: 32
@@ -376,33 +460,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aff3f984a066f204db1ddd00d19800eb
+      spriteID: c90c06531d2ce9043b3ae60ce006e43e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: summoner_14
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aff9f9218990ca04193997857ba3a5ab
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: summoner_15
+      name: summoner_18
       rect:
         serializedVersion: 2
         x: 0
@@ -416,13 +480,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cd1655c87eda9a4b97f98f5ebc174dd
+      spriteID: ce1c8413c3cb03c4f97c3ad5e8749ab4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: summoner_16
+      name: summoner_19
       rect:
         serializedVersion: 2
         x: 16
@@ -436,13 +500,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d26a284f3cbde4419621bf0fceebabf
+      spriteID: 8cc4a71401312cc40bc2085da4b32d16
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: summoner_17
+      name: summoner_20
       rect:
         serializedVersion: 2
         x: 32
@@ -456,7 +520,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd188eb463bef9b42bcfb81d351af6f0
+      spriteID: a363e0736650b384192919905659d495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summoner_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29368a15c8b9f6b4da8396c2e3513a23
       vertices: []
       indices: 
       edges: []
