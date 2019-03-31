@@ -64,9 +64,11 @@ public class MusicController : MonoBehaviour
         victory = true;
 
         major.clip = victory_music;
+        major.loop = false;
         major.Play();
 
         minor.clip = victory_music;
+        minor.loop = false;
         minor.Play();
     }
 }
