@@ -8,6 +8,9 @@ public class Sniper : MonoBehaviour
     float charge_time = 0f;
     float last_shot;
 
+    bool death_playing = false;
+    public AudioClip death_clip;
+
     public AudioClip charge_up;
     public AudioClip fire_shot;
     AudioSource source;
@@ -111,6 +114,14 @@ public class Sniper : MonoBehaviour
             charge_time = 0;
 
             source.Stop();
+        }
+
+        if (enemy.health <= 0 &&
+            !death_playing)
+        {
+            death_playing = true;
+            GetComponent<AudioSource>().clip = death_clip;
+            GetComponent<AudioSource>().Play();
         }
 
         SetSprite();
