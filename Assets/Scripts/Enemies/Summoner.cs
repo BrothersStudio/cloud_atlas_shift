@@ -17,6 +17,7 @@ public class Summoner : MonoBehaviour
     float current_frame_hold = 0;
     public List<Sprite> summon_animation_sprites;
 
+    int walk_cycle = 0;
     public List<Sprite> walking_animation_sprites;
 
     float last_summon = -2f;
@@ -33,6 +34,11 @@ public class Summoner : MonoBehaviour
         player = FindObjectOfType<Player>();
         enemy = GetComponent<Enemy>();
         sprite_renderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(WalkCycle());
     }
 
     void Update()
@@ -83,9 +89,13 @@ public class Summoner : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-10, 10), Random.Range(-10, 10)).normalized * speed * Time.deltaTime;
             CheckWall();
         }
+        else if (!summoning &&
+            enemy.health > 0)
+        {
+            CheckWall();
+        }
 
-        if (!summoning &&
-            !enemy.flashing)
+        if (!summoning)
         {
             ChooseWalkingSprite();
         }
@@ -98,7 +108,8 @@ public class Summoner : MonoBehaviour
             summoning = true;
         }
 
-        if (TimeChange.current.dimension == enemy.enemy_dimension)
+        if (TimeChange.current.dimension == enemy.enemy_dimension &&
+            enemy.health > 0)
         {
             SetEnemyFacing();
         }
@@ -149,6 +160,11 @@ public class Summoner : MonoBehaviour
 
             ResetSummon();
         }
+        
+        if (enemy.flashing)
+        {
+            sprite_renderer.sprite = enemy.flash_sprite;
+        }
     }
 
     void ResetSummon()
@@ -158,8 +174,30 @@ public class Summoner : MonoBehaviour
         current_frame_hold = 0;
     }
 
+    IEnumerator WalkCycle()
+    {
+        while (enemy.health > 0)
+        {
+            walk_cycle = 0;
+            yield return new WaitForSeconds(0.25f);
+            walk_cycle = 1;
+            yield return new WaitForSeconds(0.25f);
+            walk_cycle = 2;
+            yield return new WaitForSeconds(0.25f);
+            walk_cycle = 3;
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
     void ChooseWalkingSprite()
     {
-        sprite_renderer.sprite = walking_animation_sprites[0];
+        if (!enemy.flashing)
+        {
+            sprite_renderer.sprite = walking_animation_sprites[walk_cycle];
+        }
+        else
+        {
+            sprite_renderer.sprite = enemy.flash_sprite;
+        }
     }
 }

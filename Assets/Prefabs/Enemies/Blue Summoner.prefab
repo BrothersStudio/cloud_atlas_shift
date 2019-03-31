@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
   is_hazard: 0
   health: 200
@@ -181,8 +182,10 @@ MonoBehaviour:
   - {fileID: 21300018, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
   - {fileID: 21300020, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
   walking_animation_sprites:
-  - {fileID: 21300000, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
-  - {fileID: 21300002, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300036, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300038, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300040, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
+  - {fileID: 21300042, guid: cc2e2768b637bf049ae91b060bcafe39, type: 3}
   enemy_to_summon: {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559,
     type: 3}
   num_to_summon: 3
