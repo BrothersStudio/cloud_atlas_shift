@@ -65,24 +65,24 @@ public class Sword : MonoBehaviour
     void SelectAnimation()
     {
         ResetFacing();
-        switch (GetComponentInParent<Player>().GetFacingDirection())
+        switch (GetComponentInParent<PlayerSprite>().player_direction)
         {
-            case FacingDirection.Up:
+            case WalkDir.Up:
                 transform.localPosition = new Vector3(0, 0.82f, 0);
                 break;
-            case FacingDirection.Down:
+            case WalkDir.Down:
                 GetComponent<SpriteRenderer>().flipY = true;
                 GetComponent<SpriteRenderer>().sortingLayerName = "Above Char Weapons";
 
                 transform.localPosition = new Vector3(0, -0.82f, 0);
                 break;
-            case FacingDirection.Left:
+            case WalkDir.Left:
                 GetComponent<SpriteRenderer>().flipX = true;
 
                 transform.Rotate(new Vector3(0, 0, 90));
                 transform.localPosition = new Vector3(-0.82f, 0, 0);
                 break;
-            case FacingDirection.Right:
+            case WalkDir.Right:
                 GetComponent<SpriteRenderer>().flipX = true;
                 GetComponent<SpriteRenderer>().flipY = true;
 

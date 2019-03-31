@@ -17,7 +17,8 @@ public class PlayerSprite : MonoBehaviour
 
     public GameObject dust_cloud;
 
-    WalkDir player_direction = WalkDir.Up;
+    [HideInInspector]
+    public WalkDir player_direction = WalkDir.Up;
 
     // Past
     public Sprite past_walking_up;
@@ -344,21 +345,6 @@ public class PlayerSprite : MonoBehaviour
     public void ForceSpriteForTime(float time)
     {
         sprite_force_time = Time.timeSinceLevelLoad + time;
-        switch (GetComponent<Player>().GetFacingDirection())
-        {
-            case FacingDirection.Up:
-                player_direction = WalkDir.Up;
-                break;
-            case FacingDirection.Down:
-                player_direction = WalkDir.Down;
-                break;
-            case FacingDirection.Left:
-                player_direction = WalkDir.Left;
-                break;
-            case FacingDirection.Right:
-                player_direction = WalkDir.Right;
-                break;
-        }
     }
 
     bool IsForceTimeUp()

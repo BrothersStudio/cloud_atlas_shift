@@ -156,47 +156,6 @@ public class Player : MonoBehaviour
         y_speed = 0;
     }
 
-    public FacingDirection GetFacingDirection()
-    {
-        Vector3 dir_vec = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        if (dir_vec.y > 0)
-        {
-            if (dir_vec.y > Mathf.Abs(dir_vec.x))
-            {
-                return FacingDirection.Up;
-            }
-            else
-            {
-                if (dir_vec.x > 0)
-                {
-                    return FacingDirection.Right;
-                }
-                else
-                {
-                    return FacingDirection.Left;
-                }
-            }
-        }
-        else
-        {
-            if (-dir_vec.y > Mathf.Abs(dir_vec.x))
-            {
-                return FacingDirection.Down;
-            }
-            else
-            {
-                if (dir_vec.x > 0)
-                {
-                    return FacingDirection.Right;
-                }
-                else
-                {
-                    return FacingDirection.Left;
-                }
-            }
-        }
-    }
-
     public void DamagePlayer(Transform source)
     {
         if (invincible) return;
