@@ -95,7 +95,7 @@ public class PlayerSprite : MonoBehaviour
             walk_sprite_time = 0;
 
             Vector3 spawn_loc = transform.position;
-            spawn_loc.y -= -0.06f;
+            spawn_loc.y -= 0.18f;
             Instantiate(dust_cloud, spawn_loc, Quaternion.identity);
         }
 
