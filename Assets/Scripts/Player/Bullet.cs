@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public bool homing;
 
+    bool hit_wall = false;
+
     int damage = 15;
     public float player_speed;
     public float enemy_speed;
@@ -43,6 +45,8 @@ public class Bullet : MonoBehaviour
     {
         enable_time = Time.timeSinceLevelLoad;
         sprite_renderer.color = new Color(sprite_renderer.color.r, sprite_renderer.color.g, sprite_renderer.color.b, 1);
+
+        hit_wall = false;
     }
 
     public void SetSpriteAndSpeed()
@@ -142,10 +146,11 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<Shield>().HitShield();
             HitWall();
         }
-        else if (collision.tag == "Wall" && 
-            Time.timeSinceLevelLoad > wall_encounter_time + enable_time)
+        else if (collision.tag == "Wall" &&
+            Time.timeSinceLevelLoad > wall_encounter_time + enable_time &&
+            !hit_wall)
         {
-            Invoke("HitWall", 0.03f);
+            HitWall();
         }
     }
 
@@ -156,8 +161,11 @@ public class Bullet : MonoBehaviour
 
     void HitWall()
     {
+        hit_wall = true;
+
         GameObject wall_hit = PlayerBulletPool.current.GetPooledWallHit();
         wall_hit.transform.position = transform.position;
+        RotateWallHit(wall_hit);
         wall_hit.SetActive(true);
 
         if (TimeChange.current.dimension != bullet_dimension)
@@ -170,6 +178,29 @@ public class Bullet : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+    }
+
+    void RotateWallHit(GameObject wall_hit)
+    {
+        wall_hit.transform.rotation = Quaternion.identity;
+
+        float angle = 0;
+        Vector2 vec = GetComponent<Rigidbody2D>().velocity;
+        if (vec.x < 0)
+        {
+            angle = 360 - (Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg * -1);
+        }
+        else
+        {
+            angle = Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
+        }
+
+        wall_hit.transform.Rotate(new Vector3(0, 0, -angle));
+
+        if (angle > 45 && angle < 305)
+        {
+            wall_hit.transform.Translate(new Vector3(0, 0.8f, 0));
+        }
     }
 }
 
