@@ -6,6 +6,7 @@ public class Sword : MonoBehaviour
 {
     int damage = 50;
 
+    int last_bullet_swing_id;
     int swing_id = 0;
     int swing_frame_count = 0;
     public BoxCollider2D[] swing_boxes;
@@ -113,8 +114,10 @@ public class Sword : MonoBehaviour
                 Hitstop.current.HitstopFor(0.2f);
             }
         }
-        else if (collision.tag == "Bullet")
+        else if (collision.tag == "Bullet" && swing_id != last_bullet_swing_id)
         {
+            last_bullet_swing_id = swing_id;
+
             collision.gameObject.SetActive(false);
             Hitstop.current.HitstopFor(0.1f);
             FindObjectOfType<SwordFlash>().Flash();
