@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour
     Attacks current_attack;
 
     // Dive attack
+    int num_dives = 0;
     float orig_speed;
     float speed = 4;
     int dive_choice = 0;
@@ -82,15 +83,9 @@ public class Boss : MonoBehaviour
         {
             current_attack = Attacks.Dive;
 
-            // Choose location further away from yourself
-            if (transform.position.x >= 0)
-            {
-                dive_choice = Random.Range(0, dive_positions.Count / 2);
-            }
-            else
-            {
-                dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
-            }
+            num_dives = Random.Range(2, 5);
+
+            ChooseDiveLocation();
         }
         else
         {
@@ -180,6 +175,21 @@ public class Boss : MonoBehaviour
         }
     }
 
+    void ChooseDiveLocation()
+    {
+        // Choose location further away from yourself
+        speed = 0;
+
+        if (transform.position.x >= 0)
+        {
+            dive_choice = Random.Range(0, dive_positions.Count / 2);
+        }
+        else
+        {
+            dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
+        }
+    }
+
     void DiveAttack()
     {
         speed += Time.deltaTime;
@@ -195,7 +205,15 @@ public class Boss : MonoBehaviour
 
         if (Vector3.Distance(transform.position, dive_positions[dive_choice]) < 0.1f)
         {
-            current_attack = Attacks.None;
+            num_dives--;
+            if (num_dives == 0)
+            {
+                current_attack = Attacks.None;
+            }
+            else
+            {
+                ChooseDiveLocation();
+            }
         }
     }
 
