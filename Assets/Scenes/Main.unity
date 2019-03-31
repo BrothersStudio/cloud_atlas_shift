@@ -1089,7 +1089,7 @@ MonoBehaviour:
     type: 3}
   level_1_rooms:
   - {fileID: 7950326965343713441, guid: 1dd3d64224768df47beee5b8f3770519, type: 3}
-  - {fileID: 7950326965343713441, guid: 2d16e0928b003524ba3521c447f3c603, type: 3}
+  - {fileID: 7950326965343713441, guid: 27732c6630312104f87a5d6177fc8ab6, type: 3}
   - {fileID: 7148320562747277706, guid: 41eccc0035600284c9eeb301f398321a, type: 3}
   - {fileID: 7148320562747277706, guid: e853dfb2a7a27694c87bf48305469c74, type: 3}
   - {fileID: 7950326965343713441, guid: 5acb7c7b0a904f347a9a95e2d6370a77, type: 3}
@@ -1797,6 +1797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust_cloud: {fileID: 4022020314596167618, guid: 31bf5b6fa75dbf141a3536c0ecb82ed5,
     type: 3}
+  player_direction: 0
   past_walking_up: {fileID: 21300002, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
   past_walking_down: {fileID: 21300000, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
   past_walking_left: {fileID: 21300006, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
