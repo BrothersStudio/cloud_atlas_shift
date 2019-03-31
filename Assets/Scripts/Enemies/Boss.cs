@@ -264,8 +264,6 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         sprite_renderer.sprite = shoot_animation[8];
         yield return new WaitForSeconds(0.1f);
-        sprite_renderer.sprite = shoot_animation[9];
-        yield return new WaitForSeconds(0.1f);
         in_shoot_animation = false;
     }
 
