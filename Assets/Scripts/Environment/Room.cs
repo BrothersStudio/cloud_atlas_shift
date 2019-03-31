@@ -6,6 +6,9 @@ public class Room : MonoBehaviour
 {
     public bool stair_room;
 
+    public int death_tier;
+    public Vector3 health_spawn_location;
+
     public List<Direction> exits;
     public List<Vector3> exit_points;
 
@@ -18,6 +21,8 @@ public class Room : MonoBehaviour
 
     [HideInInspector]
     public List<Enemy> enemies = new List<Enemy>();
+
+    bool activated = false;
     bool room_complete = false;
 
     public List<Vector3> max_and_min_cam_pos;
@@ -45,6 +50,7 @@ public class Room : MonoBehaviour
 
         AddDoors();
 
+        activated = true;
         room_complete = false;
 
         pathfinding_grid.CreateGrid();
@@ -94,11 +100,11 @@ public class Room : MonoBehaviour
 
     void Update()
     {
-        if (!room_complete)
+        if (!room_complete && activated)
         {
             foreach (Enemy enemy in enemies)
             {
-                if (enemy.health > 0 && !enemy.is_hazard)
+                if ((enemy.health > 0 && !enemy.is_hazard) || enemy.is_boss)
                 {
                     return;
                 }
@@ -114,6 +120,15 @@ public class Room : MonoBehaviour
         foreach (Door door in doors_to_open)
         {
             door.Open();
+        }
+
+        if (death_tier > -1)
+        { 
+            int deaths = FindObjectOfType<LevelController>().deaths;
+            if (deaths >= death_tier)
+            {
+                Instantiate(FindObjectOfType<RoomController>().healing_item, transform.TransformPoint(health_spawn_location), Quaternion.identity);
+            }
         }
     }
 }

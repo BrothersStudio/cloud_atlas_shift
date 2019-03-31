@@ -1085,6 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb92addfe0ee20458d0eaa5643c708e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healing_item: {fileID: 7230780949460697247, guid: c680917bad3ef3241bf9fd4a704c2e83,
+    type: 3}
   level_1_rooms:
   - {fileID: 7950326965343713441, guid: 1dd3d64224768df47beee5b8f3770519, type: 3}
   - {fileID: 7950326965343713441, guid: 2d16e0928b003524ba3521c447f3c603, type: 3}
@@ -1145,6 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_level: 1
+  deaths: 0
   game_over: 0
 --- !u!4 &1550669672
 Transform:
@@ -1177,6 +1180,7 @@ MonoBehaviour:
   boss_laugh_source: {fileID: 1550669676}
   boss_minor: {fileID: 8300000, guid: cf2d6acfc3bf0c54d9a9ff69fdffeab1, type: 3}
   boss_major: {fileID: 8300000, guid: e16cd080d9ff61a41ba175815f467dc2, type: 3}
+  victory_music: {fileID: 8300000, guid: 52fa92589e092654888202939bd1638f, type: 3}
 --- !u!82 &1550669674
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1702,13 +1706,13 @@ GameObject:
   - component: {fileID: 1846309564}
   - component: {fileID: 1846309565}
   - component: {fileID: 1846309566}
-  - component: {fileID: 1846309562}
   - component: {fileID: 1846309567}
   - component: {fileID: 1846309569}
   - component: {fileID: 1846309568}
   - component: {fileID: 1846309570}
   - component: {fileID: 1846309571}
   - component: {fileID: 1846309572}
+  - component: {fileID: 1846309573}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -1716,32 +1720,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1846309562
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846309561}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.6}
-  m_EdgeRadius: 0
 --- !u!4 &1846309563
 Transform:
   m_ObjectHideFlags: 0
@@ -6682,6 +6660,27 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846309561}
   m_Enabled: 1
+--- !u!68 &1846309573
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846309561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.19211611, y: 0.10262799}
+  - {x: -0.19334385, y: -0.47719812}
+  - {x: 0.14749491, y: -0.47744346}
+  - {x: 0.14749525, y: 0.11155224}
+  - {x: -0.20500958, y: 0.10262799}
 --- !u!1 &2085885648
 GameObject:
   m_ObjectHideFlags: 0

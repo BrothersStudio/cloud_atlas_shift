@@ -10,6 +10,9 @@ public class LevelController : MonoBehaviour
     public int current_level = 1;
 
     [HideInInspector]
+    public int deaths = 0;
+
+    [HideInInspector]
     public bool game_over = false;
 
     void Awake()

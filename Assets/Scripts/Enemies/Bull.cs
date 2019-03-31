@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bull : MonoBehaviour
 {
+    int start_charge_health = 0;
     bool charging = false;
     float charge_start = 0;
     float charge_delay = 0.5f;
@@ -55,7 +56,7 @@ public class Bull : MonoBehaviour
             speed = Mathf.Clamp(speed + 0.03f, 0, 4);
 
             transform.position = Vector3.MoveTowards(transform.position, charge_direction, speed * speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, player_charge_position) < 1f)
+            if (Vector3.Distance(transform.position, player_charge_position) < 1f || enemy.health != start_charge_health)
             {
                 looking_for_wall = true;
             }
@@ -152,6 +153,8 @@ public class Bull : MonoBehaviour
     void Charge()
     {
         StopAllCoroutines();
+
+        start_charge_health = enemy.health;
 
         charging = true;
         charge_start = Time.timeSinceLevelLoad;

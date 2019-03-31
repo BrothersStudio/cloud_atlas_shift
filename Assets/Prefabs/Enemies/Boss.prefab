@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 1
   is_hazard: 0
   health: 2000
@@ -186,6 +187,62 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   cloud_trail: {fileID: 5062693320930552533, guid: c257d179ce2c3f74a93ea83d24358960,
     type: 3}
+  death_position: {x: 0, y: 28, z: 0}
+  death_animation_sprites:
+  - {fileID: 21300000, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300002, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300004, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300006, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300008, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300010, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300012, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300014, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300016, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300018, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300020, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300022, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300024, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300026, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300028, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300030, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300032, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300034, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300036, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300038, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300040, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300042, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300044, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300046, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300048, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300050, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300052, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300054, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300056, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300058, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300060, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300062, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300064, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300066, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300068, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300070, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300072, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300074, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300076, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300078, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300080, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300082, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300084, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300086, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300088, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300090, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300092, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300094, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300096, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300098, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300100, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300102, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300104, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  - {fileID: 21300106, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
 --- !u!82 &8309924737297900343
 AudioSource:
   m_ObjectHideFlags: 0

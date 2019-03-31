@@ -3117,7 +3117,7 @@ GameObject:
   - component: {fileID: 7950326965343713440}
   - component: {fileID: 4445603585947590235}
   m_Layer: 0
-  m_Name: Bull and Snipe
+  m_Name: Snipe and Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3291,6 +3291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stair_room: 0
+  death_tier: 4
+  health_spawn_location: {x: 0, y: 2, z: 0}
   exits: 0000000001000000
   exit_points:
   - {x: 0, y: 4, z: 0}

@@ -154,7 +154,7 @@ public class Enemy : MonoBehaviour
         PlayHitSound();
 
         health -= damage;
-        if (health <= 0)
+        if (health <= 0 && !is_boss)
         {
             Die();
         }

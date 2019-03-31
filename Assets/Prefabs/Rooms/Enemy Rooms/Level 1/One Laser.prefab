@@ -17001,6 +17001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stair_room: 0
+  death_tier: 2
+  health_spawn_location: {x: 0, y: 8, z: 0}
   exits: 0000000001000000
   exit_points:
   - {x: 0, y: 11, z: 0}
@@ -17028,6 +17030,7 @@ MonoBehaviour:
   - {x: 5, y: 9, z: 0}
   - {x: 6, y: -3, z: 0}
   - {x: -6, y: -3, z: 0}
+  enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 11.5, z: 0}
   - {x: -7.5, y: -4.5, z: 0}
