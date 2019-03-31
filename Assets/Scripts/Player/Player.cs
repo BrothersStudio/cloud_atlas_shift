@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
                 bullet.GetComponent<Bullet>().side = BulletSide.Player;
                 bullet.GetComponent<Bullet>().SetSpriteAndSpeed();
 
-                bullet.GetComponent<Rigidbody2D>().velocity = GetDirectionOfArrowKey() * bullet.GetComponent<Bullet>().speed;
+                bullet.GetComponent<Rigidbody2D>().velocity = GetDirectionOfArrowKey() * bullet.GetComponent<Bullet>().speed + GetComponent<Rigidbody2D>().velocity / 1.2f;
 
                 GetComponent<PlayerSprite>().ForceSpriteForTime(0.2f);
                 GetComponent<PlayerAudio>().Shoot();
