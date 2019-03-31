@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    float current_speed = 4f;
+    float speed;
+    float orig_speed = 4f;
     int num_beams = 1;
 
     public bool is_vertical;
@@ -13,6 +14,8 @@ public class Laser : MonoBehaviour
 
     void Awake()
     {
+        speed = orig_speed;
+
         enemy = GetComponent<Enemy>();
         if (is_vertical)
         {
@@ -73,7 +76,7 @@ public class Laser : MonoBehaviour
         {
             if (collider.tag == "Wall")
             {
-                current_speed = -current_speed;
+                speed = orig_speed;
                 break;
             }
         }
@@ -83,7 +86,7 @@ public class Laser : MonoBehaviour
         {
             if (collider.tag == "Wall")
             {
-                current_speed = -current_speed;
+                speed = -orig_speed;
                 break;
             }
         }
@@ -91,11 +94,11 @@ public class Laser : MonoBehaviour
         Vector2 new_pos = transform.position;
         if (is_vertical)
         {
-            new_pos.x -= current_speed * Time.deltaTime;
+            new_pos.x += speed * Time.deltaTime;
         }
         else
         {
-            new_pos.y -= current_speed * Time.deltaTime;
+            new_pos.y -= speed * Time.deltaTime;
         }
         transform.position = new_pos;
     }
