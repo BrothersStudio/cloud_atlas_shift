@@ -25,6 +25,7 @@ public class Boss : MonoBehaviour
     int shoot_choice = 0;
     public List<Vector3> shoot_positions;
 
+    bool in_shoot_animation = false;
     public List<Sprite> shoot_animation;
 
     // Intensity
@@ -213,6 +214,8 @@ public class Boss : MonoBehaviour
 
             if (Time.timeSinceLevelLoad > last_critical_shot + critical_shot_cooldown)
             {
+                StartCoroutine(ShootAnimation());
+
                 last_critical_shot = Time.timeSinceLevelLoad;
                 for (float i = -Mathf.PI / 4f; i < 3 * Mathf.PI / 4f; i += 0.05f)
                 {
@@ -240,6 +243,32 @@ public class Boss : MonoBehaviour
         }
     }
 
+    IEnumerator ShootAnimation()
+    {
+        in_shoot_animation = true;
+        sprite_renderer.sprite = shoot_animation[0];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[1];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[2];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[3];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[4];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[5];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[6];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[7];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[8];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[9];
+        yield return new WaitForSeconds(0.1f);
+        in_shoot_animation = false;
+    }
+
     void Shoot(Vector3 location)
     {
         GameObject bullet = PlayerBulletPool.current.GetPooledBullet();
@@ -259,7 +288,7 @@ public class Boss : MonoBehaviour
         {
             sprite_renderer.sprite = enemy.flash_sprite;
         }
-        else
+        else if (!in_shoot_animation)
         {
             sprite_renderer.sprite = sprites[walk_cycle];
         }

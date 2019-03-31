@@ -181,6 +181,16 @@ MonoBehaviour:
   - {x: 5.5, y: 28.5, z: 0}
   - {x: 5.5, y: 23.5, z: 0}
   - {x: -5.5, y: 23.5, z: 0}
+  shoot_animation:
+  - {fileID: 21300006, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300008, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300010, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300012, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300014, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300016, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300018, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300020, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  - {fileID: 21300022, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   sprites:
   - {fileID: 21300000, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   - {fileID: 21300002, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
