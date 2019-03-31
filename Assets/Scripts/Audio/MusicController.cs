@@ -8,6 +8,8 @@ public class MusicController : MonoBehaviour
     public AudioSource minor;
     public AudioSource major;
 
+    public AudioSource boss_laugh_source;
+
     public AudioClip boss_minor;
     public AudioClip boss_major;
 
@@ -39,14 +41,18 @@ public class MusicController : MonoBehaviour
         }
     }
 
-    public void StopMusic()
+    public void PlayBossLaugh()
     {
         minor.Stop();
         major.Stop();
+
+        boss_laugh_source.Play();
     }
 
     public void SetBossMusic()
     {
+        boss_laugh_source.Stop();
+
         minor.clip = boss_minor;
         minor.Play();
 
@@ -57,6 +63,5 @@ public class MusicController : MonoBehaviour
     public void SetVictoryMusic()
     {
         victory = true;
-        StopMusic();
     }
 }
