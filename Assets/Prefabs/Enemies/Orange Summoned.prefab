@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shift_attack_delay: 0.4
-  speed: 2
+  speed: 1.7
   skull_animation:
   - {fileID: 21300000, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   - {fileID: 21300002, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}

@@ -24,6 +24,7 @@ public class Summoner : MonoBehaviour
     float summon_cooldown = 3f;
     public GameObject enemy_to_summon;
     public int num_to_summon;
+    public AudioClip summon_sound;
 
     Player player;
     Enemy enemy;
@@ -106,6 +107,10 @@ public class Summoner : MonoBehaviour
             Time.timeSinceLevelLoad > summon_cooldown + last_summon)
         {
             summoning = true;
+
+            GetComponent<AudioSource>().clip = summon_sound;
+            GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
         }
 
         if (TimeChange.current.dimension == enemy.enemy_dimension &&

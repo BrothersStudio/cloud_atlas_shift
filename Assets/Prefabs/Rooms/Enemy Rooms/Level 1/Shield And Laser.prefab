@@ -3305,12 +3305,10 @@ MonoBehaviour:
   doors_to_open: []
   enemy_to_place:
   - {fileID: 7755434271270301874, guid: be22a28a04a5beb47b9a1f44e5e458b8, type: 3}
-  - {fileID: 7126016353278326813, guid: 0c6f80ac07296ba478c313f10eb59a63, type: 3}
-  - {fileID: 5432114058869886678, guid: 7861a9f0e58392a43b005a8e6aad4a9d, type: 3}
+  - {fileID: 8200295360855493761, guid: 5b2066108d95b8c4b9b5a0860f3a7cf8, type: 3}
   location_to_place:
   - {x: 0, y: 3, z: 0}
   - {x: -6, y: 3, z: 0}
-  - {x: -6, y: 0, z: 0}
   enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 4.5, z: 0}
