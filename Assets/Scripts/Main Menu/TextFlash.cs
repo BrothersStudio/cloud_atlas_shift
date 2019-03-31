@@ -2,41 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 
 public class TextFlash : MonoBehaviour
 {
-    bool starting_soon = false;
     float last_switch = 0;
-    float on_time = 1f;
-    float off_time = 0.5f;
+    float on_time = 0.8f;
+    float off_time = 0.3f;
 
     void Update()
     {
-        if (Time.timeSinceLevelLoad > last_switch + on_time && GetComponent<Text>().enabled)
+        if (Time.timeSinceLevelLoad > last_switch + on_time && GetComponent<SpriteRenderer>().enabled)
         {
             last_switch = Time.timeSinceLevelLoad;
-            GetComponent<Text>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
         }
-        else if (Time.timeSinceLevelLoad > last_switch + off_time && !GetComponent<Text>().enabled)
+        else if (Time.timeSinceLevelLoad > last_switch + off_time && !GetComponent<SpriteRenderer>().enabled)
         {
             last_switch = Time.timeSinceLevelLoad;
-            GetComponent<Text>().enabled = true;
+            GetComponent<SpriteRenderer>().enabled = true;
         }
 
-        if (Input.anyKey && !starting_soon)
+        if (Input.anyKey)
         {
-            on_time /= 2f;
-            off_time /= 2f;
-
-            starting_soon = true;
-            Invoke("StartSoon", 2f);
+            SceneManager.LoadScene("Main");
         }
-    }
-
-    void StartSoon()
-    {
-        SceneManager.LoadScene("Main");
     }
 }
