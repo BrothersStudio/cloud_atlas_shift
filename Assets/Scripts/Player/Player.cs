@@ -86,10 +86,11 @@ public class Player : MonoBehaviour
         }
 
         // Attack
-        if (Input.GetMouseButton(0))
+        if (ArrowKeyPressed())
         {
             // Gun
-            if (TimeChange.current.dimension == Dimension.Blue && (Time.timeSinceLevelLoad > last_shot + shot_cooldown))
+            if (TimeChange.current.dimension == Dimension.Blue && 
+                (Time.timeSinceLevelLoad > last_shot + shot_cooldown))
             {
                 last_shot = Time.timeSinceLevelLoad;
 
@@ -100,14 +101,13 @@ public class Player : MonoBehaviour
                 bullet.GetComponent<Bullet>().side = BulletSide.Player;
                 bullet.GetComponent<Bullet>().SetSpriteAndSpeed();
 
-                Vector3 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
+                bullet.GetComponent<Rigidbody2D>().velocity = GetDirectionOfArrowKey() * bullet.GetComponent<Bullet>().speed;
 
                 GetComponent<PlayerSprite>().ForceSpriteForTime(0.2f);
                 GetComponent<PlayerAudio>().Shoot();
             }
-            // Sword
-            else if (TimeChange.current.dimension == Dimension.Orange && (Time.timeSinceLevelLoad > last_swing + swing_cooldown))
+            else if (TimeChange.current.dimension == Dimension.Orange &&
+                (Time.timeSinceLevelLoad > last_swing + swing_cooldown))
             {
                 last_swing = Time.timeSinceLevelLoad;
                 sword.Swing();
@@ -147,6 +147,41 @@ public class Player : MonoBehaviour
         {
             x_speed *= (1 - friction);
             y_speed *= (1 - friction);
+        }
+    }
+
+    bool ArrowKeyPressed()
+    {
+        if (Input.GetKey(KeyCode.UpArrow) ||
+            Input.GetKey(KeyCode.DownArrow) ||
+            Input.GetKey(KeyCode.LeftArrow) ||
+            Input.GetKey(KeyCode.RightArrow))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    Vector2 GetDirectionOfArrowKey()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            return new Vector2(0, 1);
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            return new Vector2(0, -1);
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            return new Vector2(-1, 0);
+        }
+        else //if (Input.GetKey(KeyCode.RightArrow))
+        {
+            return new Vector2(1, 0);
         }
     }
 

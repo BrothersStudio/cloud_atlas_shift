@@ -65,30 +65,31 @@ public class Sword : MonoBehaviour
     void SelectAnimation()
     {
         ResetFacing();
-        switch (GetComponentInParent<PlayerSprite>().player_direction)
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            case WalkDir.Up:
-                transform.localPosition = new Vector3(0, 0.82f, 0);
-                break;
-            case WalkDir.Down:
-                GetComponent<SpriteRenderer>().flipY = true;
-                GetComponent<SpriteRenderer>().sortingLayerName = "Above Char Weapons";
+            transform.localPosition = new Vector3(0, 0.82f, 0);
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            GetComponent<SpriteRenderer>().flipY = true;
+            GetComponent<SpriteRenderer>().sortingLayerName = "Above Char Weapons";
 
-                transform.localPosition = new Vector3(0, -0.82f, 0);
-                break;
-            case WalkDir.Left:
-                GetComponent<SpriteRenderer>().flipX = true;
+            transform.localPosition = new Vector3(0, -0.82f, 0);
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
 
-                transform.Rotate(new Vector3(0, 0, 90));
-                transform.localPosition = new Vector3(-0.82f, 0, 0);
-                break;
-            case WalkDir.Right:
-                GetComponent<SpriteRenderer>().flipX = true;
-                GetComponent<SpriteRenderer>().flipY = true;
+            transform.Rotate(new Vector3(0, 0, 90));
+            transform.localPosition = new Vector3(-0.82f, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipY = true;
 
-                transform.Rotate(new Vector3(0, 0, 90));
-                transform.localPosition = new Vector3(0.82f, 0, 0);
-                break;
+            transform.Rotate(new Vector3(0, 0, 90));
+            transform.localPosition = new Vector3(0.82f, 0, 0);
         }
     }
 
