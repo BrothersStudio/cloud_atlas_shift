@@ -162,10 +162,14 @@ public class Enemy : MonoBehaviour
 
     void PlayHitSound()
     {
-        AudioClip chosen_clip = last_damage_type == DamageType.Sword ? player.GetComponent<PlayerAudio>().enemy_sword_death : player.GetComponent<PlayerAudio>().enemy_gun_death;
-        GetComponent<AudioSource>().clip = chosen_clip;
-        GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
-        GetComponent<AudioSource>().Play();
+        AudioSource source = GetComponent<AudioSource>();
+        if (!source.isPlaying)
+        {
+            AudioClip chosen_clip = last_damage_type == DamageType.Sword ? player.GetComponent<PlayerAudio>().enemy_sword_death : player.GetComponent<PlayerAudio>().enemy_gun_death;
+            source.clip = chosen_clip;
+            source.pitch = Random.Range(0.9f, 1.1f);
+            source.Play();
+        }
     }
 
     void Knockback(Transform source)
