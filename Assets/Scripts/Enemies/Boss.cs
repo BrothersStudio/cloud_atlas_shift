@@ -15,7 +15,7 @@ public class Boss : MonoBehaviour
     public List<Vector3> dive_positions;
 
     // Shooting
-    float shot_position_reached_time = 0f;
+    float phase_position_reached_time = 0f;
     float phase_time = 8f;
 
     float last_quick_shot = 0f;
@@ -28,6 +28,16 @@ public class Boss : MonoBehaviour
 
     bool in_shoot_animation = false;
     public List<Sprite> shoot_animation;
+
+    // Summoning
+    float last_summon = 0;
+    float summon_cooldown = 2;
+    Vector3 summong_position = new Vector3(0, 26, 0);
+    public AudioClip summon_sound;
+
+    int num_to_summon = 4;
+    float dist_from_player = 5;
+    public List<GameObject> summoned_enemy;
 
     // Intensity
     int orig_health;
@@ -79,7 +89,9 @@ public class Boss : MonoBehaviour
     void ChooseAttack()
     {
         speed = 0;
-        if (Random.Range(0f, 1f) < 0.5)
+
+        float roll = Random.Range(0f, 1f);
+        if (roll < 0.33f)
         {
             current_attack = Attacks.Dive;
 
@@ -87,10 +99,14 @@ public class Boss : MonoBehaviour
 
             ChooseDiveLocation();
         }
-        else
+        else if (roll > 0.66f)
         {
             current_attack = Attacks.Shoot;
             shoot_choice = Random.Range(0, 4);
+        }
+        else
+        {
+            current_attack = Attacks.Summon;
         }
 
         // Assess if health is below half
@@ -172,6 +188,9 @@ public class Boss : MonoBehaviour
             case Attacks.Shoot:
                 ShootAttack();
                 break;
+            case Attacks.Summon:
+                SummonAttack();
+                break;
         }
     }
 
@@ -224,15 +243,15 @@ public class Boss : MonoBehaviour
             speed += Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, shoot_positions[shoot_choice], speed * speed * speed * Time.deltaTime);
 
-            shot_position_reached_time = Time.timeSinceLevelLoad;
+            phase_position_reached_time = Time.timeSinceLevelLoad;
         }
-        else if (Time.timeSinceLevelLoad < shot_position_reached_time + phase_time)
+        else if (Time.timeSinceLevelLoad < phase_position_reached_time + phase_time)
         {
             if (critical) critical_shot_cooldown = 0.5f;
 
             if (Time.timeSinceLevelLoad > last_critical_shot + critical_shot_cooldown)
             {
-                StartCoroutine(ShootAnimation());
+                StartCoroutine(ActionAnimation());
 
                 last_critical_shot = Time.timeSinceLevelLoad;
                 for (float i = -Mathf.PI / 4f; i < 3 * Mathf.PI / 4f; i += 0.05f)
@@ -261,7 +280,7 @@ public class Boss : MonoBehaviour
         }
     }
 
-    IEnumerator ShootAnimation()
+    IEnumerator ActionAnimation()
     {
         in_shoot_animation = true;
         sprite_renderer.sprite = shoot_animation[0];
@@ -296,6 +315,46 @@ public class Boss : MonoBehaviour
 
         Vector3 direction = location - transform.position;
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(direction.x, direction.y).normalized * bullet.GetComponent<Bullet>().speed;
+    }
+
+    void SummonAttack()
+    {
+        if (Vector3.Distance(transform.position, summong_position) > 0.1f)
+        {
+            speed += Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, summong_position, speed * speed * speed * Time.deltaTime);
+
+            phase_position_reached_time = Time.timeSinceLevelLoad;
+        }
+        else if (Time.timeSinceLevelLoad < phase_position_reached_time + phase_time &&
+            Time.timeSinceLevelLoad > last_summon + summon_cooldown)
+        {
+            last_summon = Time.timeSinceLevelLoad;
+
+            StartCoroutine(ActionAnimation());
+
+            GetComponent<AudioSource>().clip = summon_sound;
+            GetComponent<AudioSource>().pitch = Random.Range(0.5f, 0.7f);
+            GetComponent<AudioSource>().Play();
+
+            for (int i = 0; i < num_to_summon; i++)
+            {
+                while (true)
+                {
+                    Vector3 potential_pos = transform.TransformPoint(new Vector3(Random.Range(-7f, 7f), Random.Range(-4.5f, 4.5f), 0));
+                    if (Vector3.Distance(player.transform.position, potential_pos) > dist_from_player)
+                    {
+                        GameObject new_skull = Instantiate(summoned_enemy[Random.Range(0, 2)], potential_pos, Quaternion.identity);
+                        new_skull.GetComponent<Enemy>().SetRoomPosition(enemy.max_pos, enemy.min_pos);
+                        break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            current_attack = Attacks.None;
+        }
     }
 
     void SetSprite()
@@ -358,6 +417,7 @@ public class Boss : MonoBehaviour
     {
         None,
         Dive,
-        Shoot
+        Shoot,
+        Summon
     }
 }
