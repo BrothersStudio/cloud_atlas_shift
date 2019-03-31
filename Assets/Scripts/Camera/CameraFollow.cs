@@ -68,7 +68,7 @@ public class CameraFollow : MonoBehaviour
 
         if (animating)
         {
-            transform.position = Vector3.Lerp(transform.position, new_pos, 0.025f);
+            transform.position = Vector3.Lerp(transform.position, new_pos, 3 * Time.deltaTime);
             if (Vector3.Distance(transform.position, new_pos) < 0.15f)
             {
                 animating = false;

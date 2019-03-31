@@ -522,7 +522,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Game Title Here
+  m_Text: 'Cloud Atlas: Shift'
 --- !u!222 &1379868015
 CanvasRenderer:
   m_ObjectHideFlags: 0

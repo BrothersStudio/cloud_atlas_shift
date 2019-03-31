@@ -114,6 +114,7 @@ public class Boss : MonoBehaviour
 
             FindObjectOfType<LevelController>().GameOver();
             FindObjectOfType<MusicController>().SetVictoryMusic();
+            Application.Quit();
         }
     }
 

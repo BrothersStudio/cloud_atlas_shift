@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     bool fading = false;
     float start_fade_time = 1;
-    float fade_rate = 10 / 255f;
+    float fade_rate = 1000 / 255f;
 
     SpriteRenderer sprite_renderer;
     public Sprite normal_sprite;
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
         if (fading)
         {
             Color current_color = sprite_renderer.color;
-            current_color.a -= fade_rate;
+            current_color.a -= fade_rate * Time.deltaTime;
             sprite_renderer.color = current_color;
 
             if (current_color.a <= 0)

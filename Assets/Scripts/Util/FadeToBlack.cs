@@ -33,7 +33,7 @@ public class FadeToBlack : MonoBehaviour
         while (image.color.a > 0)
         {
             Color color = image.color;
-            color.a -= 0.01f;
+            color.a -= 3f * Time.deltaTime;
             image.color = color;
 
             yield return null;
@@ -46,7 +46,7 @@ public class FadeToBlack : MonoBehaviour
         while (image.color.a < 1)
         {
             Color color = image.color;
-            color.a += 0.01f;
+            color.a += 3f * Time.deltaTime;
             image.color = color;
 
             yield return null;
