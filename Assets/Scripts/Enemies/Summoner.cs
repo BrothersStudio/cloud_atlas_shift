@@ -10,6 +10,9 @@ public class Summoner : MonoBehaviour
     float last_movement_change = 0;
     float change_cooldown = 1f;
 
+    bool death_playing = false;
+    public AudioClip death_clip;
+
     bool summoning = false;
     bool summon_done = false;
     int summon_animation_frame = 0;
@@ -110,6 +113,14 @@ public class Summoner : MonoBehaviour
 
             GetComponent<AudioSource>().clip = summon_sound;
             GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
+        }
+
+        if (enemy.health <= 0 &&
+            !death_playing)
+        {
+            death_playing = true;
+            GetComponent<AudioSource>().clip = death_clip;
             GetComponent<AudioSource>().Play();
         }
 
