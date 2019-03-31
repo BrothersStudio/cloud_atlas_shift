@@ -111,7 +111,7 @@ public class Sword : MonoBehaviour
             if (enemy.last_swing_id != swing_id && (enemy.enemy_dimension == Dimension.Orange || enemy.is_boss))
             {
                 enemy.SwordHit(damage, transform.parent, swing_id);
-                Hitstop.current.HitstopFor(0.2f);
+                Hitstop.current.HitstopFor(0.15f);
             }
         }
         else if (collision.tag == "Bullet" && swing_id != last_bullet_swing_id)
