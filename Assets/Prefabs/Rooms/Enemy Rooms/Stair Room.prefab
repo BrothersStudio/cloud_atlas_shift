@@ -2942,6 +2942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stair_room: 1
+  death_tier: -1
+  health_spawn_location: {x: 0, y: 0, z: 0}
   exits: 01000000
   exit_points:
   - {x: 0, y: 4, z: 0}
@@ -2961,6 +2963,7 @@ MonoBehaviour:
   doors_to_open: []
   enemy_to_place: []
   location_to_place: []
+  enemies: []
   max_and_min_cam_pos:
   - {x: 7.5, y: 4.5, z: 0}
   - {x: -7.5, y: -4.5, z: 0}
@@ -13286,11 +13289,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7950326965343713440}
     m_Modifications:
-    - target: {fileID: 2734316510886792907, guid: 42a29fd3c2ee7974b91694c9c82ff837,
-        type: 3}
-      propertyPath: m_Name
-      value: Next Floor
-      objectReference: {fileID: 0}
     - target: {fileID: 8077207528173247876, guid: 42a29fd3c2ee7974b91694c9c82ff837,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13345,6 +13343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734316510886792907, guid: 42a29fd3c2ee7974b91694c9c82ff837,
+        type: 3}
+      propertyPath: m_Name
+      value: Next Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42a29fd3c2ee7974b91694c9c82ff837, type: 3}

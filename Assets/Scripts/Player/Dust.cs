@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Dust : MonoBehaviour
 {
-    public Sprite dust_1;
-    public Sprite dust_2;
-    public Sprite dust_3;
-
-    int frame_count = 0;
-
+    public List<Sprite> sprites;
     SpriteRenderer sprite_renderer;
 
     void Awake()
@@ -17,20 +12,24 @@ public class Dust : MonoBehaviour
         sprite_renderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    void Start()
     {
-        frame_count++;
-        if (frame_count > 46)
-        {
-            Destroy(gameObject);
-        }
-        else if (frame_count > 38)
-        {
-            sprite_renderer.sprite = dust_3;
-        }
-        else if (frame_count > 30)
-        {
-            sprite_renderer.sprite = dust_2;
-        }
+        StartCoroutine(AnimateDust());
+    }
+
+    IEnumerator AnimateDust()
+    {
+        sprite_renderer.sprite = sprites[0];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = sprites[1];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = sprites[2];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = sprites[3];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = sprites[4];
+        yield return new WaitForSeconds(0.1f);
+
+        Destroy(gameObject);
     }
 }

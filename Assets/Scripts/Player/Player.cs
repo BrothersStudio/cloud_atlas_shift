@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
                 GameObject bullet = PlayerBulletPool.current.GetPooledBullet();
                 bullet.SetActive(true);
-                bullet.transform.position = transform.position;
+                bullet.transform.position = transform.position + new Vector3(0, -0.1f, 0);
 
                 bullet.GetComponent<Bullet>().side = BulletSide.Player;
                 bullet.GetComponent<Bullet>().SetSpriteAndSpeed();

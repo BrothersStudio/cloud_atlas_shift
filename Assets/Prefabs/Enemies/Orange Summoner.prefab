@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shift_attack_delay: 0.2
   speed: 40
+  death_clip: {fileID: 8300000, guid: 791b346d98abef64ba2fb7278239ee85, type: 3}
   summon_animation_sprites:
   - {fileID: 21300008, guid: 36611eb3ea9e6374cae4729530f595de, type: 3}
   - {fileID: 21300010, guid: 36611eb3ea9e6374cae4729530f595de, type: 3}

@@ -23,7 +23,7 @@ public class TextFlash : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = true;
         }
 
-        if (Input.anyKey)
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             SceneManager.LoadScene("Main");
         }

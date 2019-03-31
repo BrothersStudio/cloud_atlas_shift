@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour
     Attacks current_attack;
 
     // Dive attack
+    int num_dives = 0;
     float orig_speed;
     float speed = 4;
     int dive_choice = 0;
@@ -25,6 +26,7 @@ public class Boss : MonoBehaviour
     int shoot_choice = 0;
     public List<Vector3> shoot_positions;
 
+    bool in_shoot_animation = false;
     public List<Sprite> shoot_animation;
 
     // Intensity
@@ -81,15 +83,9 @@ public class Boss : MonoBehaviour
         {
             current_attack = Attacks.Dive;
 
-            // Choose location further away from yourself
-            if (transform.position.x >= 0)
-            {
-                dive_choice = Random.Range(0, dive_positions.Count / 2);
-            }
-            else
-            {
-                dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
-            }
+            num_dives = Random.Range(2, 5);
+
+            ChooseDiveLocation();
         }
         else
         {
@@ -179,6 +175,21 @@ public class Boss : MonoBehaviour
         }
     }
 
+    void ChooseDiveLocation()
+    {
+        // Choose location further away from yourself
+        speed = 0;
+
+        if (transform.position.x >= 0)
+        {
+            dive_choice = Random.Range(0, dive_positions.Count / 2);
+        }
+        else
+        {
+            dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
+        }
+    }
+
     void DiveAttack()
     {
         speed += Time.deltaTime;
@@ -194,7 +205,15 @@ public class Boss : MonoBehaviour
 
         if (Vector3.Distance(transform.position, dive_positions[dive_choice]) < 0.1f)
         {
-            current_attack = Attacks.None;
+            num_dives--;
+            if (num_dives == 0)
+            {
+                current_attack = Attacks.None;
+            }
+            else
+            {
+                ChooseDiveLocation();
+            }
         }
     }
 
@@ -213,6 +232,8 @@ public class Boss : MonoBehaviour
 
             if (Time.timeSinceLevelLoad > last_critical_shot + critical_shot_cooldown)
             {
+                StartCoroutine(ShootAnimation());
+
                 last_critical_shot = Time.timeSinceLevelLoad;
                 for (float i = -Mathf.PI / 4f; i < 3 * Mathf.PI / 4f; i += 0.05f)
                 {
@@ -240,6 +261,30 @@ public class Boss : MonoBehaviour
         }
     }
 
+    IEnumerator ShootAnimation()
+    {
+        in_shoot_animation = true;
+        sprite_renderer.sprite = shoot_animation[0];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[1];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[2];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[3];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[4];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[5];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[6];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[7];
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = shoot_animation[8];
+        yield return new WaitForSeconds(0.1f);
+        in_shoot_animation = false;
+    }
+
     void Shoot(Vector3 location)
     {
         GameObject bullet = PlayerBulletPool.current.GetPooledBullet();
@@ -259,7 +304,7 @@ public class Boss : MonoBehaviour
         {
             sprite_renderer.sprite = enemy.flash_sprite;
         }
-        else
+        else if (!in_shoot_animation)
         {
             sprite_renderer.sprite = sprites[walk_cycle];
         }

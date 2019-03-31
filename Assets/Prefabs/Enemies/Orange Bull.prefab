@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3286982738762271137}
   - component: {fileID: 3526670806572684244}
   m_Layer: 0
-  m_Name: Bull
+  m_Name: Orange Bull
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
   is_hazard: 0
   health: 100
@@ -150,6 +151,7 @@ MonoBehaviour:
   - {fileID: 21300006, guid: a22bb2ba5b9158d40ae470dc72ac733c, type: 3}
   - {fileID: 21300008, guid: a22bb2ba5b9158d40ae470dc72ac733c, type: 3}
   charge_sound: {fileID: 8300000, guid: 15b13999979261944be3176ab2853803, type: 3}
+  death_sound: {fileID: 8300000, guid: d4992eb09ca2fc542b26142cb3156aaa, type: 3}
   speed: 2
 --- !u!61 &3286982738762271137
 BoxCollider2D:

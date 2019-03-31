@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
   is_hazard: 0
   health: 100
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d16c5727aa10342bba77e7726b676d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  death_clip: {fileID: 8300000, guid: ad6706d5a5c58fa4cb0396312a79f841, type: 3}
   charge_up: {fileID: 8300000, guid: 5d263efac9b690c4cb398be17b55d028, type: 3}
   fire_shot: {fileID: 8300000, guid: 6c7b6b5ab758fca4fb133a98bacccd8b, type: 3}
   charging_color: {r: 1, g: 0.9450981, b: 0.909804, a: 1}
