@@ -9,6 +9,8 @@ public class RoomController : MonoBehaviour
     int new_room_height_factor = 0;
     List<GameObject> spawned_rooms = new List<GameObject>();
 
+    public GameObject healing_item;
+
     public List<GameObject> level_1_rooms;
     public List<GameObject> level_2_rooms;
     public List<GameObject> level_3_rooms;

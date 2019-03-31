@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     private static LevelController lev_con_instance;
 
     public int current_level = 1;
+    public int deaths = 0;
 
     [HideInInspector]
     public bool game_over = false;

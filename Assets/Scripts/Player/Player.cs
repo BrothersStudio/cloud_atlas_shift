@@ -217,6 +217,8 @@ public class Player : MonoBehaviour
             GetComponent<PlayerSprite>().Dead();
             GetComponent<PlayerAudio>().Dead();
 
+            FindObjectOfType<LevelController>().deaths++;
+
             main_camera.PlayerDead();
 
             Invoke("Restart", 2f);

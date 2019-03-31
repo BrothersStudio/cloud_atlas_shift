@@ -16729,7 +16729,7 @@ GameObject:
   - component: {fileID: 7148320562747277707}
   - component: {fileID: 3519324538023356272}
   m_Layer: 0
-  m_Name: Two Laser
+  m_Name: So Many Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17001,6 +17001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stair_room: 0
+  death_tier: 3
+  health_spawn_location: {x: 0, y: 9, z: 0}
   exits: 0000000001000000
   exit_points:
   - {x: 0, y: 11, z: 0}
