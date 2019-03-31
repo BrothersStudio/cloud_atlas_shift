@@ -51,7 +51,6 @@ public class MusicController : MonoBehaviour
 
     public void SetBossMusic()
     {
-        boss_laugh_source.Stop();
 
         minor.clip = boss_minor;
         minor.Play();
