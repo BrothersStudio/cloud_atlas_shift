@@ -59,7 +59,7 @@ public class Bull : MonoBehaviour
             Time.timeSinceLevelLoad > charge_delay + charge_start &&
             enemy.health > 0)
         {
-            speed = Mathf.Clamp(speed + 0.03f, 0, 4);
+            speed = Mathf.Clamp(speed + Time.deltaTime * 5, 0, 4);
 
             transform.position = Vector3.MoveTowards(transform.position, charge_direction, speed * speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, player_charge_position) < 1f || enemy.health != start_charge_health)
