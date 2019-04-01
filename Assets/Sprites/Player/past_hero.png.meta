@@ -10,6 +10,22 @@ TextureImporter:
     21300010: past_hero_5
     21300012: past_hero_6
     21300014: past_hero_7
+    21300016: past_hero_8
+    21300018: past_hero_9
+    21300020: past_hero_10
+    21300022: past_hero_11
+    21300024: past_hero_12
+    21300026: past_hero_13
+    21300028: past_hero_14
+    21300030: past_hero_15
+    21300032: past_hero_16
+    21300034: past_hero_17
+    21300036: past_hero_18
+    21300038: past_hero_19
+    21300040: past_hero_20
+    21300042: past_hero_21
+    21300044: past_hero_22
+    21300046: past_hero_23
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -96,6 +112,166 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9758210c49feee044a20636b4ca72416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93051e3456ec1e47a7d71f5c0a812ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940b846f5c3ae1a4681d9913c8bb4fa1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069e260d972dca145bf595d8ba43584e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dcd3c64c03dbd4fa53fbece522b532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9105e940988fd1343baf18c0d0c0632d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb818116e4b84644bd0b0343f284c09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c56dbd8276e6e4c965e4689c168384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_8
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 48
         width: 16
         height: 16
@@ -106,13 +282,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e50d58a8d9ac7924ca88b8d62cdba3b7
+      spriteID: 0480ea2f06fe3c843bcbbeba8d656aa8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_1
+      name: past_hero_9
       rect:
         serializedVersion: 2
         x: 16
@@ -126,13 +302,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c826f9fb1172c0447ae43d110e9f16dd
+      spriteID: f70f0880f2bb9aa40a8ad868da301929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_2
+      name: past_hero_10
       rect:
         serializedVersion: 2
         x: 32
@@ -146,13 +322,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b7780e509c2ad34c9e8d34774eef176
+      spriteID: 8f32397acb6a84646ac83275a420c17c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_3
+      name: past_hero_11
       rect:
         serializedVersion: 2
         x: 48
@@ -166,13 +342,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01d3eaea5752e014699386324a4087a7
+      spriteID: b243a700416390f49885e7023cbf179e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_4
+      name: past_hero_12
       rect:
         serializedVersion: 2
         x: 0
@@ -186,13 +362,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e4dbd6fca284c428cd52c78599c7d4
+      spriteID: 4f47c2cc7ecc46c48b831609ab5b1b18
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_5
+      name: past_hero_13
       rect:
         serializedVersion: 2
         x: 16
@@ -206,13 +382,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c012259db1cac6c4caaa24982d893c95
+      spriteID: e0933291796b65b459d23b4f57858b63
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_6
+      name: past_hero_14
       rect:
         serializedVersion: 2
         x: 32
@@ -226,13 +402,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e53b3d8469b73f94daf250cc688e0947
+      spriteID: 3662b3519476a3c4eb69c61601cae14a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: past_hero_7
+      name: past_hero_15
       rect:
         serializedVersion: 2
         x: 48
@@ -246,7 +422,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed9c41c6754b762459865de0f0cd9930
+      spriteID: 73a7ec58d58140a468214fc915620302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234b0a19d6e3d1c4cbdb1559ed90e7ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ddcc6baadc1f84dbfdb075ab4bd7a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56528aad15b83714d96721276d94946a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7210a56d8085324ba8a3b5f820afba5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da5785122fe0ff4eb9326a7d3f65729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21327674bcd83aa4dacc2448d60273b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1313a9c877a24a14991c4e69566bc614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: past_hero_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620e2bcb522c3374a8487c5b056c7549
       vertices: []
       indices: 
       edges: []
