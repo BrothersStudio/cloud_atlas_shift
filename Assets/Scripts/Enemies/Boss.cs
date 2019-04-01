@@ -10,7 +10,7 @@ public class Boss : MonoBehaviour
     // Dive attack
     int num_dives = 0;
     float orig_speed;
-    float speed = 4;
+    float speed = 3.5f;
     int dive_choice = 0;
     public List<Vector3> dive_positions;
 
@@ -39,8 +39,8 @@ public class Boss : MonoBehaviour
     Vector3 summong_position = new Vector3(0, 26, 0);
     public AudioClip summon_sound;
 
-    int num_to_summon = 4;
-    float dist_from_player = 5;
+    int num_to_summon = 3;
+    float dist_from_player = 3;
     public List<GameObject> summoned_enemy;
 
     // Intensity
