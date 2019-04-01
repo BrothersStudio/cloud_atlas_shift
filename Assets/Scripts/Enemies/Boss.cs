@@ -14,6 +14,8 @@ public class Boss : MonoBehaviour
     int dive_choice = 0;
     public List<Vector3> dive_positions;
 
+    public AudioClip dive_sound;
+
     // Shooting
     float phase_position_reached_time = 0f;
     float phase_time = 8f;
@@ -22,6 +24,8 @@ public class Boss : MonoBehaviour
     float last_critical_shot = 0f;
     float quick_shot_cooldown = 0.4f;
     float critical_shot_cooldown = 1;
+
+    public AudioClip shoot_sound;
 
     int shoot_choice = 0;
     public List<Vector3> shoot_positions;
@@ -133,6 +137,7 @@ public class Boss : MonoBehaviour
         {
             Hitstop.current.HitstopFor(30);
 
+            CancelInvoke();
             StopAllCoroutines();
 
             speed = 1;
@@ -207,6 +212,8 @@ public class Boss : MonoBehaviour
         {
             dive_choice = Random.Range(dive_positions.Count / 2, dive_positions.Count);
         }
+
+        Invoke("DiveSound", 4);
     }
 
     void DiveAttack()
@@ -236,6 +243,13 @@ public class Boss : MonoBehaviour
         }
     }
 
+    void DiveSound()
+    {
+        GetComponent<AudioSource>().clip = dive_sound;
+        GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+        GetComponent<AudioSource>().Play();
+    }
+
     void ShootAttack()
     {
         if (Vector3.Distance(transform.position, shoot_positions[shoot_choice]) > 0.1f)
@@ -252,6 +266,10 @@ public class Boss : MonoBehaviour
             if (Time.timeSinceLevelLoad > last_critical_shot + critical_shot_cooldown)
             {
                 StartCoroutine(ActionAnimation());
+
+                GetComponent<AudioSource>().clip = shoot_sound;
+                GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+                GetComponent<AudioSource>().Play();
 
                 last_critical_shot = Time.timeSinceLevelLoad;
                 for (float i = -Mathf.PI / 4f; i < 3 * Mathf.PI / 4f; i += 0.05f)
@@ -323,8 +341,10 @@ public class Boss : MonoBehaviour
         {
             speed += Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, summong_position, speed * speed * speed * Time.deltaTime);
-
-            phase_position_reached_time = Time.timeSinceLevelLoad;
+            if (Vector3.Distance(transform.position, summong_position) <= 0.1f)
+            {
+                phase_position_reached_time = Time.timeSinceLevelLoad;
+            }
         }
         else if (Time.timeSinceLevelLoad < phase_position_reached_time + phase_time &&
             Time.timeSinceLevelLoad > last_summon + summon_cooldown)
@@ -351,7 +371,7 @@ public class Boss : MonoBehaviour
                 }
             }
         }
-        else
+        else if (Time.timeSinceLevelLoad > phase_position_reached_time + phase_time)
         {
             current_attack = Attacks.None;
         }

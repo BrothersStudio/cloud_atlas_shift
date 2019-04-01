@@ -176,6 +176,8 @@ MonoBehaviour:
   - {x: -10, y: 24, z: 0}
   - {x: 10, y: 28, z: 0}
   - {x: 10, y: 24, z: 0}
+  dive_sound: {fileID: 8300000, guid: 8131e589a0963384c866bdd909f0718a, type: 3}
+  shoot_sound: {fileID: 8300000, guid: f6c3713280f39be49a7539cfa21724f1, type: 3}
   shoot_positions:
   - {x: -5.5, y: 28.5, z: 0}
   - {x: 5.5, y: 28.5, z: 0}
