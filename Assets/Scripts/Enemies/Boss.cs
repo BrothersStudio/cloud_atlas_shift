@@ -117,6 +117,7 @@ public class Boss : MonoBehaviour
         // Assess if health is below half
         if (enemy.health < (orig_health / 2f) && !critical)
         {
+            num_to_summon = 4;
             critical = true;
         }
     }
