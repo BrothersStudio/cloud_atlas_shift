@@ -54,6 +54,11 @@ public class Room : MonoBehaviour
         room_complete = false;
 
         pathfinding_grid.CreateGrid();
+
+        if (GetComponentInChildren<Flag>() != null)
+        {
+            GetComponentInChildren<Flag>().Activate();
+        }
     }
 
     void AddDoors()
