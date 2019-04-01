@@ -2016,25 +2016,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc25813375925f4799d769ae5cb6a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 0
   dust_cloud: {fileID: 4022020314596167618, guid: 31bf5b6fa75dbf141a3536c0ecb82ed5,
     type: 3}
   player_direction: 0
-  past_walking_up: {fileID: 21300002, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
-  past_walking_down: {fileID: 21300000, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
-  past_walking_left: {fileID: 21300006, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
-  past_walking_right: {fileID: 21300004, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_standing_up: {fileID: 21300002, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_standing_down: {fileID: 21300000, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_standing_left: {fileID: 21300006, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_standing_right: {fileID: 21300004, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_standing_up_swordless: {fileID: 21300010, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_standing_down_swordless: {fileID: 21300008, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_standing_left_swordless: {fileID: 21300014, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_standing_right_swordless: {fileID: 21300012, guid: 469e3cd20a7b13e40ad076862d69a02d,
+    type: 3}
+  past_walking_up:
+  - {fileID: 21300040, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300042, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_down:
+  - {fileID: 21300016, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300018, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_left:
+  - {fileID: 21300032, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300034, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_right:
+  - {fileID: 21300024, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300026, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
   past_flash_up: {fileID: 21300002, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
   past_flash_down: {fileID: 21300000, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
   past_flash_left: {fileID: 21300006, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
   past_flash_right: {fileID: 21300004, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
-  past_walking_up_swordless: {fileID: 21300010, guid: 469e3cd20a7b13e40ad076862d69a02d,
-    type: 3}
-  past_walking_down_swordless: {fileID: 21300008, guid: 469e3cd20a7b13e40ad076862d69a02d,
-    type: 3}
-  past_walking_left_swordless: {fileID: 21300014, guid: 469e3cd20a7b13e40ad076862d69a02d,
-    type: 3}
-  past_walking_right_swordless: {fileID: 21300012, guid: 469e3cd20a7b13e40ad076862d69a02d,
-    type: 3}
+  past_walking_up_swordless:
+  - {fileID: 21300044, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300046, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_down_swordless:
+  - {fileID: 21300020, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300022, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_left_swordless:
+  - {fileID: 21300036, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300038, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  past_walking_right_swordless:
+  - {fileID: 21300028, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
+  - {fileID: 21300030, guid: 469e3cd20a7b13e40ad076862d69a02d, type: 3}
   past_flash_up_swordless: {fileID: 21300010, guid: be4db1aca551aa5409dd40cc69dc496a,
     type: 3}
   past_flash_down_swordless: {fileID: 21300008, guid: be4db1aca551aa5409dd40cc69dc496a,
@@ -2044,13 +2070,25 @@ MonoBehaviour:
   past_flash_right_swordless: {fileID: 21300012, guid: be4db1aca551aa5409dd40cc69dc496a,
     type: 3}
   past_dead: {fileID: 21300000, guid: be4db1aca551aa5409dd40cc69dc496a, type: 3}
-  future_walking_up: {fileID: 21300002, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
-  future_walking_down: {fileID: 21300000, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
+  future_standing_up: {fileID: 21300002, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  future_standing_down: {fileID: 21300000, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
     type: 3}
-  future_walking_left: {fileID: 21300006, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
+  future_standing_left: {fileID: 21300006, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
     type: 3}
-  future_walking_right: {fileID: 21300004, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
+  future_standing_right: {fileID: 21300004, guid: bc73a6a05ea3e6d44a70e622b0ffe987,
     type: 3}
+  future_walking_up:
+  - {fileID: 21300012, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  - {fileID: 21300014, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  future_walking_down:
+  - {fileID: 21300008, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  - {fileID: 21300010, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  future_walking_left:
+  - {fileID: 21300020, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  - {fileID: 21300022, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  future_walking_right:
+  - {fileID: 21300016, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
+  - {fileID: 21300018, guid: bc73a6a05ea3e6d44a70e622b0ffe987, type: 3}
   future_flash_up: {fileID: 21300002, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
   future_flash_down: {fileID: 21300000, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}
   future_flash_left: {fileID: 21300006, guid: 3c85dfb9838fa4f44a6a5c5a160959ed, type: 3}

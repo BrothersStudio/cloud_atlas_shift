@@ -116,8 +116,10 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (!knockback_state && Input.anyKey)
+        if (!knockback_state && WASDKeyPressed())
         {
+            GetComponent<PlayerSprite>().moving = true;
+
             // Movement
             if (Input.GetKey(KeyCode.W))
             {
@@ -138,12 +140,13 @@ public class Player : MonoBehaviour
 
             x_speed *= (1 - friction);
             y_speed *= (1 - friction);
-
-            //transform.position = new Vector3(transform.position.x + x_speed * Time.deltaTime, transform.position.y + y_speed * Time.deltaTime, transform.position.z);
+            
             GetComponent<Rigidbody2D>().AddForce(new Vector2(x_speed * Time.deltaTime, y_speed * Time.deltaTime));
         }
         else if (!knockback_state)
         {
+            GetComponent<PlayerSprite>().moving = false;
+
             x_speed *= (1 - friction);
             y_speed *= (1 - friction);
         }
@@ -155,6 +158,21 @@ public class Player : MonoBehaviour
             Input.GetKey(KeyCode.DownArrow) ||
             Input.GetKey(KeyCode.LeftArrow) ||
             Input.GetKey(KeyCode.RightArrow))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    bool WASDKeyPressed()
+    {
+        if (Input.GetKey(KeyCode.W) ||
+            Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.S) ||
+            Input.GetKey(KeyCode.D))
         {
             return true;
         }

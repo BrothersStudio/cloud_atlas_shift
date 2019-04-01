@@ -15,26 +15,39 @@ public class PlayerSprite : MonoBehaviour
     float walk_sprite_time = 0;
     float walk_sprite_flip_time = 0.5f;
 
+    public bool moving = false;
+    int walk_cycle_ind = 0;
+
     public GameObject dust_cloud;
 
     [HideInInspector]
     public WalkDir player_direction = WalkDir.Up;
 
     // Past
-    public Sprite past_walking_up;
-    public Sprite past_walking_down;
-    public Sprite past_walking_left;
-    public Sprite past_walking_right;
+    public Sprite past_standing_up;
+    public Sprite past_standing_down;
+    public Sprite past_standing_left;
+    public Sprite past_standing_right;
+
+    public Sprite past_standing_up_swordless;
+    public Sprite past_standing_down_swordless;
+    public Sprite past_standing_left_swordless;
+    public Sprite past_standing_right_swordless;
+
+    public List<Sprite> past_walking_up;
+    public List<Sprite> past_walking_down;
+    public List<Sprite> past_walking_left;
+    public List<Sprite> past_walking_right;
 
     public Sprite past_flash_up;
     public Sprite past_flash_down;
     public Sprite past_flash_left;
     public Sprite past_flash_right;
 
-    public Sprite past_walking_up_swordless;
-    public Sprite past_walking_down_swordless;
-    public Sprite past_walking_left_swordless;
-    public Sprite past_walking_right_swordless;
+    public List<Sprite> past_walking_up_swordless;
+    public List<Sprite> past_walking_down_swordless;
+    public List<Sprite> past_walking_left_swordless;
+    public List<Sprite> past_walking_right_swordless;
 
     public Sprite past_flash_up_swordless;
     public Sprite past_flash_down_swordless;
@@ -44,10 +57,15 @@ public class PlayerSprite : MonoBehaviour
     public Sprite past_dead;
 
     // Future
-    public Sprite future_walking_up;
-    public Sprite future_walking_down;
-    public Sprite future_walking_left;
-    public Sprite future_walking_right;
+    public Sprite future_standing_up;
+    public Sprite future_standing_down;
+    public Sprite future_standing_left;
+    public Sprite future_standing_right;
+
+    public List<Sprite> future_walking_up;
+    public List<Sprite> future_walking_down;
+    public List<Sprite> future_walking_left;
+    public List<Sprite> future_walking_right;
 
     public Sprite future_flash_up;
     public Sprite future_flash_down;
@@ -60,6 +78,7 @@ public class PlayerSprite : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(WalkCycle());
         sprite_renderer = GetComponent<SpriteRenderer>();
 
         player = GetComponent<Player>();
@@ -75,6 +94,19 @@ public class PlayerSprite : MonoBehaviour
     {
         flash_time = 0;
         flashing = true;
+    }
+
+    IEnumerator WalkCycle()
+    {
+        while (true)
+        {
+            if (walk_cycle_ind == 0)
+                walk_cycle_ind = 1;
+            else
+                walk_cycle_ind = 0;
+
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 
     void Update()
@@ -181,9 +213,13 @@ public class PlayerSprite : MonoBehaviour
             {
                 sprite_renderer.sprite = future_flash_up;
             }
+            else if (!moving)
+            {
+                sprite_renderer.sprite = future_standing_up;
+            }
             else
             {
-                sprite_renderer.sprite = future_walking_up;
+                sprite_renderer.sprite = future_walking_up[walk_cycle_ind];
             }
         }
         else if (TimeChange.current.dimension == Dimension.Orange)
@@ -199,15 +235,26 @@ public class PlayerSprite : MonoBehaviour
                     sprite_renderer.sprite = past_flash_up_swordless;
                 }
             }
+            else if (!moving)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_standing_up;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_standing_up_swordless;
+                }
+            }
             else
             {
                 if (IsForceTimeUp())
                 {
-                    sprite_renderer.sprite = past_walking_up;
+                    sprite_renderer.sprite = past_walking_up[walk_cycle_ind];
                 }
                 else
                 {
-                    sprite_renderer.sprite = past_walking_up_swordless;
+                    sprite_renderer.sprite = past_walking_up_swordless[walk_cycle_ind];
                 }
             }
         }
@@ -221,9 +268,13 @@ public class PlayerSprite : MonoBehaviour
             {
                 sprite_renderer.sprite = future_flash_down;
             }
+            else if (!moving)
+            {
+                sprite_renderer.sprite = future_standing_down;
+            }
             else
             {
-                sprite_renderer.sprite = future_walking_down;
+                sprite_renderer.sprite = future_walking_down[walk_cycle_ind];
             }
         }
         else if (TimeChange.current.dimension == Dimension.Orange)
@@ -239,15 +290,26 @@ public class PlayerSprite : MonoBehaviour
                     sprite_renderer.sprite = past_flash_down_swordless;
                 }
             }
+            else if (!moving)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_standing_down;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_standing_down_swordless;
+                }
+            }
             else
             {
                 if (IsForceTimeUp())
                 {
-                    sprite_renderer.sprite = past_walking_down;
+                    sprite_renderer.sprite = past_walking_down[walk_cycle_ind];
                 }
                 else
                 {
-                    sprite_renderer.sprite = past_walking_down_swordless;
+                    sprite_renderer.sprite = past_walking_down_swordless[walk_cycle_ind];
                 }
             }
         }
@@ -261,9 +323,13 @@ public class PlayerSprite : MonoBehaviour
             {
                 sprite_renderer.sprite = future_flash_left;
             }
+            else if (!moving)
+            {
+                sprite_renderer.sprite = future_standing_left;
+            }
             else
             {
-                sprite_renderer.sprite = future_walking_left;
+                sprite_renderer.sprite = future_walking_left[walk_cycle_ind];
             }
         }
         else if (TimeChange.current.dimension == Dimension.Orange)
@@ -279,15 +345,26 @@ public class PlayerSprite : MonoBehaviour
                     sprite_renderer.sprite = past_flash_left_swordless;
                 }
             }
+            else if (!moving)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_standing_left;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_standing_left_swordless;
+                }
+            }
             else
             {
                 if (IsForceTimeUp())
                 {
-                    sprite_renderer.sprite = past_walking_left;
+                    sprite_renderer.sprite = past_walking_left[walk_cycle_ind];
                 }
                 else
                 {
-                    sprite_renderer.sprite = past_walking_left_swordless;
+                    sprite_renderer.sprite = past_walking_left_swordless[walk_cycle_ind];
                 }
             }
         }
@@ -301,9 +378,13 @@ public class PlayerSprite : MonoBehaviour
             {
                 sprite_renderer.sprite = future_flash_right;
             }
+            else if (!moving)
+            {
+                sprite_renderer.sprite = future_standing_right;
+            }
             else
             {
-                sprite_renderer.sprite = future_walking_right;
+                sprite_renderer.sprite = future_walking_right[walk_cycle_ind];
             }
         }
         else if (TimeChange.current.dimension == Dimension.Orange)
@@ -319,15 +400,26 @@ public class PlayerSprite : MonoBehaviour
                     sprite_renderer.sprite = past_flash_right_swordless;
                 }
             }
+            else if (!moving)
+            {
+                if (IsForceTimeUp())
+                {
+                    sprite_renderer.sprite = past_standing_right;
+                }
+                else
+                {
+                    sprite_renderer.sprite = past_standing_right_swordless;
+                }
+            }
             else
             {
                 if (IsForceTimeUp())
                 {
-                    sprite_renderer.sprite = past_walking_right;
+                    sprite_renderer.sprite = past_walking_right[walk_cycle_ind];
                 }
                 else
                 {
-                    sprite_renderer.sprite = past_walking_right_swordless;
+                    sprite_renderer.sprite = past_walking_right_swordless[walk_cycle_ind];
                 }
             }
         }
