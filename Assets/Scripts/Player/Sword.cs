@@ -9,9 +9,9 @@ public class Sword : MonoBehaviour
     int last_bullet_swing_id;
     int swing_id = 0;
     int swing_frame_count = 0;
-    public BoxCollider2D[] swing_boxes;
 
-    public Sprite[] swing_sprites;
+    public List<BoxCollider2D> swing_boxes;
+    public List<Sprite> swing_sprites;
 
     Vector3 orig_pos;
     Quaternion orig_rot;
@@ -22,7 +22,7 @@ public class Sword : MonoBehaviour
 
         if (orig_pos == null)
         {
-            orig_pos = new Vector3(0, 0.43f, -0.5f);
+            orig_pos = transform.position;
             orig_rot = transform.rotation;
         }
 
@@ -42,12 +42,18 @@ public class Sword : MonoBehaviour
             return;
         }
 
-        if (swing_frame_count >= 10)
+        if (swing_frame_count >= 12)
         {
             gameObject.SetActive(false);
-            swing_boxes[2].enabled = false;
+            swing_boxes[3].enabled = false;
         }
-        else if (swing_frame_count >= 8)
+        else if (swing_frame_count >= 10)
+        {
+            GetComponent<SpriteRenderer>().sprite = swing_sprites[3];
+            swing_boxes[2].enabled = false;
+            swing_boxes[3].enabled = true;
+        }
+        else if (swing_frame_count >= 6)
         {
             GetComponent<SpriteRenderer>().sprite = swing_sprites[2];
             swing_boxes[1].enabled = false;
@@ -67,29 +73,35 @@ public class Sword : MonoBehaviour
         ResetFacing();
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.localPosition = new Vector3(0, 0.82f, 0);
+            transform.localPosition = new Vector3(0.126f, 0.608f, 0);
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
+            transform.localPosition = new Vector3(-0.126f, -0.608f, 0);
+
             GetComponent<SpriteRenderer>().flipY = true;
             GetComponent<SpriteRenderer>().sortingLayerName = "Above Char Weapons";
 
-            transform.localPosition = new Vector3(0, -0.82f, 0);
+            //transform.localPosition = new Vector3(0, -0.82f, 0);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
+            transform.localPosition = new Vector3(-0.608f, -0.126f, 0);
+
             GetComponent<SpriteRenderer>().flipX = true;
 
             transform.Rotate(new Vector3(0, 0, 90));
-            transform.localPosition = new Vector3(-0.82f, 0, 0);
+            //transform.localPosition = new Vector3(-0.82f, 0, 0);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
+            transform.localPosition = new Vector3(0.608f, 0.126f, 0);
+
             GetComponent<SpriteRenderer>().flipX = true;
             GetComponent<SpriteRenderer>().flipY = true;
 
             transform.Rotate(new Vector3(0, 0, 90));
-            transform.localPosition = new Vector3(0.82f, 0, 0);
+            //transform.localPosition = new Vector3(0.82f, 0, 0);
         }
     }
 

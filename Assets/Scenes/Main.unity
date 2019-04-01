@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 1364447506}
   - component: {fileID: 1364447507}
   - component: {fileID: 1364447508}
+  - component: {fileID: 1364447509}
   m_Layer: 9
   m_Name: Sword
   m_TagString: Untagged
@@ -780,10 +781,12 @@ MonoBehaviour:
   - {fileID: 1364447506}
   - {fileID: 1364447507}
   - {fileID: 1364447508}
+  - {fileID: 1364447509}
   swing_sprites:
-  - {fileID: 21300000, guid: 3f4e3a41ec24e6641a8803f2aee05a46, type: 3}
-  - {fileID: 21300000, guid: e34b638e5d372e741b7a872735567647, type: 3}
-  - {fileID: 21300000, guid: 19d26dc016f3e0342984050d99ca2a1d, type: 3}
+  - {fileID: 21300000, guid: 532ead1e22de7fc4e9fb9e19c3513a1a, type: 3}
+  - {fileID: 21300002, guid: 532ead1e22de7fc4e9fb9e19c3513a1a, type: 3}
+  - {fileID: 21300004, guid: 532ead1e22de7fc4e9fb9e19c3513a1a, type: 3}
+  - {fileID: 21300006, guid: 532ead1e22de7fc4e9fb9e19c3513a1a, type: 3}
 --- !u!4 &1364447504
 Transform:
   m_ObjectHideFlags: 0
@@ -792,7 +795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364447502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: -0.5}
+  m_LocalPosition: {x: 0.126, y: 0.608, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1846309563}
@@ -832,13 +835,13 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 133930615
-  m_SortingLayer: 6
+  m_SortingLayerID: 2110886205
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f4e3a41ec24e6641a8803f2aee05a46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 532ead1e22de7fc4e9fb9e19c3513a1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
@@ -859,18 +862,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.57, y: -0.44}
+  m_Offset: {x: 0.57, y: -0.38}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2.625, y: 1.4375}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.3}
+  m_Size: {x: 1.03, y: 0.36}
   m_EdgeRadius: 0
 --- !u!61 &1364447507
 BoxCollider2D:
@@ -885,18 +888,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08, y: -0.26}
+  m_Offset: {x: 0.3, y: 0.07}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2.625, y: 1.4375}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.53, y: 0.76}
+  m_Size: {x: 2.04, y: 1.3}
   m_EdgeRadius: 0
 --- !u!61 &1364447508
 BoxCollider2D:
@@ -911,18 +914,44 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.56, y: -0.5}
+  m_Offset: {x: -0.47, y: 0.11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2.625, y: 1.4375}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.3}
+  m_Size: {x: 1.72, y: 1.02}
+  m_EdgeRadius: 0
+--- !u!61 &1364447509
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364447502}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.77, y: -0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.625, y: 1.4375}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.87, y: 0.3}
   m_EdgeRadius: 0
 --- !u!1 &1432819349
 GameObject:
