@@ -103,31 +103,19 @@ public class PlayerSprite : MonoBehaviour
         // Facing direction
         if (Input.GetKey(KeyCode.W))
         {
-            if (IsForceTimeUp())
-            {
-                player_direction = WalkDir.Up;
-            }
+            player_direction = WalkDir.Up;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            if (IsForceTimeUp())
-            {
-                player_direction = WalkDir.Left;
-            }
+            player_direction = WalkDir.Left;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            if (IsForceTimeUp())
-            {
-                player_direction = WalkDir.Right;
-            }
+            player_direction = WalkDir.Right;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            if (IsForceTimeUp())
-            {
-                player_direction = WalkDir.Down;
-            }
+            player_direction = WalkDir.Down;
         }
         else
         {
@@ -148,7 +136,10 @@ public class PlayerSprite : MonoBehaviour
             flashing = false;
         }
 
-        SetPlayerDirectionSprite();
+        if (IsForceTimeUp())
+        {
+            SetPlayerDirectionSprite();
+        }
     }
 
     void SetPlayerDirectionSprite()
@@ -182,7 +173,7 @@ public class PlayerSprite : MonoBehaviour
         }
     }
 
-    void SetUpSprite()
+    public void SetUpSprite()
     {
         if (TimeChange.current.dimension == Dimension.Blue)
         {
@@ -222,7 +213,7 @@ public class PlayerSprite : MonoBehaviour
         }
     }
 
-    void SetDownSprite()
+    public void SetDownSprite()
     {
         if (TimeChange.current.dimension == Dimension.Blue)
         {
@@ -262,7 +253,7 @@ public class PlayerSprite : MonoBehaviour
         }
     }
 
-    void SetLeftSprite()
+    public void SetLeftSprite()
     {
         if (TimeChange.current.dimension == Dimension.Blue)
         {
@@ -302,7 +293,7 @@ public class PlayerSprite : MonoBehaviour
         }
     }
 
-    void SetRightSprite()
+    public void SetRightSprite()
     {
         if (TimeChange.current.dimension == Dimension.Blue)
         {
