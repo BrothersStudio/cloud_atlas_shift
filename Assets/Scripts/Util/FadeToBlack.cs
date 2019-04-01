@@ -8,6 +8,7 @@ public class FadeToBlack : MonoBehaviour
     Image image;
 
     public bool done = false;
+    bool from_boss = false;
 
     void Awake()
     {
@@ -21,9 +22,15 @@ public class FadeToBlack : MonoBehaviour
         StartCoroutine(In());
     }
 
-    public void FadeOut()
+    public void FadeOut(bool from_boss = false)
     {
         done = false;
+        this.from_boss = from_boss;
+        if (from_boss)
+        {
+            FindObjectOfType<MusicController>().PlayBeach();
+        }
+
         image.color = new Color(0, 0, 0, 0);
         StartCoroutine(Out());
     }
@@ -52,5 +59,10 @@ public class FadeToBlack : MonoBehaviour
             yield return null;
         }
         done = true;
+
+        if (from_boss)
+        {
+            transform.parent.Find("Credits").GetComponent<AdvanceCredits>().Begin();
+        }
     }
 }

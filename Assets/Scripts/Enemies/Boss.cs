@@ -167,7 +167,7 @@ public class Boss : MonoBehaviour
         else if (!ending)
         {
             ending = true;
-            FindObjectOfType<FadeToBlack>().FadeOut();
+            FindObjectOfType<FadeToBlack>().FadeOut(true);
         }
     }
 
