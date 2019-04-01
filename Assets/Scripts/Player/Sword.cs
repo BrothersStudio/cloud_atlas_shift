@@ -73,35 +73,43 @@ public class Sword : MonoBehaviour
         ResetFacing();
         if (Input.GetKey(KeyCode.UpArrow))
         {
+            transform.parent.GetComponent<PlayerSprite>().ForceSpriteForTime(0.25f);
+            transform.parent.GetComponent<PlayerSprite>().SetUpSprite();
+
             transform.localPosition = new Vector3(0.126f, 0.608f, 0);
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
+            transform.parent.GetComponent<PlayerSprite>().ForceSpriteForTime(0.25f);
+            transform.parent.GetComponent<PlayerSprite>().SetDownSprite();
+
             transform.localPosition = new Vector3(-0.126f, -0.608f, 0);
 
             GetComponent<SpriteRenderer>().flipY = true;
             GetComponent<SpriteRenderer>().sortingLayerName = "Above Char Weapons";
-
-            //transform.localPosition = new Vector3(0, -0.82f, 0);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
+            transform.parent.GetComponent<PlayerSprite>().ForceSpriteForTime(0.25f);
+            transform.parent.GetComponent<PlayerSprite>().SetLeftSprite();
+
             transform.localPosition = new Vector3(-0.608f, -0.126f, 0);
 
             GetComponent<SpriteRenderer>().flipX = true;
 
             transform.Rotate(new Vector3(0, 0, 90));
-            //transform.localPosition = new Vector3(-0.82f, 0, 0);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
+            transform.parent.GetComponent<PlayerSprite>().ForceSpriteForTime(0.25f);
+            transform.parent.GetComponent<PlayerSprite>().SetRightSprite();
+
             transform.localPosition = new Vector3(0.608f, 0.126f, 0);
 
             GetComponent<SpriteRenderer>().flipX = true;
             GetComponent<SpriteRenderer>().flipY = true;
 
             transform.Rotate(new Vector3(0, 0, 90));
-            //transform.localPosition = new Vector3(0.82f, 0, 0);
         }
     }
 

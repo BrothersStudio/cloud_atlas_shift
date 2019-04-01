@@ -112,7 +112,6 @@ public class Player : MonoBehaviour
                 last_swing = Time.timeSinceLevelLoad;
                 sword.Swing();
 
-                GetComponent<PlayerSprite>().ForceSpriteForTime(0.2f);
                 GetComponent<PlayerAudio>().Slash();
             }
         }
