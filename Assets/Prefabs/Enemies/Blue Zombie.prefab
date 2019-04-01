@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  death_clip: {fileID: 8300000, guid: 8a847db88cd5cd047a874809a7c46ea0, type: 3}
   sprites:
   - {fileID: 21300000, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}
   - {fileID: 21300002, guid: c988b082fa277d44eb3fc88bc4e62854, type: 3}

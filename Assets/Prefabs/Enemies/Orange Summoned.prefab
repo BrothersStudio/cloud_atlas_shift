@@ -151,6 +151,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   - {fileID: 21300002, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
   - {fileID: 21300004, guid: 2c3a3321e28aaec42b9060f1151ea61d, type: 3}
+  death_clip: {fileID: 8300000, guid: f9e14c2209a9e6b46b02d73ce16b7881, type: 3}
 --- !u!61 &6107635844206614067
 BoxCollider2D:
   m_ObjectHideFlags: 0

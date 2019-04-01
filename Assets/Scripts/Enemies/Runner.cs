@@ -11,6 +11,9 @@ public class Runner : MonoBehaviour
     int animation_ind = 0;
     public List<Sprite> skull_animation;
 
+    bool death_playing = false;
+    public AudioClip death_clip;
+
     Vector3 random_target;
 
     Player player;
@@ -54,6 +57,15 @@ public class Runner : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, random_target, speed * speed * Time.deltaTime);
             }
+        }
+
+        if (enemy.health <= 0 &&
+             !death_playing)
+        {
+            death_playing = true;
+            GetComponent<AudioSource>().clip = death_clip;
+            GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
         }
     }
 

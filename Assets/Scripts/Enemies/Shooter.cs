@@ -18,6 +18,9 @@ public class Shooter : MonoBehaviour
     int walk_cycle_int = 0;
     public List<Sprite> walk_animation;
 
+    bool death_playing = false;
+    public AudioClip death_clip;
+
     Enemy enemy;
     Player player;
     SpriteRenderer sprite_renderer;
@@ -74,6 +77,14 @@ public class Shooter : MonoBehaviour
 
             GetComponent<AudioSource>().clip = enemy_shot;
             GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
+        }
+
+        if (enemy.health <= 0 &&
+            !death_playing)
+        {
+            death_playing = true;
+            GetComponent<AudioSource>().clip = death_clip;
             GetComponent<AudioSource>().Play();
         }
 

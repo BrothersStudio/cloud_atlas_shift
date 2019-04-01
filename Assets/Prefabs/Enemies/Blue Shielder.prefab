@@ -341,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d93083ea882554ba5cf2375ad54720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_shake: {fileID: 0}
   is_boss: 0
   is_hazard: 0
   health: 100
@@ -372,6 +373,7 @@ MonoBehaviour:
   shot_cooldown: 1
   enemy_shot: {fileID: 8300000, guid: 7d8a11086b40fa9408ddb2a37aa51f83, type: 3}
   walk_animation: []
+  death_clip: {fileID: 8300000, guid: 496b08a18ca560c4696088d84671aa09, type: 3}
 --- !u!50 &5308247986410619763
 Rigidbody2D:
   serializedVersion: 4

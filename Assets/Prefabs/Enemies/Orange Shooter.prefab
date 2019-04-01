@@ -179,6 +179,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 04359fdb7e15da0439a17f6794b18353, type: 3}
   - {fileID: 21300004, guid: 04359fdb7e15da0439a17f6794b18353, type: 3}
   - {fileID: 21300006, guid: 04359fdb7e15da0439a17f6794b18353, type: 3}
+  death_clip: {fileID: 8300000, guid: 496b08a18ca560c4696088d84671aa09, type: 3}
 --- !u!82 &1676827041401487383
 AudioSource:
   m_ObjectHideFlags: 0

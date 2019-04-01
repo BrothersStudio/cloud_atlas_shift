@@ -10,6 +10,9 @@ public class Zombie : MonoBehaviour
     int targetIndex;
     Vector3 target_location;
 
+    bool death_playing = false;
+    public AudioClip death_clip;
+
     int current_ind;
     public List<Sprite> sprites;
 
@@ -36,6 +39,14 @@ public class Zombie : MonoBehaviour
     void Update()
     {
         SetSprite();
+
+        if (enemy.health <= 0 &&
+            !death_playing)
+        {
+            death_playing = true;
+            GetComponent<AudioSource>().clip = death_clip;
+            GetComponent<AudioSource>().Play();
+        }
     }
 
     void SetSprite()
