@@ -81,8 +81,6 @@ public class Sword : MonoBehaviour
 
             GetComponent<SpriteRenderer>().flipY = true;
             GetComponent<SpriteRenderer>().sortingLayerName = "Above Char Weapons";
-
-            //transform.localPosition = new Vector3(0, -0.82f, 0);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -91,7 +89,6 @@ public class Sword : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = true;
 
             transform.Rotate(new Vector3(0, 0, 90));
-            //transform.localPosition = new Vector3(-0.82f, 0, 0);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -101,7 +98,6 @@ public class Sword : MonoBehaviour
             GetComponent<SpriteRenderer>().flipY = true;
 
             transform.Rotate(new Vector3(0, 0, 90));
-            //transform.localPosition = new Vector3(0.82f, 0, 0);
         }
     }
 
