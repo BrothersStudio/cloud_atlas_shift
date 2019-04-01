@@ -174,6 +174,7 @@ public class Boss : MonoBehaviour
     IEnumerator PlayDeathAnimation()
     {
         GetComponent<AudioSource>().clip = death_sound;
+        GetComponent<AudioSource>().pitch = 1;
         GetComponent<AudioSource>().Play();
 
         for (int i = 0; i < death_animation_sprites.Count; i++)
