@@ -61,6 +61,7 @@ public class Boss : MonoBehaviour
     public List<Sprite> death_animation_sprites;
     bool done_death_animation = false;
     bool ending = false;
+    public AudioClip death_sound;
 
     Enemy enemy;
     Player player;
@@ -172,6 +173,9 @@ public class Boss : MonoBehaviour
 
     IEnumerator PlayDeathAnimation()
     {
+        GetComponent<AudioSource>().clip = death_sound;
+        GetComponent<AudioSource>().Play();
+
         for (int i = 0; i < death_animation_sprites.Count; i++)
         {
             sprite_renderer.sprite = death_animation_sprites[i];

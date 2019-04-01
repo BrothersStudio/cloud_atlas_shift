@@ -259,6 +259,7 @@ MonoBehaviour:
   - {fileID: 21300102, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
   - {fileID: 21300104, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
   - {fileID: 21300106, guid: 7f72137ac178ee54ba2c528b28dea96a, type: 3}
+  death_sound: {fileID: 8300000, guid: 4c9328ba51092734290d6ea568907530, type: 3}
 --- !u!82 &8309924737297900343
 AudioSource:
   m_ObjectHideFlags: 0
