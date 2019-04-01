@@ -144,8 +144,7 @@ public class Boss : MonoBehaviour
             speed = 1;
             moving_to_die = true;
 
-            FindObjectOfType<LevelController>().GameOver();
-            FindObjectOfType<MusicController>().SetVictoryMusic();
+            FindObjectOfType<MusicController>().StopMusic();
 
             GetComponent<BoxCollider2D>().enabled = false;
             player.GetComponent<EdgeCollider2D>().enabled = false;
@@ -167,7 +166,7 @@ public class Boss : MonoBehaviour
         else if (!ending)
         {
             ending = true;
-            FindObjectOfType<FadeToBlack>().FadeOut();
+            FindObjectOfType<FadeToBlack>().FadeOut(true);
         }
     }
 

@@ -16,6 +16,8 @@ public class MusicController : MonoBehaviour
     bool victory = false;
     public AudioClip victory_music;
 
+    public AudioSource beach_source;
+
     public void SetMinorMusic()
     {
         minor_playing = true;
@@ -59,16 +61,14 @@ public class MusicController : MonoBehaviour
         major.Play();
     }
 
-    public void SetVictoryMusic()
+    public void StopMusic()
     {
-        victory = true;
+        minor.Stop();
+        major.Stop();
+    }
 
-        major.clip = victory_music;
-        major.loop = false;
-        major.Play();
-
-        minor.clip = victory_music;
-        minor.loop = false;
-        minor.Play();
+    public void PlayBeach()
+    {
+        beach_source.Play();
     }
 }
