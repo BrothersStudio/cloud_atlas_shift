@@ -119,6 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c34f893bc500de488ad1d4e2362f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_block: 1
+  is_block: 0
   orange_sprite: {fileID: 21300006, guid: 9417115fb3803a8428af94fe84add8d6, type: 3}
   blue_sprite: {fileID: 21300014, guid: 9417115fb3803a8428af94fe84add8d6, type: 3}
