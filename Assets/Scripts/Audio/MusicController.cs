@@ -61,26 +61,14 @@ public class MusicController : MonoBehaviour
         major.Play();
     }
 
-    public void SetVictoryMusic()
+    public void StopMusic()
     {
-        victory = true;
-
-        major.clip = victory_music;
-        major.loop = false;
-        major.volume = 0.25f;
-        major.Play();
-
-        minor.clip = victory_music;
-        minor.loop = false;
-        minor.volume = 0.25f;
-        minor.Play();
+        minor.Stop();
+        major.Stop();
     }
 
     public void PlayBeach()
     {
-        minor.Stop();
-        major.Stop();
-
         beach_source.Play();
     }
 }

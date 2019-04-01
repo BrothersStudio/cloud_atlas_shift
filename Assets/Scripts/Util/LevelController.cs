@@ -12,9 +12,6 @@ public class LevelController : MonoBehaviour
     [HideInInspector]
     public int deaths = 0;
 
-    [HideInInspector]
-    public bool game_over = false;
-
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -33,10 +30,5 @@ public class LevelController : MonoBehaviour
     {
         GetComponent<MusicController>().SetMinorMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void GameOver()
-    {
-        game_over = true;
     }
 }
