@@ -191,6 +191,10 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   - {fileID: 21300020, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   - {fileID: 21300022, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
+  summon_sound: {fileID: 8300000, guid: 7d38cb32bbcdb5046bcf877cba72c764, type: 3}
+  summoned_enemy:
+  - {fileID: 3300603445471452217, guid: 15dcd6227ae9bc34f955bb37ebe2d559, type: 3}
+  - {fileID: 209042965596252317, guid: eba3e9cf9b0c40041810002c9cf0632e, type: 3}
   sprites:
   - {fileID: 21300000, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
   - {fileID: 21300002, guid: 903cc2a656b93c64eaad83349c1c2572, type: 3}
