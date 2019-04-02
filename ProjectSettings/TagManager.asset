@@ -64,3 +64,6 @@ TagManager:
   - name: Above Char Weapons
     uniqueID: 133930615
     locked: 0
+  - name: Canvas
+    uniqueID: 3968118545
+    locked: 0

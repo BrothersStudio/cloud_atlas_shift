@@ -25,11 +25,13 @@ public class Flash : MonoBehaviour
         dist_from_center = 0;
 
         center_pos = Camera.main.WorldToScreenPoint(player.position);
+        center_pos.x = (center_pos.x / Screen.width) * 256;
+        center_pos.y = (center_pos.y / Screen.height) * 144;
 
         gameObject.SetActive(true);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (flashing)
         {
@@ -59,8 +61,8 @@ public class Flash : MonoBehaviour
             texture.filterMode = FilterMode.Point;
             texture.Apply();
 
-            dist_from_center += 8;
-            if (dist_from_center >= 200)
+            dist_from_center += 13;
+            if (dist_from_center >= 220)
             {
                 flashing = false;
                 gameObject.SetActive(false);
